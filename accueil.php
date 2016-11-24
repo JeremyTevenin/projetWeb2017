@@ -83,6 +83,7 @@
 		<div id="opaAccueil"></div>
 		<section id="bienvenueAccueil">
 			<h2> Bienvenue sur notre blog scientifique ! </h2>
+			<h3> Bienvenue sur notre blog scientifique 2 ! </h3>
 			Cliquez ici s vous voulez directement accéder aux articles.<br />
 		</section>
 <?php		
