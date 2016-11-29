@@ -7,33 +7,42 @@
 	</head>
 	<body>
 		<?php
-			if (isset($_POST[ 'pseudo' ]) && isset($_POST[ 'password' ]) && isset($_POST[ 'password2' ])) {
-                $pseudo = htmlspecialchars($_POST['pseudo']);
-                $password = sha1(htmlspecialchars($_POST['password']));
-                $password2 = sha1(htmlspecialchars($_POST['password2']));
+		
+			$nom = $_POST['nom'];
+			$prenom = $_POST['prenom'];
+			$ville = $_POST['ville'];
+			$dateN = $_POST['dateN'];
+			$mail = $_POST['mail'];
+			
+			$password = $_POST['password'];
+			$password2 = $_POST['password2'];
+			
+			if (isset($_POST[ 'nom' ]) && isset($_POST[ 'prenom' ]) && isset($_POST[ 'ville' ]) && isset($_POST[ 'dateN' ]) &&
+			isset($_POST[ 'mail' ]) && isset($_POST[ 'password' ]) && isset($_POST[ 'password2' ])) {
+				echo 'bonjour' ;
+                $nom = htmlspecialchars($nom);
+                $prenom = htmlspecialchars($prenom);
+                $ville = htmlspecialchars($ville);
+                $dateN = htmlspecialchars($dateN);
+                $mail = htmlspecialchars($mail);
+                $password = sha1(htmlspecialchars($password));
+                $password2 = sha1(htmlspecialchars($password2));
                 if ($password == $password2) {
-                    $query = 'INSERT INTO logs (pseudo, password) VALUES ("' . $pseudo . '", "' . $password . '")';
+					echo 'salut';
+                    $query = 'INSERT INTO auteur (nom, prenom, ville, dateN, mail, password) VALUES ('$nom', '$prenom', '$ville', '$dateN', '$mail', '$password')';
                     $request = $db->prepare($query);
                     $request->execute();
                     session_regenerate_id();
-                    $_SESSION['pseudo'] = $pseudo;
-                    $query = 'SELECT id FROM logs where pseudo="' . $pseudo . '"';
+                    $_SESSION['mail'] = $mail;
+                    $query = 'SELECT id FROM auteur where mail="' . $mail . '"';
                     $req = $db->prepare($query);
                     $req->execute();
                     $id = $req->fetch();
-                    
-                    $query = 'INSERT INTO parametres (idPlayer, playerColor, iaColor, boardColor, help) VALUES ("' . $id['id'] . '", "000", "FFF", "008000", "1")';
-                    $request = $db->prepare($query);
-                    $request->execute();
-                    $_SESSION['iaColor'] = "FFF";
-                    $_SESSION['boardColor'] = "008000";
-                    $_SESSION['playerColor'] = "000";
-                    $_SESSION['help'] = 1;
                 }
 			} else {
 				echo 'mot de passe ou pseudo non renseigner';
 			}
-            header('Location: reversi.php');
+            //header('Location: accueil.php');
 		?>
 	</body>
 </html>
