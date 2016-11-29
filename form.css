@@ -8,6 +8,7 @@ fieldset {
 
 input {
   border-radius: 5px;
+  width:170px;
 }
 
 input[type=submit]:hover {

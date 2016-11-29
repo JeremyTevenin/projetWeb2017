@@ -9,13 +9,7 @@
 		} else {
 			echo "Bienvenue !<br/>\n";
 		}
-		
-		/*//Condition permettant de se rediriger en cas de mauvaise session
-		if ( !isset($_SESSION['pseudo']) ) 
-		{
-			header( 'Location: inscription.php' );
-			exit();
-		}*/
+
 	}
 	
 	function deconnexion() 

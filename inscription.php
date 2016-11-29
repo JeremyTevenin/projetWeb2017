@@ -26,7 +26,7 @@
 					</tr>
 					<tr>
 						<td>Ville : </td>
-						<td><input type='text' name='ville' required='required' id='ville' pattern='[a-zA-Z\._]+'></td>
+						<td><input type='text' name='ville' required='required' id='ville' pattern='[\sa-zA-Z\._]+'></td>
 					</tr>
 					<tr>
 						<td>Date de naissance : </td>
@@ -38,12 +38,12 @@
 					</tr>
 					<tr>
 						<td>Mot de passe : </td>
-						<td><input type='password' name='password' id ='password' required='required'></td>
+						<td><input type='password' name='password' id ='password' required='required' pattern='/^[a-zA-Z0-9].{5,12}$/'></td>
 						<td id='tickPa1'></td>
 					</tr>
 					<tr>
 						<td>Réentrez le mot de passe : </td>
-						<td><input type='password' name='password2' id ='password2' required='required'></td>
+						<td><input type='password' name='password2' id ='password2' required='required' pattern='/^[a-zA-Z0-9].{5,12}$/'></td>
 						<td id='tickPa2'></td>
 					</tr>
 					<tr>
@@ -101,7 +101,7 @@
 					$("#ville").css("border-color", "#ff5b5b"); 
 					$("#ville").next(".erreur").show().text("Veuillez entrer votre ville");
 					testVille = false; 
-				} else if (!$("#ville").val().match(/^[-a-zA-Zéèç]+$/)) {
+				} else if (!$("#ville").val().match(/^[-a-zA-Zéèç\s]+$/)) {
 					$("#ville").css("border-color", "#ff5b5b"); 
 					$("#ville").next(".erreur").show().text("Veuillez entrer une ville valide");	
 					testVille = false;
@@ -139,8 +139,16 @@
 					testMail = true;
 				}
 			});
+			
             $( '#password' ).keyup(function() {
-                if ($( '#password' ).val() == $( '#password2' ).val()) {
+				if (!$("#password").val().match(/^[a-zA-Z0-9].{5,12}$/)) {
+					$("#password").css("border-color", "#ff5b5b");
+					document.getElementById('tickPa1').innerHTML = '<img src="cross.png">';
+					document.getElementById('tickPa2').innerHTML = '<img src="cross.png">';
+					document.getElementById('tickPa2').innerHTML += 'Mot de passe trop petit';
+					document.getElementById('tickPa1').innerHTML += 'Mot de passe trop petit';
+					$("#password").next(".tickPa1").show().text("Mot de passe trop petit");
+				} else if ($( '#password' ).val() == $( '#password2' ).val()) {
                     $( '#password' ).css("border-color", " green");
                     $( '#password2' ).css("border-color", "green");
 					document.getElementById('tickPa1').innerHTML = '<img src="tick.png">';
@@ -149,21 +157,26 @@
                     if (pass && mail && ville && nom && prenom && dateN) { 
                         $('#submit').removeAttr('disabled');
                     }
-                } else {
-                    $( '#password' ).css("border-color", "red");
-                    $( '#password2' ).css("border-color", "red");
+				} else {
+					$( '#password' ).css("border-color", "red");
+					$( '#password2' ).css("border-color", "red");
 					document.getElementById('tickPa1').innerHTML = '<img src="cross.png">';
 					document.getElementById('tickPa2').innerHTML = '<img src="cross.png">';
-                    $('#submit').attr('disabled', 'true');
-                    pass = false;
-                }
+					$('#submit').attr('disabled', 'true');
+					pass = false;
+				}
             });
+            
             $( '#password2' ).keyup(function() {
-                if ($( '#password' ).val() == $( '#password2' ).val()) {
+				if (!$("#password").val().match(/^[a-zA-Z0-9].{5,12}$/)) {
+					$("#password").css("border-color", "#ff5b5b"); 
+					
+				} else if ($( '#password' ).val() == $( '#password2' ).val()) {
                     $( '#password' ).css("border-color", " green");
                     $( '#password2' ).css("border-color", "green");
 					document.getElementById('tickPa1').innerHTML = '<img src="tick.png">';
 					document.getElementById('tickPa2').innerHTML = '<img src="tick.png">';
+				
                     pass = true;
                     if (pass && mail && ville && nom && prenom && dateN) { 
                         $('#submit').removeAttr('disabled');
