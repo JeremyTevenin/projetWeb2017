@@ -1,6 +1,6 @@
 <?php
     try {
-		$db = new PDO('mysql:host=localhost;dbname=reversi', 'root', '');
+		$db = new PDO('mysql:host=localhost;dbname=auteur', 'root', '');
 	} catch (PDOException $e) {
 		print 'Error!: ' . $e_>getMessage() . '<br/>';
 		die();
@@ -10,11 +10,11 @@
     
     function connexion() {
         
-        if ( isset($_SESSION['pseudo']) ) {
-            echo "Bienvenue ".$_SESSION['pseudo'].", bonne chance !";
+        if ( isset($_SESSION['mail']) ) {
+            echo "Bienvenue ".$_SESSION['prenom'].$_SESSION['nom']." !";
             echo "<a href=\"deconnexion.php\">  Se deconnecter  </a>";
         } else {
-            echo 'Bienvenue, bonne chance ! <a href="index.php">Se connecter</a> <a href="inscription.php">S\'inscrire ?</a><br/>';
+            echo 'Bienvenue ! <a href="index.php">Se connecter</a> <a href="inscription.php">S\'inscrire ?</a><br/>';
         }
     }
     /*//Condition permettant de se rediriger en cas de mauvaise session

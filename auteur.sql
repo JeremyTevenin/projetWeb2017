@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `auteur` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nom` varchar2(20) NOT NULL,
-  `prenom` varchar2(20) NOT NULL,
-  `ville` varchar2(15) CHARACTER SET utf32 NOT NULL,
+  `nom` varchar(20) NOT NULL,
+  `prenom` varchar(20) NOT NULL,
+  `ville` varchar(15) CHARACTER SET utf32 NOT NULL,
   `dateN` date NOT NULL,
-  `mail` varchar2(30) NOT NULL,
-  `mdp` varchar2(20) NOT NULL,
+  `mail` varchar(30) NOT NULL,
+  `mdp` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   FULLTEXT KEY `mdp` (`mdp`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `auteur` (
 --
 
 INSERT INTO `auteur` (`id`, `nom`, `prenom`, `ville`, `dateN`, `mail`, `mdp`) VALUES
-(1, 'JÃ©rÃ©my', 'TÃ©venin', 'Rouen', '1994-04-16', 'jeremy_tevenin@hotmail.fr', '111111');
+(1, 'Jeremy', 'Tevenin', 'Rouen', '1994-04-16', 'jeremy_tevenin@hotmail.fr', '111111');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
