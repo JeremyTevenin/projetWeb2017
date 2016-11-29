@@ -1,0 +1,53 @@
+h2 {
+  text-align: center;
+  color: #BFB; 
+}
+
+header {
+	padding:25px 0px;/*Marge verticale*/
+  background-color: #777;
+  border: 2px #888 solid;
+	width: 100%;
+	margin-top:0px;
+  box-shadow : 10px 10px 10px;
+	margin-bottom:10px;
+}
+
+body {
+  margin: 0px;
+	background-color: #999;
+}
+
+section {
+  margin-top:10px;
+  margin-left:35%;
+}
+
+input[type=submit] {
+  margin-top: 5px;
+  background-color: #BFB;
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid green;
+}
+
+input[type=button] {
+  margin-top: 5px;
+  background-color: #BFB;
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid green;
+}
+
+img {
+  width:25px;
+}
+
+select {
+  margin-top: 5px;
+  background-color: #BFB;
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid green;
+}
+
