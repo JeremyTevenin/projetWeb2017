@@ -9,7 +9,13 @@
          <?php
             include('connect.php');
             include('header.php');
+            include('menu.php');
         ?>
+		<nav>
+		<?php
+			menu();
+		?>
+		</nav>
 		<form method='post' action='login_confirm.php'>
 			<fieldset>
 				<legend>Connexion</legend>

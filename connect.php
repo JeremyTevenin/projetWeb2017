@@ -1,6 +1,6 @@
 <?php
     try {
-		$db = new PDO('mysql:host=localhost;dbname=reversi', 'root', '');
+		$db = new PDO('mysql:host=localhost;dbname=auteur', 'root', '');
 	} catch (PDOException $e) {
 		print 'Error!: ' . $e_>getMessage() . '<br/>';
 		die();
