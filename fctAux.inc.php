@@ -4,10 +4,10 @@
 	{ 
 		session_start();
 		
-		if ( isset($_SESSION['pseudo']) ) {
-			echo "Bienvenue ".$_SESSION['pseudo'].", bonne chance !<br/>\n";
+		if ( isset($_SESSION['mail']) ) {
+			echo "Bienvenue ".$_SESSION['prenom'].$_SESSION['nom']." !<br/>\n";
 		} else {
-			echo "Bienvenue, bonne chance !<br/>\n";
+			echo "Bienvenue !<br/>\n";
 		}
 		
 		/*//Condition permettant de se rediriger en cas de mauvaise session
@@ -20,7 +20,7 @@
 	
 	function deconnexion() 
 	{ 
-		if ( isset($_SESSION['pseudo']) ) {
+		if ( isset($_SESSION['mail']) ) {
 			echo "<a href=\"deconnexion.php\">  Deconnexion  </a> \n";
 		}
 	}

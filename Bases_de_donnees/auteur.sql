@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `auteur` (
 --
 
 INSERT INTO `auteur` (`id`, `nom`, `prenom`, `ville`, `dateN`, `mail`, `mdp`) VALUES
-(1, 'JÃ©rÃ©my', 'TÃ©venin', 'Rouen', '1994-04-16', 'jeremy_tevenin@hotmail.fr', '111111');
+(1, 'Jeremy', 'Tevenin', 'Rouen', '1994-04-16', 'jeremy_tevenin@hotmail.fr', '111111');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
