@@ -76,6 +76,29 @@ CREATE TABLE IF NOT EXISTS `page` (
   KEY `id_menu` (`id_menu`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20;
 
+--
+-- Contenu de la table `page`
+--
+
+INSERT INTO `page` (`id_menu`, `id_page`, `nom_page`, `texte_page`, `repertoire`, `url`) VALUES
+(1, 1, 'Structure administrative', '', 'structure_administrative', 'structure_administrative.php'),
+(1, 2, 'Structure pédagogique', '', 'structure_p_edagogique', 'structure_p_edagogique.php'),
+(1, 3, 'Vie scolaire', '', 'vie_scolaire', 'vie_scolaire.php'),
+(2, 4, 'Le choix des options', '', 'le_choix_des_options', 'le_choix_des_options.php'),
+(2, 6, 'Section européenne allemand', '', 'section_europ_eenne_allemand', 'section_europ_eenne_allemand.php'),
+(3, 7, 'Liste des fournitures', '', 'liste_des_fournitures', 'liste_des_fournitures.php'),
+(3, 8, 'Inscription 5e, 4e et 3e ', '', 'inscription_5e_4e_et_3e_', 'inscription_5e_4e_et_3e_.php'),
+(3, 9, 'Inscription 6e', '', 'inscription_6e', 'inscription_6e.php'),
+(3, 10, 'Modalités de réinscription', '', 'modalit_es_de_r_einscription', 'modalit_es_de_r_einscription.php'),
+(3, 11, 'Inscription en section bilangue', '', 'inscription_en_section_bilangue', 'inscription_en_section_bilangue.php'),
+(4, 13, 'Les nouvelles classes de seconde', '', 'les_nouvelles_classes_de_seconde', 'les_nouvelles_classes_de_seconde.php'),
+(2, 14, 'Stage d''observation en 3ème', '', 'stage_d_observation_en_3eme', 'stage_d_observation_en_3eme.php'),
+(4, 15, 'L''option latin', '', 'l_option_latin', 'l_option_latin.php'),
+(3, 16, 'Références des oeuvres étudiées', '', 'r_ef_erences_des_oeuvres__etudi_ees', 'r_ef_erences_des_oeuvres__etudi_ees.php'),
+(3, 17, 'Horaires histoire des arts', '', 'horaires_histoire_des_arts', 'horaires_histoire_des_arts.php'),
+(2, 18, 'Les horaires', '', 'les_horaires', 'les_horaires.php'),
+(1, 19, 'Le réglement', '', 'le_r_eglement', 'le_r_eglement.php');
+
 -- --------------------------------------------------------
 
 --

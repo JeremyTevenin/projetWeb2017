@@ -10,12 +10,10 @@
             include('connect.php');
             include('header.php');
             include('menu.php');
-        ?>
-		<nav>
-		<?php
+
 			menu();
 		?>
-		</nav>
+<!--
 		<form method='post' action='login_confirm.php'>
 			<fieldset>
 				<legend>Connexion</legend>
@@ -58,7 +56,7 @@
                 <a href="reversi.php">Jouez</a>
                  (Attention vous ne pourrez pas écrire ou modifier des articles.)
             </section>
-		</form>
+		</form>-->
     </body>
 </html>
 
