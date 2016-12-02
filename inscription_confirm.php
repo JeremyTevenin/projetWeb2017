@@ -12,14 +12,6 @@
 		$password = $_POST['password'];
 		$password2 = $_POST['password2'];
 	
-		echo $nom."<br />";
-		echo $prenom."<br />";
-		echo $ville."<br />";
-		echo $dateN."<br />";
-		echo $mail."<br />";
-		echo $password."<br />";
-		echo $password2."<br />";
-	
 		$nom = htmlspecialchars($nom);
 		$prenom = htmlspecialchars($prenom);
 		$ville = htmlspecialchars($ville);
@@ -51,5 +43,5 @@
 			$id = $req->fetch();
 		}
 	}
-	//header('Location: accueil.php');
+	header('Location: accueil.php');
 ?>
