@@ -19,8 +19,6 @@ body {
 	text-align: center; 
 }
 
-/*
-
 img.titre {
 	margin-top: -20px;
 	display: inline;
@@ -30,11 +28,6 @@ img.titre {
 img.logo {
 	margin-top: -20px;
 	display: inline;
-}*/
-
-form > img {
-	width: 5px;
-	height: 5px;
 }
 
 h1, h2, h3 {
