@@ -35,5 +35,5 @@
 			}
 		}
 	}
-	header ("Refresh: 10;URL=index.php");
+	header ("Refresh: 5;URL=index.php");
 ?>
