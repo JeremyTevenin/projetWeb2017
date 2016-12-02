@@ -1,5 +1,6 @@
 <?php
-	include "fonctionAux.php";
+	session_start();
+	session_destroy(); // detruit la session courante
 	
-	deconnexion();
+	header( "Location: index.php" );
 ?>

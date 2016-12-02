@@ -1,48 +1,21 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <link rel="stylesheet" type='text/css' href="form.css">
+	<head>
+		<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+		<script type="text/javascript" src="script.js"></script>
         <link rel="stylesheet" type='text/css' href="common.css">
-    </head>
-    
-    <body>
-         <?php
-            include('connect.php');
-            include('header.php');
-            include('menu.php');
-
-			menu();
-		?>
-
-		<form method='post' action='login_confirm.php'>
-			<fieldset>
-				<legend>Connexion</legend>
-                <p id='valid'></p>
-				<table>
-					<tr>
-						<td>Email : </td>
-						<td><input type='email' name='mail' required='required' id='mail' pattern='/^[-a-zA-Z_.]+\@[a-z]+(.)(fr|com)$/'></td>
-					</tr>
-					<tr>
-						<td>Mot de passe : </td>
-						<td><input type='password' name='password' id ='password' required='required'></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input type='submit' name='submit' id='submit' value='Validez'></td>
-					</tr>
-				</table>
-			</fieldset>
-            <section>
-                Pas encore inscrit ?
-                <a href="inscription.php">Vous inscrire</a><br/>
-                Vous pouvez aussi naviguer sans être inscrit
-                <a href="accueil.php">Naviguez</a>
-                 (Attention vous ne pourrez pas écrire ou modifier des articles.)
-            </section>
-		</form>
+        <link rel="stylesheet" type='text/css' href="form.css">
 		
-		<form method='post' action='inscription_confirm.php'>
+		<?php
+			include('connect.php');
+		?>
+	</head>
+	<body>
+        <?php
+            include('header.php');
+        ?>
+		<section id="inscription">
+			<form method='post' action='inscription_confirm.php'>
 				<fieldset>
 					<legend>Inscription</legend>
 					<label>Nom : </label>
@@ -90,8 +63,8 @@
 					<input type='submit' name='submit' id='submit' value='Envoyer'>
 				</fieldset>
 			</form>
-		<script>
-			var xmlhttp = new XMLHttpRequest();
+		</section>
+		<script>	var xmlhttp = new XMLHttpRequest();
 	var pass = true;
 	var testNom = false;
 	var testPrenom = false;
@@ -105,17 +78,17 @@
 	$("#nom").keyup(function() {
 		if ($("#nom").val() == "") {
 			$("#nom").css("border-color", "#ff5b5b");
-			$("#nom").next(".erreurNom").show().attr('src', 'cross.png');
+			$("#nom").next(".erreurNom").show().attr('src', 'images/cross.png');
 			$(".erreurNom").next(".erreur").show().text("Veuillez entrer votre nom");
 			testNom = false; 
 		} else if (!$("#nom").val().match(/^[-a-zA-Zéèç]+$/)) {
 			$("#nom").css("border-color", "#ff5b5b"); 
-			$("#nom").next(".erreurNom").show().attr('src', 'cross.png');
+			$("#nom").next(".erreurNom").show().attr('src', 'images/cross.png');
 			$(".erreurNom").next(".erreur").show().text("Veuillez entrer un nom valide");
 			testNom = false;
 		} else {
 			$("#nom").css("border-color", "#00ff00"); 
-			$("#nom").next(".erreurNom").show().attr('src', 'tick.png');
+			$("#nom").next(".erreurNom").show().attr('src', 'images/tick.png');
 			$(".erreurNom").next(".erreur").hide().text("");
 			testNom = true;
 		}
@@ -124,17 +97,17 @@
 	$("#prenom").keyup(function() {
 		if ($("#prenom").val() == "") {
 			$("#prenom").css("border-color", "#ff5b5b"); 
-			$("#prenom").next(".erreurPrenom").show().attr('src', 'cross.png');
+			$("#prenom").next(".erreurPrenom").show().attr('src', 'images/cross.png');
 			$(".erreurPrenom").next(".erreur").show().text("Veuillez entrer votre prénom");
 			testPrenom = false; 
 		} else if (!$("#prenom").val().match(/^[-a-zA-Zéèç]+$/)) {
 			$("#prenom").css("border-color", "#ff5b5b");
-			$("#prenom").next(".erreurPrenom").show().attr('src', 'cross.png');
+			$("#prenom").next(".erreurPrenom").show().attr('src', 'images/cross.png');
 			$(".erreurPrenom").next(".erreur").show().text("Veuillez entrer un prénom valide");				
 			testPrenom = false;
 		} else {
 			$("#prenom").css("border-color", "#00ff00"); 
-			$("#prenom").next(".erreurPrenom").show().attr('src', 'tick.png');
+			$("#prenom").next(".erreurPrenom").show().attr('src', 'images/tick.png');
 			$(".erreurPrenom").next(".erreur").hide().text("");
 			testPrenom = true;
 		}
@@ -143,17 +116,17 @@
 	$("#ville").keyup(function() {
 		if ($("#ville").val() == "") {
 			$("#ville").css("border-color", "#ff5b5b"); 
-			$("#ville").next(".erreurVille").show().attr('src', 'cross.png');
+			$("#ville").next(".erreurVille").show().attr('src', 'images/cross.png');
 			$(".erreurVille").next(".erreur").show().text("Veuillez entrer votre ville");
 			testVille = false; 
 		} else if (!$("#ville").val().match(/^[-a-zA-Zéèç\s]+$/)) {
 			$("#ville").css("border-color", "#ff5b5b"); 
-			$("#ville").next(".erreurVille").show().attr('src', 'cross.png');
+			$("#ville").next(".erreurVille").show().attr('src', 'images/cross.png');
 			$(".erreurVille").next(".erreur").show().text("Veuillez entrer une ville valide");	
 			testVille = false;
 		} else {
 			$("#ville").css("border-color", "#00ff00"); 
-			$("#ville").next(".erreurVille").show().attr('src', 'tick.png');
+			$("#ville").next(".erreurVille").show().attr('src', 'images/tick.png');
 			$(".erreurVille").next(".erreur").hide().text("");
 			testVille = true;
 		}
@@ -162,12 +135,12 @@
 	$("#dateN").keyup(function() {
 		if ($("#dateN").val() == "") {
 			$("#dateN").css("border-color", "#ff5b5b"); 
-			$("#dateN").next(".erreurDN").show().attr('src', 'cross.png');
+			$("#dateN").next(".erreurDN").show().attr('src', 'images/cross.png');
 			$(".erreurDN").next(".erreur").show().text("Veuillez renseigner votre date de naissance");
 			testDate = false; 
 		} else {
 			$("#dateN").css("border-color", "#00ff00"); 
-			$("#dateN").next(".erreurDN").show().attr('src', 'tick.png');
+			$("#dateN").next(".erreurDN").show().attr('src', 'images/tick.png');
 			$(".erreurDN").next(".erreur").hide().text("");
 			testDate = true;
 		}
@@ -176,17 +149,17 @@
 	$("#mail").keyup(function() {
 		if ($("#mail").val() == "") {
 			$("#mail").css("border-color", "#ff5b5b"); 
-			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
+			$("#mail").next(".erreurEmail").show().attr('src', 'images/cross.png');
 			$(".erreurEmail").next(".erreur").show().text("Veuillez entrer votre mail");
 			testmail = false; 
 		} else if (!$("#mail").val().match(/^[-a-zA-Z_.]+\@[a-z]+(.)(fr|com)$/)) {
 			$("#mail").css("border-color", "#ff5b5b"); 
-			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
+			$("#mail").next(".erreurEmail").show().attr('src', 'images/cross.png');
 			$(".erreurEmail").next(".erreur").show().text("Veuillez entrer un mail valide");
 			testmail = false;
 		} else {
 			$("#mail").css("border-color", "#00ff00"); 
-			$("#mail").next(".erreurEmail").show().attr('src', 'tick.png');
+			$("#mail").next(".erreurEmail").show().attr('src', 'images/tick.png');
 			$(".erreurEmail").next(".erreur").hide().text("");
 			testMail = true;
 		}
@@ -195,13 +168,13 @@
 	$('#password').keyup(function() {
 		if (!$("#password").val().match(/^[a-zA-Z0-9].{5,}$/)) {
 			$("#password").css("border-color", "#ff5b5b");
-			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/cross.png');
 			$(".erreurMDP1").next(".erreur").show().text("Mot de passe trop petit");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$('#password').css("border-color", "#00ff00");
 			$('#password2').css("border-color", "#00ff00");
-			$("#password").next(".erreurMDP1").show().attr('src', 'tick.png');
-			$("#password2").next(".erreurMDP2").show().attr('src', 'tick.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/tick.png');
+			$("#password2").next(".erreurMDP2").show().attr('src', 'images/tick.png');
 			$(".erreurMDP1").next(".erreur").hide().text("");
 			$(".erreurMDP2").next(".erreur").hide().text("");
 			pass = true;
@@ -211,8 +184,8 @@
 		} else {
 			$('#password').css("border-color", "#ff5b5b");
 			$('#password2').css("border-color", "#ff5b5b");
-			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
-			$("#password2").next(".erreurMDP2").show().attr('src', 'cross.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/cross.png');
+			$("#password2").next(".erreurMDP2").show().attr('src', 'images/cross.png');
 			$(".erreurMDP1").next(".erreur").show().text("Le mot de passe n'est pas identique");
 			$(".erreurMDP2").next(".erreur").show().text("Le mot de passe n'est pas identique");
 			$('#submit').attr('disabled', 'true');
@@ -223,13 +196,13 @@
 	$( '#password2' ).keyup(function() {
 		if (!$("#password2").val().match(/^[a-zA-Z0-9].{5,}$/)) {
 			$("#password2").css("border-color", "#ff5b5b"); 
-			$("#password2").next(".erreurMDP2").show().attr('src', 'cross.png');
+			$("#password2").next(".erreurMDP2").show().attr('src', 'images/cross.png');
 			$(".erreurMDP2").next(".erreur").show().text("Mot de passe trop petit");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$( '#password' ).css("border-color", "#00ff00");
 			$( '#password2' ).css("border-color", "#00ff00");
-			$("#password").next(".erreurMDP1").show().attr('src', 'tick.png');
-			$("#password2").next(".erreurMDP2").show().attr('src', 'tick.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/tick.png');
+			$("#password2").next(".erreurMDP2").show().attr('src', 'images/tick.png');
 			$(".erreurMDP1").next(".erreur").hide().text("");
 			$(".erreurMDP2").next(".erreur").hide().text("");
 			pass = true;
@@ -239,14 +212,12 @@
 		} else {
 			$('#password').css("border-color", "ff5b5b");
 			$('#password2').css("border-color", "ff5b5b");
-			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
-			$("#password2").next(".erreurMDP2").show().attr('src', 'cross.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/cross.png');
+			$("#password2").next(".erreurMDP2").show().attr('src', 'images/cross.png');
 			$(".erreurMDP2").next(".erreur").hide().text("Le mot de passe n'est pas identique");
 			$('#submit').attr('disabled', 'true');
 			pass = false;
 		}
-	});
-		</script>
-    </body>
+	});</script>
+	</body>
 </html>
-
