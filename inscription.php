@@ -38,12 +38,12 @@
 					</tr>
 					<tr>
 						<td>Mot de passe : </td>
-						<td><input type='password' name='password' id ='password' required='required' pattern='/^[a-zA-Z0-9].{5,12}$/'></td>
+						<td><input type='password' name='password' id ='password' required='required'></td>
 						<td id='tickPa1'></td>
 					</tr>
 					<tr>
 						<td>Réentrez le mot de passe : </td>
-						<td><input type='password' name='password2' id ='password2' required='required' pattern='/^[a-zA-Z0-9].{5,12}$/'></td>
+						<td><input type='password' name='password2' id ='password2' required='required'></td>
 						<td id='tickPa2'></td>
 					</tr>
 					<tr>

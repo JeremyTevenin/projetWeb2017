@@ -13,9 +13,13 @@
 		$request->execute();
 		$name = $request->fetch();
 		if ($name['exist'] != 0) {
+			
 			$request1 = $db->prepare("SELECT * FROM auteur WHERE mail='$mail'");
 			$request1->execute();
 			$name1 = $request1->fetch();
+			echo $name1['password'];
+			echo $name1['mail'];
+			
 			if ($password == $name1['password']) {
 				session_regenerate_id();
 				$nom = $name1['nom'];
@@ -31,5 +35,5 @@
 			}
 		}
 	}
-	header ("Refresh: 5;URL=index.php");
+	header ("Refresh: 10;URL=index.php");
 ?>
