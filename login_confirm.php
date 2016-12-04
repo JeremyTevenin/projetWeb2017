@@ -3,8 +3,8 @@
 
 	if (isset($_POST['mail']) && isset($_POST['password'])) {
 		
-		$mail = $_POST['mail'];
-		$password = $_POST['password'];
+		$mail = $_POST['mailC'];
+		$password = $_POST['passwordC'];
 		
 		$mail = htmlspecialchars($mail);
 		$password = htmlspecialchars($password);

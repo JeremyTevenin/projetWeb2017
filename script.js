@@ -14,12 +14,12 @@ $(function() {
 		if ($("#nom").val() == "") {
 			$("#nom").css("border-color", "#ff5b5b");
 			$("#nom").next(".erreurNom").show().attr('src', 'cross.png');
-			$(".erreurNom").next(".erreur").show().text("Veuillez entrer votre nom");
+			$(".erreurNom").next(".erreur").show().text("Veuillez saisir votre nom");
 			testNom = false; 
 		} else if (!$("#nom").val().match(/^[-a-zA-Zéèç]+$/)) {
 			$("#nom").css("border-color", "#ff5b5b"); 
 			$("#nom").next(".erreurNom").show().attr('src', 'cross.png');
-			$(".erreurNom").next(".erreur").show().text("Veuillez entrer un nom valide");
+			$(".erreurNom").next(".erreur").show().text("Caractère non valide");
 			testNom = false;
 		} else {
 			$("#nom").css("border-color", "#00ff00"); 
@@ -33,12 +33,12 @@ $(function() {
 		if ($("#prenom").val() == "") {
 			$("#prenom").css("border-color", "#ff5b5b"); 
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'cross.png');
-			$(".erreurPrenom").next(".erreur").show().text("Veuillez entrer votre prénom");
+			$(".erreurPrenom").next(".erreur").show().text("Veuillez saisir votre prénom");
 			testPrenom = false; 
 		} else if (!$("#prenom").val().match(/^[-a-zA-Zéèç]+$/)) {
 			$("#prenom").css("border-color", "#ff5b5b");
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'cross.png');
-			$(".erreurPrenom").next(".erreur").show().text("Veuillez entrer un prénom valide");				
+			$(".erreurPrenom").next(".erreur").show().text("Caractère non valide");				
 			testPrenom = false;
 		} else {
 			$("#prenom").css("border-color", "#00ff00"); 
@@ -52,12 +52,12 @@ $(function() {
 		if ($("#ville").val() == "") {
 			$("#ville").css("border-color", "#ff5b5b"); 
 			$("#ville").next(".erreurVille").show().attr('src', 'cross.png');
-			$(".erreurVille").next(".erreur").show().text("Veuillez entrer votre ville");
+			$(".erreurVille").next(".erreur").show().text("Veuillez saisir votre ville");
 			testVille = false; 
 		} else if (!$("#ville").val().match(/^[-a-zA-Zéèç\s]+$/)) {
 			$("#ville").css("border-color", "#ff5b5b"); 
 			$("#ville").next(".erreurVille").show().attr('src', 'cross.png');
-			$(".erreurVille").next(".erreur").show().text("Veuillez entrer une ville valide");	
+			$(".erreurVille").next(".erreur").show().text("Caractère non valide");	
 			testVille = false;
 		} else {
 			$("#ville").css("border-color", "#00ff00"); 
@@ -71,8 +71,13 @@ $(function() {
 		if ($("#dateN").val() == "") {
 			$("#dateN").css("border-color", "#ff5b5b"); 
 			$("#dateN").next(".erreurDN").show().attr('src', 'cross.png');
-			$(".erreurDN").next(".erreur").show().text("Veuillez renseigner votre date de naissance");
-			testDate = false; 
+			$(".erreurDN").next(".erreur").show().text("Format jj/mm/aaaa");
+			testDate = false;
+		} else if (!$("#dateN").val().match(/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}/)) {
+			$("#dateN").css("border-color", "#ff5b5b"); 
+			$("#dateN").next(".erreurVille").show().attr('src', 'cross.png');
+			$(".erreurDateN").next(".erreur").show().text("Format jj/mm/aaaa");	
+			testVille = false;			
 		} else {
 			$("#dateN").css("border-color", "#00ff00"); 
 			$("#dateN").next(".erreurDN").show().attr('src', 'tick.png');
@@ -85,12 +90,12 @@ $(function() {
 		if ($("#mail").val() == "") {
 			$("#mail").css("border-color", "#ff5b5b"); 
 			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
-			$(".erreurEmail").next(".erreur").show().text("Veuillez entrer votre mail");
+			$(".erreurEmail").next(".erreur").show().text("Veuillez saisir votre mail");
 			testmail = false; 
 		} else if (!$("#mail").val().match(/^[-a-zA-Z_.]+\@[a-z]+(.)(fr|com)$/)) {
 			$("#mail").css("border-color", "#ff5b5b"); 
 			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
-			$(".erreurEmail").next(".erreur").show().text("Veuillez entrer un mail valide");
+			$(".erreurEmail").next(".erreur").show().text("Caractère non valide");
 			testmail = false;
 		} else {
 			$("#mail").css("border-color", "#00ff00"); 
