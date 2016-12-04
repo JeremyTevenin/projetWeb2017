@@ -9,7 +9,6 @@
 		} else {
 			echo "Bienvenue !<br/>\n";
 		}
-
 	}
 	
 	function deconnexion() 

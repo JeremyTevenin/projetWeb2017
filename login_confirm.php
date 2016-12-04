@@ -1,7 +1,7 @@
 <?php
 	include('connect.php');
 
-	if (isset($_POST['mail']) && isset($_POST['password'])) {
+	if (isset($_POST['mailC']) && isset($_POST['passwordC'])) {
 		
 		$mail = $_POST['mailC'];
 		$password = $_POST['passwordC'];
@@ -9,11 +9,11 @@
 		$mail = htmlspecialchars($mail);
 		$password = htmlspecialchars($password);
 		
-		$request = $db->prepare("SELECT COUNT(*) AS exist FROM auteur WHERE mail='$mail'");
+		$request = $dbauteur->prepare("SELECT COUNT(*) AS exist FROM auteur WHERE mail='$mail'");
 		$request->execute();
 		$name = $request->fetch();
 		if ($name['exist'] != 0) {
-			$request1 = $db->prepare("SELECT * FROM auteur WHERE mail='$mail'");
+			$request1 = $dbauteur->prepare("SELECT * FROM auteur WHERE mail='$mail'");
 			$request1->execute();
 			$name1 = $request1->fetch();
 			if ($password == $name1['password']) {

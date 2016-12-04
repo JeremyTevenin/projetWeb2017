@@ -1,21 +1,12 @@
 <?php
 // Fonction qui crée le menu déroulant grâce à des requêtes effectuées sur la base de données MENU
-function menu()
-{
-	// Connexion à la base de données
-	try {
-		$dsn = "mysql:host=localhost;dbname=menu";
-		$menu = new PDO($dsn, "root", "");
-	}
-	catch(PDOException $e) {
-		exit( 'Erreur lors de la connexion à la base de données');
-	}
-
+function menu() {
+	include('connect.php');
+		
 	$requeteMenu = "select * FROM MENU";	
-	$resMenu = $menu->query($requeteMenu);
+	$resMenu = $dbmenu->query($requeteMenu);
 	
 	echo " 		<nav class=\"menu\">\n";
-
 	echo " 			<ul>\n";
 	
 	$tupleMenu = $resMenu->fetchAll();
@@ -30,7 +21,7 @@ function menu()
 		echo "							<ul>\n";
 					
 		$requetePage = "select * FROM PAGE WHERE id_menu =".$nomMenu['id_menu'];
-		$resPage = $menu->query($requetePage);
+		$resPage = $dbmenu->query($requetePage);
 		
 		$tuplePage = $resPage->fetchAll();
 		
@@ -55,17 +46,35 @@ function menu()
 	$resMenu->closeCursor(); // fin du traitement de la requête
 	
 	// Menu de l'administrateur qui lui permet de gérer le contenu du site
-	if ( isset($_SESSION['nom_utilisateur']) ) {		
-		$droitAcces = $_SESSION['admin'];
-		if ( $droitAcces == 1 ) {
-			echo " 				<li class=\"titreMenu\">\n";
-			echo "					<a href=\"menuModif.php\">Modifier le site</a>\n";
-			echo "				</li>\n";
-		}
+	if (isset($_SESSION['mail'])) {			
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"deconnexion.php\">Se déconnecter</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"ajouterMenu.php\">Ajouter un menu</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"modifierMenu.php\">Modifier un menu</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"supprimerMenu.php\">Supprimer un menu</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"ajouterArticle.php\">Ajouter un article</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"modifierArticle.php\">Modifier un article</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\supprimerArticle.php\">Supprimer un article</a>\n";
+		echo "				</li>\n";
+	} else {
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"accueil.php\">S'incrire/Se connecter</a>\n";
+		echo "				</li>\n";
 	}
 	
 	echo " 			</ul>\n";
-			echo " 		</nav>\n";
-		
+	echo " 		</nav>\n";	
 }
 ?>

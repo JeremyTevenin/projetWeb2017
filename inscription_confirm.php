@@ -22,7 +22,7 @@
 		
 		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur	
 		$query = "SELECT * FROM auteur WHERE mail='$mail'";
-		$request = $db->query($query);
+		$request = $dbauteur->query($query);
 		
 		$lignes = $request->fetchAll();
 		if (count($lignes) >= 1) {
@@ -33,12 +33,12 @@
 		
 		if ($password == $password2) {
 			$query = 'INSERT INTO auteur (nom, prenom, ville, dateN, mail, password) VALUES ("' . $nom . '", "' . $prenom . '", "'. $ville . '", "'. $dateN . '", "' . $mail . '", "' . $password . '")';
-			$request = $db->prepare($query);
+			$request = $dbauteur->prepare($query);
 			$request->execute();
 			session_regenerate_id();
 			$_SESSION['mail'] = $mail;
 			$query = 'SELECT id FROM auteur where mail="' . $mail . '"';
-			$req = $db->prepare($query);
+			$req = $dbauteur->prepare($query);
 			$req->execute();
 			$id = $req->fetch();
 		}
