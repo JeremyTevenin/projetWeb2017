@@ -1,0 +1,135 @@
+/* ----------------------------- */
+/* Gestion du style de l'accueil */
+/* ----------------------------- */
+header {
+	padding: 5px 0px;
+	width: 95%;
+	margin: auto;
+}
+
+h2 {
+	text-align: center;
+	font-family : "Georgia", "Courier New", sans-serif;
+	font-size: 28px;
+}
+
+fieldset {
+	background-color: #DCDCDC;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px;
+	opacity: 0.80;
+}
+
+legend {
+	font-style: bold;
+	font-size: 20px;
+}
+
+#fond {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url(fond.jpeg) 0px center no-repeat;
+	background-size: cover;
+}
+
+
+
+#accueil input[type=submit] {
+	margin-top: 5px;
+	background-color: #D3D3D3;
+	border-radius: 10px;
+	height: 25px;
+	border: 1px solid black;
+}
+
+
+#accueil  form {
+	margin-top: 5px;
+	vertical-align: middle;
+	text-align: left;	
+	font-size: 17px;
+}
+
+#accueil  input {
+	vertical-align: middle;
+	text-align: left;	
+	font-size: 15px;
+	padding: 2px;
+	border-radius: 5px;
+	width: 175px;
+}
+
+#accueil input[type=submit]:hover {
+  background-color: #7F7;
+}
+
+#accueil input[type=submit]:disabled {
+  background-color: #DDD;
+}
+
+/* Gestion de l'inscription */
+#inscription {
+	position: absolute;
+	margin-left: 40px;
+	top: 120px;
+	width: 650px;
+	padding: 5px;
+}
+
+#inscription label {
+    width: 200px;
+	float: left;
+	padding: 2px;
+}
+
+#inscription  img {
+	vertical-align: middle;
+	width: 25px;
+}
+
+span.erreur {
+	vertical-align: middle;
+	text-align: left;
+	padding: 2px;
+	font-size: 15px;
+	width: 20px;
+	color: #ff5b5b;
+}
+
+/* Gestion de la connexion */
+#connexion {
+	position: absolute;
+	right: 80px;
+	top: 340px;
+	width: 450px;
+	height: 220px;
+	padding: 5px;
+}
+
+#connexion label {
+    width: 100px;
+	float: left;
+	padding: 2px;
+}
+
+/* Gestion du lien de redirection */
+#redirection {
+	position: absolute;
+	right: 110px;
+	top: 150px;
+	width: 350px;
+	height: 220px;
+	padding: 5px;
+	text-align: center;
+}
+
+#redirection  a {
+	text-decoration: none;
+	color: black;
+}
+
+#redirection  a:hover {
+	color: red;
+}

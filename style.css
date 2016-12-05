@@ -31,114 +31,6 @@ body {
 	background-color: white;
 }
 
-#fond {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background: url(fond.jpeg) 0px center no-repeat;
-	background-size: cover;
-}
-
-input[type=submit] {
-	margin-top: 5px;
-	background-color: #D3D3D3;
-	border-radius: 10px;
-	height: 20px;
-	border: 1px solid green;
-}
-
-/* -------------------- */
-/* Gestion de l'accueil */
-/* -------------------- */
-#accueil  form {
-	margin-top: 5px;
-	vertical-align: middle;
-	text-align: left;	
-	font-size: 17px;
-}
-
-#accueil  input {
-	vertical-align: middle;
-	text-align: left;	
-	font-size: 15px;
-	padding: 2px;
-	border-radius: 5px;
-	width: 175px;
-}
-
-#accueil input[type=submit]:hover {
-  background-color: #7F7;
-}
-
-#accueil input[type=submit]:disabled {
-  background-color: #DDD;
-}
-
-/* Gestion de l'inscription */
-#inscription {
-	position: absolute;
-	margin-left: 40px;
-	top: 120px;
-	width: 650px;
-	padding: 5px;
-}
-
-#inscription label {
-    width: 200px;
-	float: left;
-	padding: 2px;
-}
-
-#inscription  img {
-	vertical-align: middle;
-	width: 25px;
-}
-
-span.erreur {
-	vertical-align: middle;
-	text-align: left;
-	padding: 2px;
-	font-size: 15px;
-	width: 20px;
-	color: #ff5b5b;
-}
-
-/* Gestion de la connexion */
-#connexion {
-	position: absolute;
-	right: 80px;
-	top: 340px;
-	width: 450px;
-	height: 220px;
-	padding: 5px;
-}
-
-#connexion label {
-    width: 100px;
-	float: left;
-	padding: 2px;
-}
-
-/* Gestion du lien de redirection */
-#redirection {
-	position: absolute;
-	right: 110px;
-	top: 150px;
-	width: 350px;
-	height: 220px;
-	padding: 5px;
-	text-align: center;
-}
-
-#redirection  a {
-	text-decoration: none;
-	color: black;
-}
-
-#redirection  a:hover {
-	color: red;
-}
-
 /* --------------- */
 /* Gestion du menu */
 /* --------------- */
@@ -148,37 +40,44 @@ span.erreur {
 }
 
 .menu a {
-	text-decoration:none;
-	color:black;
+	text-decoration: none;
+	color: black;
 }
+
+.menu a:hover {
+	font-style: bold;
+}
+
 .menu ul {
 	list-style-type: none;
 }
+
 .menu ul ul {
 	display: none;
 	position: absolute;
 	left: 80px;
 	top: -1px;
 }
+
 .menu li {
 	position: relative;
-	width : 100px;
-	padding:10px;
-	background-color:#e74c3c;
-	border:solid 1px;
+	width: 100px;
+	padding: 8px;
+	background-color: #DCDCDC;
+	border: solid 1px;
 	color: black;
 }
+
 .menu :hover > ul {
 	display: block;
 }
+
 .menu li:hover{
-	background-color: #c0392b;
+	background-color: #D3D3D3;
 }
-.more {
-	background: url(right.png) no-repeat right;
-}
+
 li.more {
-	color: #34495e;
+	color: #DCDCDC;
 	border-color: black;
 }
 

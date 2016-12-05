@@ -16,7 +16,7 @@ $(function() {
 			$("#nom").next(".erreurNom").show().attr('src', 'cross.png');
 			$(".erreurNom").next(".erreur").show().text("Veuillez saisir votre nom");
 			testNom = false; 
-		} else if (!$("#nom").val().match(/^[-a-zA-Zéèç]+$/)) {
+		} else if (!$("#nom").val().match(/^[-a-zA-Zéèàôöîïç]{3,}/)) {
 			$("#nom").css("border-color", "#ff5b5b"); 
 			$("#nom").next(".erreurNom").show().attr('src', 'cross.png');
 			$(".erreurNom").next(".erreur").show().text("Caractère non valide");
@@ -35,7 +35,7 @@ $(function() {
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'cross.png');
 			$(".erreurPrenom").next(".erreur").show().text("Veuillez saisir votre prénom");
 			testPrenom = false; 
-		} else if (!$("#prenom").val().match(/^[-a-zA-Zéèç]+$/)) {
+		} else if (!$("#prenom").val().match(/^[-a-zA-Zéèàôöîïç]{3,}/)) {
 			$("#prenom").css("border-color", "#ff5b5b");
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'cross.png');
 			$(".erreurPrenom").next(".erreur").show().text("Caractère non valide");				
@@ -54,7 +54,7 @@ $(function() {
 			$("#ville").next(".erreurVille").show().attr('src', 'cross.png');
 			$(".erreurVille").next(".erreur").show().text("Veuillez saisir votre ville");
 			testVille = false; 
-		} else if (!$("#ville").val().match(/^[-a-zA-Zéèç\s]+$/)) {
+		} else if (!$("#ville").val().match(/^[-a-zA-Zéèàôöîïç\s]{2,}/)) {
 			$("#ville").css("border-color", "#ff5b5b"); 
 			$("#ville").next(".erreurVille").show().attr('src', 'cross.png');
 			$(".erreurVille").next(".erreur").show().text("Caractère non valide");	
@@ -92,10 +92,10 @@ $(function() {
 			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
 			$(".erreurEmail").next(".erreur").show().text("Veuillez saisir votre mail");
 			testmail = false; 
-		} else if (!$("#mail").val().match(/^[-a-zA-Z_.]+\@[a-z]+(.)(fr|com)$/)) {
+		} else if (!$("#mail").val().match(/^[-a-z_.]+\@[a-z]+(.)(fr|com)$/)) {
 			$("#mail").css("border-color", "#ff5b5b"); 
 			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
-			$(".erreurEmail").next(".erreur").show().text("Caractère non valide");
+			$(".erreurEmail").next(".erreur").show().text("Adresse non valide");
 			testmail = false;
 		} else {
 			$("#mail").css("border-color", "#00ff00"); 
@@ -106,10 +106,10 @@ $(function() {
 	});
 
 	$('#password').keyup(function() {
-		if (!$("#password").val().match(/^[a-zA-Z0-9].{5,}$/)) {
+		if (!$("#password").val().match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/)) {
 			$("#password").css("border-color", "#ff5b5b");
 			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
-			$(".erreurMDP1").next(".erreur").show().text("Mot de passe trop petit");
+			$(".erreurMDP1").next(".erreur").show().text("Mot de passe incorrect (8 caractères, une majuscule, une minuscule et un chiffre minimum)");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$('#password').css("border-color", "#00ff00");
 			$('#password2').css("border-color", "#00ff00");
@@ -134,10 +134,10 @@ $(function() {
 	});
 
 	$( '#password2' ).keyup(function() {
-		if (!$("#password2").val().match(/^[a-zA-Z0-9].{5,}$/)) {
+		if (!$("#password2").val().match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/)) {
 			$("#password2").css("border-color", "#ff5b5b"); 
 			$("#password2").next(".erreurMDP2").show().attr('src', 'cross.png');
-			$(".erreurMDP2").next(".erreur").show().text("Mot de passe trop petit");
+			$(".erreurMDP2").next(".erreur").show().text("Mot de passe incorrect (8 caractères, une majuscule, une minuscule et un chiffre minimum)");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$( '#password' ).css("border-color", "#00ff00");
 			$( '#password2' ).css("border-color", "#00ff00");
@@ -154,7 +154,8 @@ $(function() {
 			$('#password2').css("border-color", "ff5b5b");
 			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
 			$("#password2").next(".erreurMDP2").show().attr('src', 'cross.png');
-			$(".erreurMDP2").next(".erreur").hide().text("Le mot de passe n'est pas identique");
+			$(".erreurMDP1").next(".erreur").show().text("Le mot de passe n'est pas identique");
+			$(".erreurMDP2").next(".erreur").show().text("Le mot de passe n'est pas identique");
 			$('#submit').attr('disabled', 'true');
 			pass = false;
 		}
