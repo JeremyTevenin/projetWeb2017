@@ -69,7 +69,7 @@ function menu() {
 		
 	
 	// Menu de l'administrateur qui lui permet de gérer le contenu du site
-	if (isset($_SESSION['mail'])) {			
+	if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {			
 		echo " 				<li class=\"titreMenu\">\n";
 		echo "					<a href=\"deconnexion.php\">Se déconnecter</a>\n";
 		echo "				</li>\n";
@@ -82,6 +82,16 @@ function menu() {
 		echo " 				<li class=\"titreMenu\">\n";
 		echo "					<a href=\"supprimerMenu.php\">Supprimer un menu</a>\n";
 		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"ajouterSousMenu.php\">Ajouter un sous-menu</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"modifierSousMenu.php\">Modifier un sous-menu</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"titreMenu\">\n";
+		echo "					<a href=\"supprimerSousMenu.php\">Supprimer un sous-menu</a>\n";
+		echo "				</li>\n";
+	} else if (isset($_SESSION['mail'])) {
 		echo " 				<li class=\"titreMenu\">\n";
 		echo "					<a href=\"ajouterArticle.php\">Ajouter un article</a>\n";
 		echo "				</li>\n";

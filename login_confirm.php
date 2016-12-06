@@ -19,10 +19,12 @@
 				session_regenerate_id();
 				$nom = $name1['nom'];
 				$prenom = $name1['prenom'];
+				$admin = $name1['admin'];
 				
 				$_SESSION['mail'] = $mail;
 				$_SESSION['nom'] = $nom;
 				$_SESSION['prenom'] = $prenom;
+				$_SESSION['admin'] = $admin;
 				header ("Location: lepetitscientifique.php");
 			} else {
 				echo 'Vous n\'avez pas rentré les bons identifiants, vous allez etre redirige dans 5 secondes';
