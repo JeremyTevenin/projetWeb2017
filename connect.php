@@ -12,4 +12,6 @@
 		print 'Error!: ' . $e_>getMessage() . '<br/>';
 		die();
 	}
+	
+	session_start();
 ?>

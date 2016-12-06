@@ -66,21 +66,21 @@ INSERT INTO `menu` (`id_menu`, `nom_menu`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `page` (
-  `id_menu` int(11) NOT NULL,
+  `id_sousmenu` int(11) NOT NULL,
   `id_page` int(11) NOT NULL AUTO_INCREMENT,
   `nom_page` varchar(50) NOT NULL,
   `texte_page` text NOT NULL,
   `repertoire` varchar(45) NOT NULL,
   `url` varchar(45) NOT NULL,
   PRIMARY KEY (`id_page`,`nom_page`),
-  KEY `id_menu` (`id_menu`)
+  KEY `id_sousmenu` (`id_sousmenu`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20;
 
 --
 -- Contenu de la table `page`
 --
 
-INSERT INTO `page` (`id_menu`, `id_page`, `nom_page`, `texte_page`, `repertoire`, `url`) VALUES
+INSERT INTO `page` (`id_sousmenu`, `id_page`, `nom_page`, `texte_page`, `repertoire`, `url`) VALUES
 (1, 1, 'Structure administrative', '', 'structure_administrative', 'structure_administrative.php'),
 (1, 2, 'Structure pédagogique', '', 'structure_p_edagogique', 'structure_p_edagogique.php'),
 (1, 3, 'Vie scolaire', '', 'vie_scolaire', 'vie_scolaire.php'),
@@ -92,14 +92,39 @@ INSERT INTO `page` (`id_menu`, `id_page`, `nom_page`, `texte_page`, `repertoire`
 (3, 10, 'Modalités de réinscription', '', 'modalit_es_de_r_einscription', 'modalit_es_de_r_einscription.php'),
 (3, 11, 'Inscription en section bilangue', '', 'inscription_en_section_bilangue', 'inscription_en_section_bilangue.php'),
 (4, 13, 'Les nouvelles classes de seconde', '', 'les_nouvelles_classes_de_seconde', 'les_nouvelles_classes_de_seconde.php'),
-(2, 14, 'Stage d''observation en 3ème', '', 'stage_d_observation_en_3eme', 'stage_d_observation_en_3eme.php'),
-(4, 15, 'L''option latin', '', 'l_option_latin', 'l_option_latin.php'),
-(3, 16, 'Références des oeuvres étudiées', '', 'r_ef_erences_des_oeuvres__etudi_ees', 'r_ef_erences_des_oeuvres__etudi_ees.php'),
-(3, 17, 'Horaires histoire des arts', '', 'horaires_histoire_des_arts', 'horaires_histoire_des_arts.php'),
-(2, 18, 'Les horaires', '', 'les_horaires', 'les_horaires.php'),
-(1, 19, 'Le réglement', '', 'le_r_eglement', 'le_r_eglement.php');
+(5, 14, 'Stage d''observation en 3ème', '', 'stage_d_observation_en_3eme', 'stage_d_observation_en_3eme.php'),
+(5, 15, 'L''option latin', '', 'l_option_latin', 'l_option_latin.php'),
+(6, 16, 'Références des oeuvres étudiées', '', 'r_ef_erences_des_oeuvres__etudi_ees', 'r_ef_erences_des_oeuvres__etudi_ees.php'),
+(6, 17, 'Horaires histoire des arts', '', 'horaires_histoire_des_arts', 'horaires_histoire_des_arts.php'),
+(7, 18, 'Les horaires', '', 'les_horaires', 'les_horaires.php'),
+(7, 19, 'Le réglement', '', 'le_r_eglement', 'le_r_eglement.php');
 
 -- --------------------------------------------------------
+
+--
+-- Structure de la table `sousmenu`
+--
+
+CREATE TABLE IF NOT EXISTS `sousmenu` (
+  `id_menu` int(11) NOT NULL,
+  `id_sousmenu` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_sousmenu` varchar(35) NOT NULL,
+  PRIMARY KEY (`id_sousmenu`),
+  KEY `id_menu` (`id_menu`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8;
+
+--
+-- Contenu de la table `sousmenu`
+--
+
+INSERT INTO `sousmenu` (`id_menu`, `id_sousmenu`, `nom_sousmenu`) VALUES
+(1, 1, 'Les équipes    '),
+(1, 2, 'Les options et spécificités'),
+(2, 3, 'Inscription 2014-2015'),
+(3, 4, 'Après la 3ème'),
+(3, 5, 'Pendant le collège'),
+(4, 6, 'Histoire des arts 2013-2014'),
+(5, 7, 'Le fonctionnement du CDI');
 
 --
 -- Contraintes pour les tables exportées
@@ -115,7 +140,13 @@ ALTER TABLE `fichier`
 -- Contraintes pour la table `page`
 --
 ALTER TABLE `page`
-  ADD CONSTRAINT `page_ibfk_1` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`);
+  ADD CONSTRAINT `page_ibfk_1` FOREIGN KEY (`id_sousmenu`) REFERENCES `sousmenu` (`id_sousmenu`);
+
+--
+-- Contraintes pour la table `sousmenu`
+--
+ALTER TABLE `sousmenu`
+  ADD CONSTRAINT `sousmenu_ibfk_1` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

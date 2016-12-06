@@ -2,7 +2,6 @@
 	include('connect.php');
 
 	if (isset($_POST['mailC']) && isset($_POST['passwordC'])) {
-		
 		$mail = $_POST['mailC'];
 		$password = $_POST['passwordC'];
 		
@@ -24,7 +23,7 @@
 				$_SESSION['mail'] = $mail;
 				$_SESSION['nom'] = $nom;
 				$_SESSION['prenom'] = $prenom;
-				header ("Location: accueil.php");
+				header ("Location: lepetitscientifique.php");
 			} else {
 				echo 'Vous n\'avez pas rentré les bons identifiants, vous allez etre redirige dans 5 secondes';
 				header ("Refresh: 5;URL=index.php");

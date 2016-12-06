@@ -109,7 +109,7 @@ $(function() {
 		if (!$("#password").val().match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/)) {
 			$("#password").css("border-color", "#ff5b5b");
 			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
-			$(".erreurMDP1").next(".erreur").show().text("Mot de passe incorrect (8 caractères, une majuscule, une minuscule et un chiffre minimum)");
+			$(".erreurMDP1").next(".erreur").show().text("Mot de passe incorrect (6 caractères, une majuscule, une minuscule et un chiffre minimum)");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$('#password').css("border-color", "#00ff00");
 			$('#password2').css("border-color", "#00ff00");
@@ -137,7 +137,7 @@ $(function() {
 		if (!$("#password2").val().match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/)) {
 			$("#password2").css("border-color", "#ff5b5b"); 
 			$("#password2").next(".erreurMDP2").show().attr('src', 'cross.png');
-			$(".erreurMDP2").next(".erreur").show().text("Mot de passe incorrect (8 caractères, une majuscule, une minuscule et un chiffre minimum)");
+			$(".erreurMDP2").next(".erreur").show().text("Mot de passe incorrect (6 caractères, une majuscule, une minuscule et un chiffre minimum)");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$( '#password' ).css("border-color", "#00ff00");
 			$( '#password2' ).css("border-color", "#00ff00");

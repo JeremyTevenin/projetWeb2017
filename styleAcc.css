@@ -1,6 +1,11 @@
 /* ----------------------------- */
 /* Gestion du style de l'accueil */
 /* ----------------------------- */
+body {
+	margin: 0px;
+	background-color: white;
+}
+
 header {
 	padding: 5px 0px;
 	width: 95%;
@@ -29,12 +34,10 @@ legend {
 #fond {
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	background: url(fond.jpeg) 0px center no-repeat;
 	background-size: cover;
 }
-
-
 
 #accueil input[type=submit] {
 	margin-top: 5px;

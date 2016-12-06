@@ -43,5 +43,5 @@
 			$id = $req->fetch();
 		}
 	}
-	header('Location: accueil.php');
+	header('Location: lepetitscientifique.php');
 ?>

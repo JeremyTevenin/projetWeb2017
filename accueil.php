@@ -26,7 +26,7 @@
 						<br /><br />	
 							
 						<label>Mot de passe : </label>
-						<input type='password' name='passwordC' id ='passwordC' required='required' pattern='(?=^.{8,}$)'>
+						<input type='password' name='passwordC' id ='passwordC' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
 						<br /><br />		
 								
 						<label></label>		
@@ -76,15 +76,13 @@
 						<br /><br />
 						
 						<label>Mot de passe : </label>
-						<input type='password' name='password' id ='password' required='required' autocomplete='off' pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$
-'>
+						<input type='password' name='password' id ='password' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
 						<img src="" class="erreurMDP1" style="display:none" />
 						<span class="erreur"></span>
 						<br /><br />
 
 						<label>Confirmer le mot de passe : </label>
-						<input type='password' name='password2' id ='password2' required='required' autocomplete='off' pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$
-'>
+						<input type='password' name='password2' id ='password2' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
 						<img src="" class="erreurMDP2" style="display:none" />
 						<span class="erreur"></span>
 						<br /><br />
