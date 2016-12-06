@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 06 Décembre 2016 à 10:26
+-- Généré le :  Mar 06 Décembre 2016 à 10:56
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -33,17 +33,17 @@ CREATE TABLE `auteur` (
   `ville` varchar(15) CHARACTER SET utf32 NOT NULL,
   `dateN` date NOT NULL,
   `mail` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `admin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `auteur`
 --
 
-INSERT INTO `auteur` (`id`, `nom`, `prenom`, `ville`, `dateN`, `mail`, `password`) VALUES
-(7, 'admin', 'admin', 'admin', '0001-01-01', 'admin@admin.fr', 'Admin0'),
-(8, 'test', 'test', 'test', '1996-04-12', 'test@test.fr', 'Test12'),
-(9, 'ear', 'ert', 'erty', '5585-05-14', 'jced@hy.fr', 'Admin12');
+INSERT INTO `auteur` (`id`, `nom`, `prenom`, `ville`, `dateN`, `mail`, `password`, `admin`) VALUES
+(0, 'admin', 'admin', 'admin', '0001-01-01', 'admin@admin.fr', 'Admin0', 1),
+(1, 'test', 'test', 'test', '1996-04-12', 'test@test.fr', 'Test12', 0);
 
 --
 -- Index pour les tables exportées

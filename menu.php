@@ -83,7 +83,7 @@ function menu() {
 		echo "					<a href=\"supprimerMenu.php\">Supprimer un menu</a>\n";
 		echo "				</li>\n";
 		echo " 				<li class=\"titreMenu\">\n";
-		echo "					<a href=\"ajouterSousMenu.php\">Ajouter un sous-menu</a>\n";
+		echo "					Gérer un sous-menu\n";
 		echo "				</li>\n";
 		echo " 				<li class=\"titreMenu\">\n";
 		echo "					<a href=\"modifierSousMenu.php\">Modifier un sous-menu</a>\n";
