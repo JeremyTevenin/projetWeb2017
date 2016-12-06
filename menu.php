@@ -3,106 +3,123 @@
 function menu() {
 	include('connect.php');
 		
-	$requeteMenu = "select * FROM MENU";	
-	$resMenu = $dbmenu->query($requeteMenu);
+	$requeteCateg = "select * FROM categorie";	
+	$resCateg = $dbmenu->query($requeteCateg);
 	
 	echo " 		<nav class=\"menu\">\n";
 	echo " 			<ul>\n";
 	
-	$tupleMenu = $resMenu->fetchAll();
-	
-	// Compteurs pour afficher les barres
-	$cptPage = 0;
+	$tupleCateg = $resCateg->fetchAll();
 			
-	// Compteurs pour afficher les barres
-		$cptPage = 0;
-		$cptSousMenu = 0;
-				
-		// Boucle listant tout les menus de la base de données
-		foreach($tupleMenu as $nomMenu) {
+		// Boucle listant toutes les catégories de la base de données
+		foreach($tupleCateg as $nomCateg) {
 			echo " 				<li class=\"more\">\n";
-			echo "					".$nomMenu['nom_menu']."\n";
+			echo "					".$nomCateg['nom_categ']."\n";
 			echo "					<ul class=\"sousmenu\">\n";
 						
-			$requeteSousMenu = "select * FROM SOUSMENU WHERE id_menu=".$nomMenu['id_menu'];
-			$resSousMenu = $dbmenu->query($requeteSousMenu);	
+			$requeteSousCateg = "select * FROM souscategorie WHERE id_categ=".$nomCateg['id_categ'];
+			$resSousCateg = $dbmenu->query($requeteSousCateg);	
 				
-			// Boucle listant tout les sous-menus d'un menu
-			$tupleSousMenu = $resSousMenu->fetchAll();
+			// Boucle listant toutes les sous-catégories d'une catégorie
+			$tupleSousCateg = $resSousCateg->fetchAll();
 		
-			foreach($tupleSousMenu as $nomSousMenu) {
+			foreach($tupleSousCateg as $nomSousCateg) {
 				echo "						<li>\n";
-				echo "							".$nomSousMenu['nom_sousmenu']."\n";			
+				echo "							".$nomSousCateg['nom_souscateg']."\n";			
 				echo "							<ul class=\"page\">\n";
 								
-				$requetePage = "select * FROM PAGE WHERE id_sousmenu =".$nomSousMenu['id_sousmenu'];
-				$resPage = $dbmenu->query($requetePage);
+				$requeteArticle = "select * FROM article WHERE id_souscateg =".$nomSousCateg['id_souscateg'];
+				$resArticle = $dbmenu->query($requeteArticle);
 				
-				$tuplePage = $resPage->fetchAll();
+				$tupleArticle = $resArticle->fetchAll();
 			
-				// Boucle listant toute les pages d'un sous-menu
-				foreach($tuplePage as $nomPage) {
+				// Boucle listant tous les articles d'une sous-catégorie
+				foreach($tupleArticle as $nomArticle) {
 					echo "								<li>\n";
-					echo "									<form name=\"recup\" method=\"get\" action=\"".$nomPage['url']."\">\n";
-					echo "										<input type=\"hidden\" name=\"id_page\" value=\"".$nomPage['id_page']."\" />\n";
+					echo "									<form name=\"recup\" method=\"get\" action=\"".$nomArticle['url']."\">\n";
+					echo "										<input type=\"hidden\" name=\"id_article\" value=\"".$nomArticle['id_article']."\" />\n";
 					// Page accessible grâce à une redirection vers celle ci en cliquant
-					echo "										<a href=\"".$nomPage['repertoire']."/".$nomPage['url']."\" onClick=\"recup.submit();\">".$nomPage['nom_page']."</a>\n";
+					echo "										<a href=\"".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
 					echo "									</form>\n";
 					echo "								</li>\n";	
-					
-					$cptPage = $cptPage + 1; 
 				}
 					
 				echo "							</ul>\n";
 				echo " 						</li>\n";
-				
-				$cptPage = 0;
-				$cptSousMenu = $cptSousMenu + 1; 
 			}		
 			
 			echo " 					</ul>\n";
 			echo " 				</li>\n";
-			
-			$cptSousMenu = 0;
 		}
-		$resMenu->closeCursor(); // fin du traitement de la requête
+		$resCateg->closeCursor(); // fin du traitement de la requête
 		
 	
 	// Menu de l'administrateur qui lui permet de gérer le contenu du site
-	if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {			
+	if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {		
 		echo " 				<li class=\"titreMenu\">\n";
 		echo "					<a href=\"deconnexion.php\">Se déconnecter</a>\n";
+		echo "				</li>\n";	
+		echo " 				<li class=\"more\">\n";
+		echo "					Gérer les catégories\n";
+		echo " 					<ul>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"ajouterCategorie.php\">Ajouter une catégorie</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"modifierCategorie.php\">Modifier une catégorie</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"supprimerCategorie.php\">Supprimer une catégorie</a>\n";
+		echo "						</li>\n";
+		echo "					</ul>\n";
 		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
-		echo "					<a href=\"ajouterMenu.php\">Ajouter un menu</a>\n";
+		echo " 				<li class=\"more\">\n";
+		echo "					Gérer les sous-catégories\n";
+		echo " 					<ul>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"ajouterSousCategorie.php\">Ajouter un sous-menu</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"modifierSousCategorie.php\">Modifier un sous-menu</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"supprimerSousCategorie.php\">Supprimer une categorie</a>\n";
+		echo "						</li>\n";		
+		echo "					</ul>\n";		
 		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
-		echo "					<a href=\"modifierMenu.php\">Modifier un menu</a>\n";
+		echo " 				<li class=\"more\">\n";
+		echo "					Gérer les auteurs\n";
+		echo " 					<ul>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"ajouterAuteur.php\">Ajouter un auteur</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"modifierAuteur.php\">Modifier un auteur</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"supprimerAuteur.php\">Supprimer un auteur</a>\n";
+		echo "						</li>\n";		
+		echo "					</ul>\n";		
 		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
-		echo "					<a href=\"supprimerMenu.php\">Supprimer un menu</a>\n";
-		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
-		echo "					Gérer un sous-menu\n";
-		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
-		echo "					<a href=\"modifierSousMenu.php\">Modifier un sous-menu</a>\n";
-		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
-		echo "					<a href=\"supprimerSousMenu.php\">Supprimer un sous-menu</a>\n";
-		echo "				</li>\n";
+		
 	} else if (isset($_SESSION['mail'])) {
-		echo " 				<li class=\"titreMenu\">\n";
+		echo " 				<li class=\"more\">\n";
+		echo "					<a href=\"deconnexion.php\">Se déconnecter</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"more\">\n";
+		echo "					<a href=\"modifierAuteur.php\">Modifier son compte</a>\n";
+		echo "				</li>\n";
+		echo " 				<li class=\"more\">\n";
 		echo "					<a href=\"ajouterArticle.php\">Ajouter un article</a>\n";
 		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
+		echo " 				<li class=\"more\">\n";
 		echo "					<a href=\"modifierArticle.php\">Modifier un article</a>\n";
 		echo "				</li>\n";
-		echo " 				<li class=\"titreMenu\">\n";
+		echo " 				<li class=\"more\">\n";
 		echo "					<a href=\supprimerArticle.php\">Supprimer un article</a>\n";
 		echo "				</li>\n";
 	} else {
-		echo " 				<li class=\"titreMenu\">\n";
+		echo " 				<li class=\"more\">\n";
 		echo "					<a href=\"accueil.php\">S'incrire/Se connecter</a>\n";
 		echo "				</li>\n";
 	}

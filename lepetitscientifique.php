@@ -7,6 +7,7 @@
 	</head>
 	<body>
         <?php
+            include('connect.php');
             include('header.php');
             include('menu.php');
 			
