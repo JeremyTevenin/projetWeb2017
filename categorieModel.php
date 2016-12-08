@@ -20,7 +20,7 @@ class Categorie {
 		$request = $this->_db->prepare($query);
 		$request->execute();
 				
-    $data = $request->fetchAll();
+		$data = $request->fetchAll();
 		
 		return $data;
 	}
@@ -31,23 +31,24 @@ class Categorie {
 		$request = $this->_db->prepare($query);
 		$request->execute();
 				
-    $data = $request->fetchAll();
-    foreach($data as $tupleCateg) {
-      $query = "select * FROM souscategorie WHERE id_categ=".$tupleCateg['id_categ'];
-      $request = $this->_db->prepare($query);
-      $request->execute();
+		$data = $request->fetchAll();
+		foreach($data as $tupleCateg) {
+		  $query = "select * FROM souscategorie WHERE id_categ=".$tupleCateg['id_categ'];
+		  $request2 = $this->_db->prepare($query);
+		  $request2->execute();
 
-  
-      $data = $request->fetchAll();
-      foreach($lignes as $tupleSousCateg) {
-        echo "						".$tupleCateg['id_categ']."\n";
-        echo "						".$tupleCateg['nom_categ']."\n";
-      
-        echo "						(".$tupleSousCateg['id_souscateg'].") ".$tupleSousCateg['nom_souscateg']."\n";		
-      }
-    }
+	  
+		  $data = $request2->fetchAll();
+		  return $data;
+		  //foreach($lignes as $tupleSousCateg) {
+			/*echo "						".$tupleCateg['id_categ']."\n";
+			echo "						".$tupleCateg['nom_categ']."\n";
+		  
+			echo "						(".$tupleSousCateg['id_souscateg'].") ".$tupleSousCateg['nom_souscateg']."\n";		*/
+		  //}
+		}
 			
-		return $data;
+		// $data;
 	}
 	
 	// Supprime la catégorie renseigné par l'id

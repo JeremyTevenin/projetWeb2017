@@ -18,7 +18,6 @@ class SousCategorie {
 	
 	// Retourne un tableau des catégories (id + nom)
 	public function getSousCategories() {
-	
 		$query = "SELECT * FROM souscategorie";	
 		$request = $this->_db->prepare($query);
 		$request->execute();
@@ -28,12 +27,10 @@ class SousCategorie {
 	
 	// Retourne la ligne de la sous-catégorie
 	public function getSousCategorie($id) {
-	
 		$query = "SELECT * FROM souscategorie WHERE id_categ=$id";	
 		$request = $this->_db->prepare($query);
 		$request->execute();
 				
-		$data = array();
 		$data = $request->fetchAll();
 		
 		return $data;
