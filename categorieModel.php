@@ -52,6 +52,16 @@ class Categorie {
 	}
 	
 	// Supprime la catégorie renseigné par l'id
+	public function ajouterCategorie($id, $nom) {
+		// On change les ' en \' pour que la requête interprête bien le nom de la catégorie
+		$nomcateg = str_replace("'", "\'", $nom);
+
+		$query = "INSERT INTO categorie (id_categ, nom_categ) VALUES('".$id."', '".$nom."')";
+		$request = $this->_db->prepare($query);		
+		$request->execute();						
+	}
+	
+	// Supprime la catégorie renseigné par l'id
 	public function supprimerCategorie($id) {
 		$query = "DELETE FROM categorie WHERE id_categ=$id";
 		$request = $this->_db->prepare($query);		

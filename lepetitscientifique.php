@@ -10,32 +10,66 @@
             include('connect.php');
             include('categorieModel.php');
             include('sousCategorieModel.php');
+            include('articleModel.php');
             include('affichage.php');
             include('header.php');
             include('menu.php');
+
+			$categorie = new Categorie;
+			$souscategorie = new SousCategorie;
+			$article = new Article;
+			
+			$data1 = $categorie->getCategories();
+			$data2 = $souscategorie->getSousCategories();
+			$data3 = $article->getArticles();
+			
+			menu($data1, $data2, $data3);
+			
+			if (isset($_GET['id_categ']) && isset($_GET['nom_categ']) && isset($_GET['insertCateg']) ) {
+				$categorie->ajouterCategorie($_GET['id_categ'], $_GET['nom_categ']);
+			}
+			
+			if (isset($_GET['deleteCateg'])) {
+				$categorie->supprimerCategorie($_GET['deleteCateg']);
+			}
 			
 			
-			menu();
         ?>
 		
 		<section id="article">
 <?php
-			$categorie = new Categorie;
-			$souscategorie = new SousCategorie;
+			
 			if (!isset($_SESSION['mail'])) {
-				echo "Bonojur<br />";
-				        
-				$data1 = $categorie->getCategories();
-				$data2 = $souscategorie->getSousCategories();
+				echo "Bonojur<br />\n";
+				  			
+			} 
+
+			if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
+				echo "			Bonjour ".$_SESSION['mail']."\n";
 				
-				tableauCategorie($data1, $data2);
-				
-				if (isset($_GET['delete'])) {
-					$categorie->supprimerCategorie($_GET['delete']);
+				if (isset($_GET['ajouterCateg'])) {
+					tabAjouteCateg($data1);
 				}
 				
-			} else {
-				echo "Bonjour ".$_SESSION['mail'];
+				if (isset($_GET['modifierCateg'])) {
+					tableauCategorie($data1, $data2);
+				}
+				
+				if (isset($_GET['supprimerCateg'])) {
+					tabSupprimeCateg($data1, $data2);
+				}
+				
+				if (isset($_GET['ajouterSousCateg'])) {
+					tableauCategorie($data1, $data2);
+				}
+				
+				if (isset($_GET['modifierSousCateg'])) {
+					tableauCategorie($data1, $data2);
+				}
+				
+				if (isset($_GET['supprimerSousCateg'])) {
+					tableauCategorie($data1, $data2);
+				}
 			}
 ?>		
 		</section>

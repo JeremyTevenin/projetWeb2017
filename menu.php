@@ -1,6 +1,6 @@
 <?php
 // Fonction qui crée le menu déroulant grâce à des requêtes effectuées sur la base de données MENU
-function menu() {
+function menu2() {
 	include('connect.php');
 		
 	$requeteCateg = "select * FROM categorie";	
@@ -63,13 +63,13 @@ function menu() {
 		echo "					Gérer les catégories\n";
 		echo " 					<ul>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"ajouterCategorie.php\">Ajouter une catégorie</a>\n";
+		echo "							<a href=\"lepetitscientifique?ajouterCateg.php\">Ajouter une catégorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"modifierCategorie.php\">Modifier une catégorie</a>\n";
+		echo "							<a href=\"lepetitscientifique?modifierCateg.php\">Modifier une catégorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"supprimerCategorie.php\">Supprimer une catégorie</a>\n";
+		echo "							<a href=\"lepetitscientifique?supprimerCateg.php\">Supprimer une catégorie</a>\n";
 		echo "						</li>\n";
 		echo "					</ul>\n";
 		echo "				</li>\n";
@@ -77,13 +77,13 @@ function menu() {
 		echo "					Gérer les sous-catégories\n";
 		echo " 					<ul>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"ajouterSousCategorie.php\">Ajouter un sous-menu</a>\n";
+		echo "							<a href=\"lepetitscientifique?ajouterSousCateg.php\">Ajouter une sous-categorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"modifierSousCategorie.php\">Modifier un sous-menu</a>\n";
+		echo "							<a href=\"lepetitscientifique?modifierSousCateg.php\">Modifier une sous-categorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"supprimerSousCategorie.php\">Supprimer une categorie</a>\n";
+		echo "							<a href=\"lepetitscientifique?supprimerSousCateg.php\">Supprimer une sous-categorie</a>\n";
 		echo "						</li>\n";		
 		echo "					</ul>\n";		
 		echo "				</li>\n";
@@ -91,13 +91,13 @@ function menu() {
 		echo "					Gérer les auteurs\n";
 		echo " 					<ul>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"ajouterAuteur.php\">Ajouter un auteur</a>\n";
+		echo "							<a href=\"lepetitscientifique?ajouterAuteur.php\">Ajouter un auteur</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"modifierAuteur.php\">Modifier un auteur</a>\n";
+		echo "							<a href=\"lepetitscientifique?modifierAuteur.php\">Modifier un auteur</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"supprimerAuteur.php\">Supprimer un auteur</a>\n";
+		echo "							<a href=\"lepetitscientifique?supprimerAuteur.php\">Supprimer un auteur</a>\n";
 		echo "						</li>\n";		
 		echo "					</ul>\n";		
 		echo "				</li>\n";
@@ -107,16 +107,16 @@ function menu() {
 		echo "					<a href=\"deconnexion.php\">Se déconnecter</a>\n";
 		echo "				</li>\n";
 		echo " 				<li class=\"more\">\n";
-		echo "					<a href=\"modifierAuteur.php\">Modifier son compte</a>\n";
+		echo "					<a href=\"lepetitscientifique?modifierAuteur.php\">Modifier son compte</a>\n";
 		echo "				</li>\n";
 		echo " 				<li class=\"more\">\n";
-		echo "					<a href=\"ajouterArticle.php\">Ajouter un article</a>\n";
+		echo "					<a href=\"lepetitscientifique?ajouterArticle.php\">Ajouter un article</a>\n";
 		echo "				</li>\n";
 		echo " 				<li class=\"more\">\n";
-		echo "					<a href=\"modifierArticle.php\">Modifier un article</a>\n";
+		echo "					<a href=\"lepetitscientifique?modifierArticle.php\">Modifier un article</a>\n";
 		echo "				</li>\n";
 		echo " 				<li class=\"more\">\n";
-		echo "					<a href=\supprimerArticle.php\">Supprimer un article</a>\n";
+		echo "					<a href=\lepetitscientifique?supprimerArticle.php\">Supprimer un article</a>\n";
 		echo "				</li>\n";
 	} else {
 		echo " 				<li class=\"more\">\n";

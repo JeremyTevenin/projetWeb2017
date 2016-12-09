@@ -22,7 +22,8 @@
 		
 		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur	
 		$query = "SELECT * FROM auteur WHERE mail='$mail'";
-		$request = $dbauteur->query($query);
+		$request = $dbauteur->prepare($query);
+		$request->execute();
 		
 		$lignes = $request->fetchAll();
 		if (count($lignes) >= 1) {

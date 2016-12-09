@@ -1,5 +1,13 @@
 <?php
 	include('connect.php');
+	include('config.php');
+	
+	try {
+		$dbauteur = new PDO('mysql:host='.HOSTNAME.';dbname='.DBAUTEUR, USER, PASSWD);
+	} catch (PDOException $e) {
+		print 'Error!: ' . $e_>getMessage() . '<br/>';
+		die();
+	}
 
 	if (isset($_POST['mailC']) && isset($_POST['passwordC'])) {
 		$mail = $_POST['mailC'];
