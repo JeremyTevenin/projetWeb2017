@@ -25,15 +25,17 @@
 			
 			menu($data1, $data2, $data3);
 			
-			if (isset($_GET['id_categ']) && isset($_GET['nom_categ']) && isset($_GET['insertCateg']) ) {
-				$categorie->ajouterCategorie($_GET['id_categ'], $_GET['nom_categ']);
+			if (isset($_GET['insert_id_categ']) && isset($_GET['insert_nom_categ'])) {
+				$categorie->ajouterCategorie($_GET['insert_id_categ'], $_GET['insert_nom_categ']);
 			}
 			
-			if (isset($_GET['deleteCateg'])) {
-				$categorie->supprimerCategorie($_GET['deleteCateg']);
+			if (isset($_GET['update_nom_categ'])) {
+				$categorie->ajouterCategorie($_GET['insert_id_categ'], $_GET['insert_nom_categ']);
 			}
 			
-			
+			if (isset($_GET['delete_id_categ'])) {
+				$categorie->supprimerCategorie($_GET['delete_id_categ']);
+			}
         ?>
 		
 		<section id="article">
@@ -41,7 +43,7 @@
 			
 			if (!isset($_SESSION['mail'])) {
 				echo "Bonojur<br />\n";
-				  			
+				 //header("Location: lepetitscientifique.php");
 			} 
 
 			if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {

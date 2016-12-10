@@ -4,9 +4,9 @@ function tabAjouteCateg($data1) {
 	echo "				<h1>Ajouter une catégorie</h1>\n";				
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
-	if (isset($_GET['insertCateg'])) {	
+	if (isset($_GET['insert_id_categ']) && isset($_GET['insert_nom_categ'])) {	
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterCateg');\");</script>\n";
-	}
+	}	
 	
 	echo "				<table>\n";
 	
@@ -31,19 +31,20 @@ function tabAjouteCateg($data1) {
 		$dernierId = $tuple['id_categ'] + 1; 
 	}
 	
-	echo "				</table>\n";		
-	echo "				<form action=\"lepetitscientifique.php?ajouterCateg&\" method=\"get\">\n";	
-	echo "					<table>\n";
-	echo "						<tr>\n";
+	echo "				</table>\n";			
+	echo "					<form action=\"lepetitscientifique.php\" method=\"get\">\n";	
+	echo "						<table>\n";
+	echo "							<tr>\n";
 	
 	// Formulaire d'ajout d'un menu, l'utilisateur doit renseigner un id_menu unique et un nom_menu 
-	echo "							<td> $dernierId <input type=\"hidden\" name=\"id_categ\" value=\"$dernierId\">	</td>\n";
-	echo "							<td> <input class=\"saisie\" type=\"text\" name=\"nom_categ\" required=required pattern=\"[-a-zA-Zéèàôöîïç\s]{2,25}\">	</td>\n";
-	echo "						</tr>\n";
-	echo "					</table>\n";
-	echo "					<br /><input name=\"insertCateg\" value=\"Valider\"  type=\"submit\">\n";
-	echo "				</form>\n";
-	echo " 			</section>\n";
+	echo "								<input type=\"hidden\" name=\"ajouterCateg\">\n";
+	echo "								<td> $dernierId <input type=\"hidden\" name=\"insert_id_categ\" value=\"$dernierId\">	</td>\n";
+	echo "								<td> <input class=\"saisie\" type=\"text\" name=\"insert_nom_categ\" required=required pattern=\"[-a-zA-Zéèàôöîïç\s]{2,25}\">	</td>\n";
+	echo "							</tr>\n";
+	echo "						</table>\n";
+	echo "						<br /><input value=\"Valider\" type=\"submit\">\n";
+	echo "					</form>\n";
+	echo " 				</section>\n";
 }
 
 function tabSupprimeCateg($data1, $data2) {
@@ -51,8 +52,8 @@ function tabSupprimeCateg($data1, $data2) {
 	echo "				<h1>Supprimer une catégorie</h1>\n";				
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
-	if (isset($_GET['deleteCateg'])) {		
-	//	echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerCateg');\");</script>\n";
+	if (isset($_GET['delete_id_categ'])) {		
+		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerCateg');\");</script>\n";
 	}
 	
 	if (count($data1) >= 1 ) {
@@ -106,7 +107,7 @@ function tabSupprimeCateg($data1, $data2) {
 			echo "						<td></td>\n";
 			echo "						<td></td>\n";
 			echo "						<td>\n"; 
-			echo "							<a href=\"lepetitscientifique.php?supprimerCateg&deleteCateg=".$tuple['id_categ']."\"> Supprimer </a>\n";
+			echo "							<a href=\"lepetitscientifique.php?supprimerCateg&delete_id_categ=".$tuple['id_categ']."\"> Supprimer </a>\n";
 			echo "						</td>\n";	
 			echo "					</tr>\n";
 		} 
