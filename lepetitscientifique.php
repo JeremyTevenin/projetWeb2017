@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type='text/css' href="style.css">
-	
+		<!-- balise title -->
 	</head>
 	<body>
         <?php
@@ -13,7 +13,6 @@
             include('articleModel.php');
             include('affichage.php');
             include('header.php');
-            include('menu.php');
 
 			$categorie = new Categorie;
 			$souscategorie = new SousCategorie;
@@ -29,12 +28,24 @@
 				$categorie->ajouterCategorie($_GET['insert_id_categ'], $_GET['insert_nom_categ']);
 			}
 			
-			if (isset($_GET['update_nom_categ'])) {
-				$categorie->ajouterCategorie($_GET['insert_id_categ'], $_GET['insert_nom_categ']);
+			if (isset($_GET['update_id_categ']) && isset($_GET['update_nom_categ'])) {
+				$categorie->modifierCategorie($_GET['update_id_categ'], $_GET['update_nom_categ']);
 			}
 			
 			if (isset($_GET['delete_id_categ'])) {
 				$categorie->supprimerCategorie($_GET['delete_id_categ']);
+			}
+			
+			if (isset($_GET['insert_id_categ']) && isset($_GET['insert_id_souscateg']) && isset($_GET['insert_nom_souscateg'])) {
+				$souscategorie->ajouterSousCategorie($_GET['insert_id_categ'], $_GET['insert_id_souscateg'], $_GET['insert_nom_souscateg']);
+			}
+			
+			if (isset($_GET['update_id_souscateg']) && isset($_GET['update_nom_souscateg'])) {
+				$souscategorie->modifierSousCategorie($_GET['update_id_souscateg'], $_GET['update_nom_souscateg']);
+			}
+			
+			if (isset($_GET['delete_id_souscateg'])) {
+				$souscategorie->supprimerSousCategorie($_GET['delete_id_souscateg']);
 			}
         ?>
 		
@@ -43,7 +54,6 @@
 			
 			if (!isset($_SESSION['mail'])) {
 				echo "Bonojur<br />\n";
-				 //header("Location: lepetitscientifique.php");
 			} 
 
 			if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
@@ -54,7 +64,7 @@
 				}
 				
 				if (isset($_GET['modifierCateg'])) {
-					tableauCategorie($data1, $data2);
+					tabModifierCateg($data1);
 				}
 				
 				if (isset($_GET['supprimerCateg'])) {
@@ -62,15 +72,15 @@
 				}
 				
 				if (isset($_GET['ajouterSousCateg'])) {
-					tableauCategorie($data1, $data2);
+					tabAjouteSousCateg($data2, $data1);
 				}
 				
 				if (isset($_GET['modifierSousCateg'])) {
-					tableauCategorie($data1, $data2);
+					tabModifierSousCateg($data2, $data3);
 				}
 				
 				if (isset($_GET['supprimerSousCateg'])) {
-					tableauCategorie($data1, $data2);
+					tabSupprimeSousCateg($data2, $data3);
 				}
 			}
 ?>		
