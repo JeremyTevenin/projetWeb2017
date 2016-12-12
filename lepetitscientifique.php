@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type='text/css' href="style.css">
-		<!-- balise title -->
+		<title>Le petit Scientifique</title>	
 	</head>
 	<body>
         <?php
@@ -11,7 +11,12 @@
             include('categorieModel.php');
             include('sousCategorieModel.php');
             include('articleModel.php');
-            include('affichage.php');
+			
+            include('vueMenu.php');
+            include('vueGestionCateg.php');
+            include('vueGestionSousCateg.php');
+            //include('vueGestionArticle.php');
+			
             include('header.php');
 
 			$categorie = new Categorie;
@@ -76,7 +81,7 @@
 				}
 				
 				if (isset($_GET['modifierSousCateg'])) {
-					tabModifierSousCateg($data2, $data3);
+					tabModifierSousCateg($data2);
 				}
 				
 				if (isset($_GET['supprimerSousCateg'])) {

@@ -22,11 +22,11 @@
 						<legend>Connexion</legend>
 						<!--<p id='valid'></p>-->
 						<label>Email : </label>
-						<input type='email' name='mailC' required='required' id='mailC' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'>
+						<input type='email' name='mailC' autocomplete='off' required='required' id='mailC' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'>
 						<br /><br />	
 							
 						<label>Mot de passe : </label>
-						<input type='password' name='passwordC' id ='passwordC' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
+						<input type='password' name='passwordC' id ='passwordC' autocomplete='off' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
 						<br /><br />		
 								
 						<label></label>		
@@ -46,44 +46,38 @@
 					<fieldset>
 						<legend>Inscription</legend>
 						<label>Nom : </label>
-						<input type='text' name='nom' required='required' id='nom' autocomplete='off' pattern='[-a-zA-Zéèàôöîïç]{3,15}'>
-						<img src="" class="erreurNom" style="display:none" />
+						<input type='text' name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>
+						<img src="" class="erreurNom" style="display:none" alt="" />
 						<span class="erreur"></span>
 						<br /><br />
 
 						<label>Prenom : </label>
-						<input type='text' name='prenom' required='required' id='prenom' autocomplete='off' pattern='[-a-zA-Zéèàôöîïç]{3,15}'>
-						<img src="" class="erreurPrenom" style="display:none" />
+						<input type='text' name='prenom' required='required' id='prenom' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,15}'>
+						<img src="" class="erreurPrenom" style="display:none" alt="" />
 						<span class="erreur"></span>
 						<br /><br />
 						
 						<label>Ville : </label>
-						<input type='text' name='ville' required='required' id='ville' autocomplete='off' pattern='[-a-zA-Zéèàôöîïç\s]{2,25}'>
-						<img src="" class="erreurVille" style="display:none" />
-						<span class="erreur"></span>
-						<br /><br />
-						
-						<label>Date de naissance : </label>
-						<input type='date' name='dateN' required='required' id='dateN' pattern='(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}'>
-						<img src="" class="erreurDN" style="display:none" />
+						<input type='text' name='ville' required='required' id='ville' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,20}'>
+						<img src="" class="erreurVille" style="display:none" alt="" />
 						<span class="erreur"></span>
 						<br /><br />
 						
 						<label>Email : </label>
 						<input type='email' name='mail' required='required' id='mail' autocomplete='off' pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$'>
-						<img src="" class="erreurEmail" style="display:none" />
+						<img src="" class="erreurEmail" style="display:none" alt="" />
 						<span class="erreur"></span>
 						<br /><br />
 						
 						<label>Mot de passe : </label>
 						<input type='password' name='password' id ='password' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
-						<img src="" class="erreurMDP1" style="display:none" />
+						<img src="" class="erreurMDP1" style="display:none" alt="" />
 						<span class="erreur"></span>
 						<br /><br />
 
 						<label>Confirmer le mot de passe : </label>
 						<input type='password' name='password2' id ='password2' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
-						<img src="" class="erreurMDP2" style="display:none" />
+						<img src="" class="erreurMDP2" style="display:none" alt="" />
 						<span class="erreur"></span>
 						<br /><br />
 						

@@ -1,12 +1,12 @@
 <?php
-	include_once('config.php');
+include_once('config.php');
 
-
+// Permet de gérer la base de données de toutes les sous-catégories
 class SousCategorie {
 	
 	private $_db;
-	private $nom_categ;
-	
+
+	// On se connecte à la base MENU
 	public function __construct() 	{		
 		try {
 			$this->_db = new PDO('mysql:host='.HOSTNAME.';dbname='.DBMENU, USER, PASSWD);
@@ -25,7 +25,7 @@ class SousCategorie {
 		return $request->fetchAll();
 	}
 	
-	// Retourne la ligne de la sous-catégorie
+	// Retourne la ligne de la sous-catégorie de l'id renseigné
 	public function getSousCategorie($id) {
 		$query = "SELECT * FROM souscategorie WHERE id_categ=$id";	
 		$request = $this->_db->prepare($query);
@@ -36,39 +36,34 @@ class SousCategorie {
 		return $data;
 	}
 	
-	// Supprime la catégorie renseigné par l'id
+	// Supprime la catégorie renseignée par l'id
 	public function supprimerSousCategorie($id) {
 		$query = "DELETE FROM souscategorie WHERE id_souscateg=$id";
 		$request = $this->_db->prepare($query);		
 		$request->execute();						
 	}
 
-  
 	// Ajoute une sous-catégorie renseigné par un nom et un id_categ
 	public function ajouterSousCategorie($id_categ, $id_souscateg, $nom) {
 		// On change les ' en \' pour que la requête interprête bien le nom de la catégorie
 		$nom = str_replace("'", "\'", $nom);
-
+		$nom = htmlspecialchars($nom);
+		
 		$query = "INSERT INTO souscategorie (id_categ, id_souscateg, nom_souscateg) VALUES('".$id_categ."', '".$id_souscateg."', '".$nom."')";
 		$request = $this->_db->prepare($query);		
 		$request->execute();						
 	}
-		
+
 	// Modifie le nom d'une catégorie en fonction de l'id	
-/*	public function modifierCategorie($id, $nom) {
+	public function modifierSousCategorie($id, $nom) {
 		// On change les ' en \' pour que la requête interprête bien le nom de la catégorie
 		$nom = str_replace( "'", "\'", $nom);
+		$nom = htmlspecialchars($nom);
 
-		$query = "UPDATE categorie SET nom_categ='".$nom."' WHERE id_categ='".$id."'";
+		$query = "UPDATE souscategorie SET nom_souscateg='".$nom."' WHERE id_souscateg='".$id."'";
 		$request = $this->_db->prepare($query);		
 		$request->execute();						
 	}
 	
-	// Supprime la catégorie renseignée par l'id
-	public function supprimerCategorie($id) {
-		$query = "DELETE FROM categorie WHERE id_categ=$id";
-		$request = $this->_db->prepare($query);		
-		$request->execute();						
-	}	*/
 }
 ?>
