@@ -1,6 +1,11 @@
 <?php
 function menu($dataCateg, $dataSousCateg, $dataArticle) {
 	echo " 		<nav class=\"menu\">\n";
+	
+	if (isset($_SESSION['mail'])) {
+		echo "			Bonjour ".$_SESSION['prenom']." ".$_SESSION['nom']."\n";
+	}
+	
 	echo " 			<ul>\n";
 	
 	// Boucle listant toutes les catégories de la base de données
@@ -69,15 +74,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "					</ul>\n";		
 		echo "				</li>\n";
 		echo " 				<li class=\"more\">\n";
-		echo "					Gérer les auteurs\n";
-		echo " 					<ul>\n";
-		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?ajouterAuteur\">Ajouter un auteur</a>\n";
-		echo "						</li>\n";
-		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?supprimerAuteur\">Supprimer un auteur</a>\n";
-		echo "						</li>\n";		
-		echo "					</ul>\n";		
+		echo "					<a href=\"lepetitscientifique?supprimerAuteur\"> Supprimer un auteur</a>\n";	
 		echo "				</li>\n";
 	} else if (isset($_SESSION['mail'])) {
 		echo " 				<li class=\"more\">\n";

@@ -72,12 +72,12 @@ $(function() {
 			testmail = false; 
 		} else if (!$("#mail").val().match(/^[-a-z_.]+\@[a-z]+\.[a-z]{2,3}$/)) {
 			$("#mail").css("border-color", "#ff5b5b"); 
-			$("#mail").next(".erreurEmail").show().attr('src', 'cross.png');
+			$("#mail").next(".erreurEmail").show().attr('src', 'images/cross.png');
 			$(".erreurEmail").next(".erreur").show().text("Adresse non valide");
 			testmail = false;
 		} else {
 			$("#mail").css("border-color", "#00ff00"); 
-			$("#mail").next(".erreurEmail").show().attr('src', 'tick.png');
+			$("#mail").next(".erreurEmail").show().attr('src', 'images/tick.png');
 			$(".erreurEmail").next(".erreur").hide().text("");
 			testMail = true;
 		}
@@ -86,13 +86,13 @@ $(function() {
 	$('#password').keyup(function() {
 		if (!$("#password").val().match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/)) {
 			$("#password").css("border-color", "#ff5b5b");
-			$("#password").next(".erreurMDP1").show().attr('src', 'cross.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/cross.png');
 			$(".erreurMDP1").next(".erreur").show().text("Mot de passe incorrect (6 caractères avec au moins une majuscule et un chiffre)");
 		} else if ($('#password').val() == $('#password2').val()) {
 			$('#password').css("border-color", "#00ff00");
 			$('#password2').css("border-color", "#00ff00");
-			$("#password").next(".erreurMDP1").show().attr('src', 'tick.png');
-			$("#password2").next(".erreurMDP2").show().attr('src', 'tick.png');
+			$("#password").next(".erreurMDP1").show().attr('src', 'images/tick.png');
+			$("#password2").next(".erreurMDP2").show().attr('src', 'images/tick.png');
 			$(".erreurMDP1").next(".erreur").hide().text("");
 			$(".erreurMDP2").next(".erreur").hide().text("");
 			pass = true;

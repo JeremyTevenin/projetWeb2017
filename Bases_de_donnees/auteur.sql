@@ -30,7 +30,7 @@ CREATE TABLE `auteur` (
   `id` int(10) NOT NULL,
   `nom` varchar(20) NOT NULL,
   `prenom` varchar(20) NOT NULL,
-  `ville` varchar(15) CHARACTER SET utf32 NOT NULL,
+  `ville` varchar(15) NOT NULL,
   `mail` varchar(30) NOT NULL,
   `password` varchar(20) NOT NULL,
   `admin` int(11) NOT NULL
