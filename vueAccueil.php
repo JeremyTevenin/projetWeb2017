@@ -40,17 +40,6 @@ function redirection() {
 					</fieldset>
 				</section>
 <?php
-		/*	$options = ['cost' => 10];
-
-			$mdp = "rt";
-			echo password_hash($mdp, PASSWORD_BCRYPT, $options);
-			$p = password_hash($mdp, PASSWORD_BCRYPT, $options);
-			//echo password_hash("Hash00", PASSWORD_BCRYPT, $options);
-			echo"<br />";
-		echo $p;
-		$options = ['cost' => 10];
-		$password = password_hash("test", PASSWORD_BCRYPT, $options);
-	echo $password;*/
 }
 
 function connexion() {

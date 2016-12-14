@@ -110,9 +110,12 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	}
 	
 	if (isset($_GET['supprimerArticle'])) {
-		tabSupprimerArticle();
+		tabSupprimerArticle($data3);
 	}
 
+	if (isset($_GET['delete_id_article'])) {
+		$article->supprimerArticle($_GET['delete_id_article']);
+	}
 }
 
 pied();

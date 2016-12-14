@@ -47,10 +47,10 @@ class Article {
 	}
 	
 	// Supprime la catégorie renseigné par l'id
-	/*public function supprimerSousCategorie($id) {
-		$query = "DELETE FROM souscategorie WHERE id_souscateg=$id";
+	public function supprimerArticle($id) {
+		$query = "DELETE FROM article WHERE id_article=$id";
 		$request = $this->_db->prepare($query);		
 		$request->execute();						
-	}*/
+	}
 }
 ?>
