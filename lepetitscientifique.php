@@ -108,6 +108,11 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	
 		$article->ajouterArticle($_GET['insert_id_souscateg'], $_GET['insert_id_article'], $id, $date, $_GET['insert_nom_article']);
 	}
+	
+	if (isset($_GET['supprimerArticle'])) {
+		tabSupprimerArticle();
+	}
+
 }
 
 pied();
