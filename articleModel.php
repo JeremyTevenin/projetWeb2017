@@ -34,6 +34,18 @@ class Article {
 		return $data;
 	}
 	
+	public function ajouterArticle($idSousCateg, $idArticle, $idAuteur, $date, $nomArticle) {
+		// On change les ' en \' pour que la requête interprête bien le nom de la catégorie
+		$nomArticle = str_replace("'", "\'", $nomArticle);
+		$nomArticle = htmlspecialchars($nomArticle);
+
+		$query = "INSERT INTO article (id_souscateg, id_article, id_auteur, date, nom_article, texte_page, repertoire, url) 
+					VALUES ('".$idSousCateg."', '".$idArticle."', '".$idAuteur."', '".$date."', '".$nomArticle."', '', '', '')";
+		
+		$request = $this->_db->prepare($query);		
+		$request->execute();			
+	}
+	
 	// Supprime la catégorie renseigné par l'id
 	/*public function supprimerSousCategorie($id) {
 		$query = "DELETE FROM souscategorie WHERE id_souscateg=$id";

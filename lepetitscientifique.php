@@ -10,7 +10,7 @@ include('auteurModel.php');
 include('vueMenu.php');
 include('vueGestionCateg.php');
 include('vueGestionSousCateg.php');
-//include('vueGestionArticle.php');
+include('vueGestionArticle.php');
 include('vueGestionAuteur.php');
 
 include('vueLepetitScientifique.php');
@@ -30,10 +30,6 @@ $data3 = $article->getArticles();
 $dataAuteur = $auteur->getAuteurs();
 
 menu($data1, $data2, $data3);
-
-
-
-
 
 contenu();
 
@@ -100,6 +96,17 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 
 	if (isset($_GET['update_auteur'])) {
 		$auteur->modifierAuteur($_GET['update_auteur'], $_GET['update_password_auteur']);
+	}
+	
+	if (isset($_GET['ajouterArticle'])) {
+		ajouterArticle($data1, $data2, $data3);
+	}
+	
+	if (isset($_GET['insert_id_souscateg']) && isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {
+		$date = date("Y-m-d"); 
+		$id = $_SESSION['id'];
+	
+		$article->ajouterArticle($_GET['insert_id_souscateg'], $_GET['insert_id_article'], $id, $date, $_GET['insert_nom_article']);
 	}
 }
 
