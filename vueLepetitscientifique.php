@@ -1,50 +1,29 @@
 <?php
 function entete() {
-?>
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-        <link rel="stylesheet" type='text/css' href="style.css">
-		<title>Le petit Scientifique</title>	
-	</head>
-	<body>
-		<header>
-			<fieldset>
-				<h2>Le petit scientifique</h2>
-			</fieldset>
-		</header>
-		<form method=\"post\" action=\"creerPage.php\">				
-			<fieldset class="cadre">
-				<h3>Créer une page</h3>
-				<input type="hidden" name="id_page" value="$tuplePage->id_page"/>
-				<label>
-				<textarea name="textarea" id="textarea"></textarea>
-
-					<script type="text/javascript">
-						CKEDITOR.replace( 'textarea' );
-					</script>	
-				</label>
-				<br>
-				<center><input type="submit" name="insertPage" value="Créer la page"/></center>
-			</fieldset>
-		</form>
-			
-<?php
+	echo "<!DOCTYPE HTML>\n";
+	echo "<html>\n";
+	echo "	<head>\n";
+	echo "		<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n";
+	echo "		<script type=\"text/javascript\" src=\"ckeditor/ckeditor.js\"></script>\n";
+	echo "        <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n";
+	echo "		<title>Le petit Scientifique</title>\n";	
+	echo "	</head>\n";
+	echo "	<body>\n";
+	echo "		<header>\n";
+	echo "			<fieldset>\n";
+	echo "				<h2>Le petit scientifique</h2>\n";
+	echo "			</fieldset>\n";
+	echo "		</header>\n";			
 }
 
 function pied() {
-?>
-		</section>
-	</body>
-</html>
-<?php
+	echo "		</section>\n";
+	echo "	</body>\n";
+	echo "</html>\n";
 }
 
 function contenu() {
-?>
-		<section id="article">
-<?php
+	echo "		<section id=\"article\">\n";
 }
 ?>
+
