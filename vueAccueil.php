@@ -7,7 +7,8 @@ function entete() {
 		<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 		<script type="text/javascript" src="script.js"></script>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type='text/css' href="styleAccueil.css">
+        <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script> 
+        <link href="bootstrap/css/styleAccueil.css" rel="stylesheet">
 		<title>Le petit Scientifique</title>
 	</head>
 	<body>
@@ -54,74 +55,63 @@ function redirection() {
 
 function connexion() {
 ?>
-				<section id="connexion">
-					<form method='post' action='accueil.php'>
-						<fieldset>
-							<legend>Connexion</legend>
-							<!--<p id='valid'></p>-->
-							<label>Email : </label>
-							<input type='email' name='mailC' autocomplete='off' required='required' id='mailC' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'>
-							<br /><br />	
-								
-							<label>Mot de passe : </label>
-							<input type='password' name='passwordC' id ='passwordC' autocomplete='off' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
-							<br /><br />		
-									
-							<label></label>		
-							<input type='submit' name='submitC' id='submitC' value='Valider'>
-						</fieldset>
-					</form>
-				</section>
+				<div class="container">
+					<div class="card card-container">
+						<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+						<form class="form-signin" method='post' action='accueil.php'>
+							<input type='email' class="form-control" name='mailC' autocomplete='off' placeholder="Email address" required autofocus id='mailC' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'>	
+							<input type='password' class="form-control" name='passwordC' id ='passwordC' placeholder="Password" autocomplete='off' required pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>	
+							<button class="btn btn-lg btn-primary btn-block btn-signin" type='submit' name='submitC' id='submitC' value='Valider'>Se connecter</button>
+						</form>
+					</div>
+				</div>
 <?php
 }
 
 function inscription() {
 ?>
 				<section id="inscription">
-					<form method='post' action='accueil.php'>
-						<fieldset>
-							<legend>Inscription</legend>
+					<div class="card card-container">
+						<form class="form-signin2" method='post' action='accueil.php'>
 							<label>Nom : </label>
-							<input type='text' name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>
+							<input type='text' class="form-control" name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>
 							<img src="images/cross.png" class="erreurNom" style="display:none" alt="" />
 							<span class="erreur"></span>
-							<br /><br />
+							</br></br>
 
 							<label>Prenom : </label>
-							<input type='text' name='prenom' required='required' id='prenom' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,15}'>
+							<input type='text' class="form-control" name='prenom' required='required' id='prenom' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,15}'>
 							<img src="images/cross.png" class="erreurPrenom" style="display:none" alt="" />
 							<span class="erreur"></span>
-							<br /><br />
+							</br></br>
 							
 							<label>Ville : </label>
-							<input type='text' name='ville' required='required' id='ville' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,20}'>
+							<input type='text' class="form-control" name='ville' required='required' id='ville' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,20}'>
 							<img src="images/cross.png" class="erreurVille" style="display:none" alt="" />
 							<span class="erreur"></span>
-							<br /><br />
+							</br></br>
 							
 							<label>Email : </label>
-							<input type='email' name='mail' required='required' id='mail' autocomplete='off' pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$'>
+							<input type='email' class="form-control" name='mail' required='required' id='mail' autocomplete='off' pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$'>
 							<img src="images/cross.png" class="erreurEmail" style="display:none" alt="" />
 							<span class="erreur"></span>
-							<br /><br />
-							
+							</br></br>
+
 							<label>Mot de passe : </label>
-							<input type='password' name='password' id ='password' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
+							<input type='password' class="form-control" name='password' id ='password' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
 							<img src="images/cross.png" class="erreurMDP1" style="display:none" alt="" />
 							<span class="erreur"></span>
-							<br /><br />
+							</br></br>
 
 							<label>Confirmer le mot de passe : </label>
-							<input type='password' name='password2' id ='password2' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
+							<input type='password' class="form-control" name='password2' id ='password2' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
 							<img src="images/cross.png" class="erreurMDP2" style="display:none" alt="" />
 							<span class="erreur"></span>
-							<br /><br />
+							</br></br>
 							
-							<label></label>
-							<input type='submit' name='submit' id='submit' value='Envoyer'>
-							<br />
-						</fieldset>
-					</form>
+							<button class="btn btn-lg btn-primary btn-block btn-signin" type='submit' name='submit' id='submit' value='Envoyer'>S'inscrire</button>
+						</form>
+					</div>
 				</section>
 <?php
 }

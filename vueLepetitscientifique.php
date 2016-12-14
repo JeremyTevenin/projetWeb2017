@@ -4,10 +4,20 @@ function entete() {
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<title>Le petit Scientifique</title>
+		
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-        <link rel="stylesheet" type='text/css' href="style.css">
-		<title>Le petit Scientifique</title>	
+		<!-- CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />   
+		
+		<link href="test.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		<!--Scripts-->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script> 
+	
 	</head>
 	<body>
 		<header>
