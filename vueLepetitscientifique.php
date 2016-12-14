@@ -15,7 +15,7 @@ function entete() {
 				<h2>Le petit scientifique</h2>
 			</fieldset>
 		</header>
-	<!--	<form method=\"post\" action=\"creerPage.php\">				
+		<form method=\"post\" action=\"creerPage.php\">				
 			<fieldset class="cadre">
 				<h3>Créer une page</h3>
 				<input type="hidden" name="id_page" value="$tuplePage->id_page"/>
@@ -29,7 +29,7 @@ function entete() {
 				<br>
 				<center><input type="submit" name="insertPage" value="Créer la page"/></center>
 			</fieldset>
-		</form>-->
+		</form>
 			
 <?php
 }

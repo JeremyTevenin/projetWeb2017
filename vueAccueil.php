@@ -7,7 +7,7 @@ function entete() {
 		<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
 		<script type="text/javascript" src="script.js"></script>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type='text/css' href="styleAcc.css">
+        <link rel="stylesheet" type='text/css' href="styleAccueil.css">
 		<title>Le petit Scientifique</title>
 	</head>
 	<body>

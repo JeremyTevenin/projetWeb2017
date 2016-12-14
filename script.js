@@ -12,17 +12,22 @@ $(function() {
 			$("#nom").css("border-color", "#ff5b5b");
 			$("#nom").next(".erreurNom").show().attr('src', 'images/cross.png');
 			$(".erreurNom").next(".erreur").show().text("Veuillez saisir votre nom");
-			testNom = false; 
+			testNom = false;
+			$('#submit').attr('disabled', 'true');
 		} else if (!$("#nom").val().match(/^([-A-zÀ-ž\s]){1,20}$/)) {
 			$("#nom").css("border-color", "#ff5b5b"); 
 			$("#nom").next(".erreurNom").show().attr('src', 'images/cross.png');
 			$(".erreurNom").next(".erreur").show().text("Caractère non valide");
 			testNom = false;
+			$('#submit').attr('disabled', 'true');
 		} else {
 			$("#nom").css("border-color", "#00ff00"); 
 			$("#nom").next(".erreurNom").show().attr('src', 'images/tick.png');
 			$(".erreurNom").next(".erreur").hide().text("");
 			testNom = true;
+			if (pass && mail && ville && nom && prenom) { 
+				$('#submit').removeAttr('disabled');
+			}
 		}
 	});
 
@@ -32,16 +37,21 @@ $(function() {
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'images/cross.png');
 			$(".erreurPrenom").next(".erreur").show().text("Veuillez saisir votre prénom");
 			testPrenom = false; 
+			$('#submit').attr('disabled', 'true');
 		} else if (!$("#prenom").val().match(/^([-A-zÀ-ž\s]){1,20}$/)) {
 			$("#prenom").css("border-color", "#ff5b5b");
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'images/cross.png');
 			$(".erreurPrenom").next(".erreur").show().text("Caractère non valide");				
 			testPrenom = false;
+			$('#submit').attr('disabled', 'true');
 		} else {
 			$("#prenom").css("border-color", "#00ff00"); 
 			$("#prenom").next(".erreurPrenom").show().attr('src', 'images/tick.png');
 			$(".erreurPrenom").next(".erreur").hide().text("");
 			testPrenom = true;
+			if (pass && mail && ville && nom && prenom) { 
+				$('#submit').removeAttr('disabled');
+			}
 		}
 	});	
 
@@ -51,16 +61,21 @@ $(function() {
 			$("#ville").next(".erreurVille").show().attr('src', 'images/cross.png');
 			$(".erreurVille").next(".erreur").show().text("Veuillez saisir votre ville");
 			testVille = false; 
+			$('#submit').attr('disabled', 'true');
 		} else if (!$("#ville").val().match(/^([-A-zÀ-ž\s]){1,20}$/)) {
 			$("#ville").css("border-color", "#ff5b5b"); 
 			$("#ville").next(".erreurVille").show().attr('src', 'images/cross.png');
 			$(".erreurVille").next(".erreur").show().text("Caractère non valide");	
 			testVille = false;
+			$('#submit').attr('disabled', 'true');
 		} else {
 			$("#ville").css("border-color", "#00ff00"); 
 			$("#ville").next(".erreurVille").show().attr('src', 'images/tick.png');
 			$(".erreurVille").next(".erreur").hide().text("");
 			testVille = true;
+			if (pass && mail && ville && nom && prenom) { 
+				$('#submit').removeAttr('disabled');
+			}
 		}
 	});	
 
@@ -70,16 +85,21 @@ $(function() {
 			$("#mail").next(".erreurEmail").show().attr('src', 'images/cross.png');
 			$(".erreurEmail").next(".erreur").show().text("Veuillez saisir votre mail");
 			testmail = false; 
+			$('#submit').attr('disabled', 'true');
 		} else if (!$("#mail").val().match(/^[-a-z_.]+\@[a-z]+\.[a-z]{2,3}$/)) {
 			$("#mail").css("border-color", "#ff5b5b"); 
 			$("#mail").next(".erreurEmail").show().attr('src', 'images/cross.png');
 			$(".erreurEmail").next(".erreur").show().text("Adresse non valide");
 			testmail = false;
+			$('#submit').attr('disabled', 'true');
 		} else {
 			$("#mail").css("border-color", "#00ff00"); 
 			$("#mail").next(".erreurEmail").show().attr('src', 'images/tick.png');
 			$(".erreurEmail").next(".erreur").hide().text("");
 			testMail = true;
+			if (pass && mail && ville && nom && prenom) { 
+				$('#submit').removeAttr('disabled');
+			}
 		}
 	});
 
@@ -108,6 +128,7 @@ $(function() {
 			$(".erreurMDP2").next(".erreur").show().text("Le mot de passe n'est pas identique");
 			$('#submit').attr('disabled', 'true');
 			pass = false;
+			$('#submit').attr('disabled', 'true');
 		}
 	});
 
@@ -136,6 +157,7 @@ $(function() {
 			$(".erreurMDP2").next(".erreur").show().text("Le mot de passe n'est pas identique");
 			$('#submit').attr('disabled', 'true');
 			pass = false;
+			$('#submit').attr('disabled', 'true');
 		}
 	});
 });
