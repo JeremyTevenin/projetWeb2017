@@ -55,9 +55,9 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo " 				<li>\n";
 		echo "					<a href=\"deconnexion.php\"><i class=\"fa fa-user fa-lg\"></i> Se déconnecter</a>\n";
 		echo "				</li>\n";	
-		echo " 				<li data-toggle=\"collapse\" data-target=\"#products\" class=\"collapsed\">\n";
+		echo " 				<li data-toggle=\"collapse\" data-target=\"#new\" class=\"collapsed\">\n";
 		echo "					Gérer les catégories<span class=\"arrow\"></span>\n";
-		echo " 					<ul class=\"sub-menu collapse\" id=\"service\">\n";
+		echo " 					<ul class=\"sub-menu collapse\" id=\"new\">\n";
 		echo " 						<li>\n";
 		echo "							<a href=\"lepetitscientifique?ajouterCateg\">Ajouter une catégorie</a>\n";
 		echo "						</li>\n";
@@ -69,9 +69,9 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "						</li>\n";
 		echo "					</ul>\n";
 		echo "				</li>\n";
-		echo " 				<li data-toggle=\"collapse\" data-target=\"#products\" class=\"collapsed\">\n";
+		echo " 				<li data-toggle=\"collapse\" data-target=\"#new1\" class=\"collapsed\">\n";
 		echo "					Gérer les sous-catégories<span class=\"arrow\"></span>\n";
-		echo " 					<ul class=\"sub-menu collapse\" id=\"service\">\n";
+		echo " 					<ul class=\"sub-menu collapse\" id=\"new1\">\n";
 		echo " 						<li>\n";
 		echo "							<a href=\"lepetitscientifique?ajouterSousCateg\"></i>Ajouter une sous-categorie</a>\n";
 		echo "						</li>\n";
