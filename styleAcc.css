@@ -35,7 +35,7 @@ legend {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	background: url(fond.jpeg) 0px center no-repeat;
+	background: url(images/fond.jpeg) 0px center no-repeat;
 	background-size: cover;
 }
 

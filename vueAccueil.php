@@ -46,10 +46,10 @@ function redirection() {
 			$p = password_hash($mdp, PASSWORD_BCRYPT, $options);
 			//echo password_hash("Hash00", PASSWORD_BCRYPT, $options);
 			echo"<br />";
-		echo $p;*/
+		echo $p;
 		$options = ['cost' => 10];
 		$password = password_hash("test", PASSWORD_BCRYPT, $options);
-	echo $password;
+	echo $password;*/
 }
 
 function connexion() {
@@ -78,7 +78,7 @@ function connexion() {
 function inscription() {
 ?>
 				<section id="inscription">
-					<form method='post' action='inscription_confirm.php'>
+					<form method='post' action='accueil.php'>
 						<fieldset>
 							<legend>Inscription</legend>
 							<label>Nom : </label>

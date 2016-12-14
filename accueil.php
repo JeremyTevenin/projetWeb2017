@@ -29,7 +29,7 @@
 			$password = $_POST['password'];
 			$password2 = $_POST['password2'];
 			
-			$auteur->connexion($nom, $prenom, $ville, $mail, $password, $password2);
+			$auteur->inscription($nom, $prenom, $ville, $mail, $password, $password2);
 		}
 	} else {
 		header('Location: lepetitscientifique.php');

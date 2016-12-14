@@ -42,11 +42,9 @@ class Auteur {
 		$prenom = htmlspecialchars($prenom);
 		$ville = htmlspecialchars($ville);
 		$mail = htmlspecialchars($mail);
+		$password = htmlspecialchars($password);
+		$password2 = htmlspecialchars($password2);
 		
-		$options = ['cost' => 10];
-		$password = password_hash("$password", PASSWORD_BCRYPT, $options);
-		//$password2 = password_hash(htmlspecialchars($password2), PASSWORD_BCRYPT, $options);
-			
 		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur	
 		$query = "SELECT * FROM auteur WHERE mail='$mail'";
 		$request = $this->_db->prepare($query);
@@ -59,14 +57,13 @@ class Auteur {
 		}
 		$request->closeCursor();
 		
-		//if ($password == $password2) {
-			
-		//	$password = password_hash($password, PASSWORD_BCRYPT, $options);
-
+		if ($password == $password2) {
+			$options = ['cost' => 10];
+			$password = password_hash("$password", PASSWORD_BCRYPT, $options);
+				
 			$query = 'INSERT INTO auteur (nom, prenom, ville, mail, password, admin) VALUES ("'.$nom.'", "'.$prenom.'", "'.$ville.'", "'.$mail.'", "'.$password.'", 0)';
-			$request = $dbauteur->prepare($query);
+			$request = $this->_db->prepare($query);
 			$request->execute();
-			session_start();
 			session_regenerate_id();
 			
 			$request1 = $this->_db->prepare("SELECT * FROM auteur WHERE mail='$mail'");
@@ -77,12 +74,12 @@ class Auteur {
 			$_SESSION['nom'] = $nom;
 			$_SESSION['prenom'] = $prenom;
 			$_SESSION['mail'] = $mail;
-			$_SESSION['admin'] = $admin;
+			$_SESSION['admin'] = 0;
 		
 			header('Location: lepetitscientifique.php');
-	/*	} else {
+		} else {
 			header('Location: index.php');
-		}*/
+		}
 	}
 		
 	public function connexion($mail, $password) {
@@ -97,8 +94,7 @@ class Auteur {
 			$request1->execute();
 			$name1 = $request1->fetch();
 						
-			//if (password_verify ($password, $name1['password'])) {
-			if ($password == $name1['password']) {
+			if (password_verify($password, $name1['password'])) {
 				session_regenerate_id();
 				$nom = $name1['nom'];
 				$prenom = $name1['prenom'];
@@ -110,17 +106,20 @@ class Auteur {
 				$_SESSION['prenom'] = $prenom;
 				$_SESSION['admin'] = $admin;
 				header ("Location: lepetitscientifique.php");
-			} else {
-				echo 'Vous n\'avez pas rentré les bons identifiants, vous allez etre redirige dans 5 secondes';
-				header ("Refresh: 5;URL=index.php");
-			}
+			} 
+		} else {
+			echo 'Vous n\'avez pas rentré les bons identifiants, vous allez etre redirige dans 5 secondes';
+			header ("Refresh: 5;URL=index.php");
 		}
 	}	
 		
-	// Modifie le nom d'une catégorie
+	// Modifie le mot de passe d'un auteur
 	public function modifierAuteur($id, $password) {
-		$mail = htmlspecialchars($mail);
+		$password = htmlspecialchars($password);
 
+		$options = ['cost' => 10];
+		$password = password_hash("$password", PASSWORD_BCRYPT, $options);
+		
 		$query = "UPDATE auteur SET password='".$password."' WHERE id='".$id."'";
 		$request = $this->_db->prepare($query);		
 		$request->execute();						

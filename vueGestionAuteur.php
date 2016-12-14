@@ -51,11 +51,13 @@ function tabModifierAuteur() {
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?modifierAuteur');\");</script>\n";
 	}
 	
+	echo "			<p>Votre nouveau mot de passe ne doit pas contenir de caractères spéciaux.</p>\n";
+	echo "			<p>Il doit  contenir 6 caractères et posséder au moins une majuscule et un chiffre </p>\n";
 	echo "			<table>\n";
 	echo "				<tr>\n";	
-	echo "					<th> NOM    </th>\n";																	
-	echo "					<th> PRENOM </th>\n";																		
-	echo "					<th> MAIL   </th>\n";																		
+	echo "					<th> NOM                  </th>\n";																	
+	echo "					<th> PRENOM               </th>\n";																		
+	echo "					<th> NOUVEAU MOT DE PASSE </th>\n";																		
 	echo "				</tr>\n";
 	echo "				<tr>\n";
 		
@@ -71,7 +73,7 @@ function tabModifierAuteur() {
 	echo "							".$_SESSION['prenom']."\n";
 	echo "						</td>\n";
 	echo "						<td>\n";
-	echo " 							<input name=\"update_mail_auteur\" value=\"".$_SESSION['mail']."\" required=required  pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$\">\n";
+	echo " 							<input type=\"password\" name=\"update_password_auteur\" value=\"\" required=required  pattern=\"(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$\">\n";
 	echo " 						</td>"; 
 	echo "						<td>\n";
 	echo "							<input value=\"Valider\" type=\"submit\">\n";

@@ -99,7 +99,7 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	}
 
 	if (isset($_GET['update_auteur'])) {
-		$auteur->modifierAuteur($_GET['update_auteur'], $_GET['update_mail_auteur']);
+		$auteur->modifierAuteur($_GET['update_auteur'], $_GET['update_password_auteur']);
 	}
 }
 
