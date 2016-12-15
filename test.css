@@ -56,16 +56,6 @@ h2 {
 /* -------------------- */
 /* Gestion des sections */
 /* -------------------- */
-.centre {
-	text-align: center;
-	margin-top: 10px;
-	display: block;
-	margin-bottom: 60px;
-}
-
-.centre table {
-	margin: 10px auto auto auto;
-}
 
 .centre td, th, tr {
 	width: 120px;
@@ -109,6 +99,9 @@ thead {
     border: 1px solid #ccc;
     padding: 5px;
     margin: 5% 0;
+    right:30px;
+    top:150px;
+    top:330px;
     box-shadow: 3px 3px 2px #ccc;
     transition: 0.5s;
     }

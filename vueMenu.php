@@ -47,6 +47,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 			}
 		}	
 		echo " 					</ul>\n";
+		
 	}
 	
 	// Menu de l'administrateur qui lui permet de gérer le contenu du site
@@ -88,14 +89,19 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo " 				<li>\n";
 		echo "					<a href=\"lepetitscientifique?modifierAuteur\"><i class=\"fa fa-user fa-lg\"></i>Modifier son compte</a>\n";
 		echo "				</li>\n";
-		echo " 				<li>\n";
-		echo "					<a href=\"lepetitscientifique?ajouterArticle\"><i class=\"fa fa-user fa-lg\"></i>Ajouter un article</a>\n";
-		echo "				</li>\n";
-		echo " 				<li>\n";
-		echo "					<a href=\"lepetitscientifique?modifierArticle\"><i class=\"fa fa-user fa-lg\"></i>Modifier un article</a>\n";
-		echo "				</li>\n";
-		echo " 				<li>\n";
-		echo "					<a href=\"lepetitscientifique?supprimerArticle\"><i class=\"fa fa-user fa-lg\"></i>Supprimer un article</a>\n";
+		echo " 				<li data-toggle=\"collapse\" data-target=\"#new2\" class=\"collapsed \">\n";
+		echo "					Gérer les articles<span class=\"arrow\"></span>\n";
+		echo " 					<ul class=\"sub-menu collapse\" id=\"new2\">\n";		
+		echo " 						<li>\n";
+		echo "							<a href=\"lepetitscientifique?ajouterArticle\">Ajouter un article</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"lepetitscientifique?modifierArticle\"></i>Modifier un article</a>\n";
+		echo "						</li>\n";
+		echo " 						<li>\n";
+		echo "							<a href=\"lepetitscientifique?supprimerArticle\"></i>Supprimer un article</a>\n";
+		echo "						</li>\n";
+		echo "					</ul>\n";
 		echo "				</li>\n";
 	} else {
 		echo " 				<li>\n";
