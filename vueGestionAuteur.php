@@ -1,14 +1,14 @@
 <?php
 function tabSupprimeAuteur($data) {
-	echo " 			<section class=\"centre\">\n";
-	echo "				<h1>Supprimer un auteur</h1>\n";				
+	echo " 			<div class=\"row col-md-6 col-md-offset-2 custyle\">\n";
+	//echo "				<h1>Supprimer un auteur</h1>\n";				
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
 	if (isset($_GET['delete_auteur'])) {		
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerAuteur');\");</script>\n";
 	}
 	
-	echo "				<table>\n";
+	echo "				<table class=\"table table-striped custab\">\n";
 	
 	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
 	if (count($data) >= 1) {		
@@ -43,7 +43,7 @@ function tabSupprimeAuteur($data) {
 }
 
 function tabModifierAuteur() {
-	echo " 		<section class=\"centre\">\n";
+	echo " 			<div class=\"row col-md-6 col-md-offset-2 custyle\">\n";
 	echo "			<h1>Modifier son compte</h1>\n";	
 	
 	// Vérifie si on a envoyé le formulaire de modification d'un menu
@@ -53,7 +53,7 @@ function tabModifierAuteur() {
 	
 	echo "			<p>Votre nouveau mot de passe ne doit pas contenir de caractères spéciaux.</p>\n";
 	echo "			<p>Il doit  contenir 6 caractères et posséder au moins une majuscule et un chiffre </p>\n";
-	echo "			<table>\n";
+	echo "			<table class=\"table table-striped custab\">\n";
 	echo "				<tr>\n";	
 	echo "					<th> NOM                  </th>\n";																	
 	echo "					<th> PRENOM               </th>\n";																		
@@ -81,6 +81,6 @@ function tabModifierAuteur() {
 	echo "					</form>";
 	echo "				</tr>\n";				
 	echo "			</table>\n";					
-	echo " 		</section>\n";
+	echo " 		</div>\n";
 }
 ?>

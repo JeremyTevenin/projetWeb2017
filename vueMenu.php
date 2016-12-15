@@ -18,35 +18,39 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "				</li>\n";
 	
 	// Boucle listant toutes les catégories de la base de données
+	$cpt = 0;
+	$cpt1 = 0;
+	$cpt2 = 0;
 	foreach($dataCateg as $nomCateg) {
-		echo " 				<li data-toggle=\"collapse\" data-target=\"#products\" class=\"collapsed\">\n";
+		$cpt = $cpt+1;
+		echo " 				<li data-toggle=\"collapse\" data-target=\"#categ".$cpt."\" class=\"collapsed\">\n";
 		echo "					".$nomCateg['nom_categ']." <span class=\"arrow\"></span>\n";
-		echo "				</li>\n";
-		echo "				<ul class=\"sub-menu collapse\" id=\"products\">\n";
+		echo " 				</li>\n";
+		echo "					<ul class=\"sub-menu collapse\" id=\"categ".$cpt."\">\n";
+
 					
 		// Boucle listant toutes les sous-catégories de la base de données
 		foreach($dataSousCateg as $nomSousCateg) {
+			$cpt1 = $cpt1+1;
 			if ($nomCateg['id_categ'] == $nomSousCateg['id_categ']) {	
-				echo "						<li data-toggle=\"collapse\" data-target=\"#service\" class=\"collapsed\">\n";
+				echo "						<li data-toggle=\"collapse\" data-target=\"#souscateg".$cpt1."\" class=\"collapsed\">\n";
 				echo "						".$nomSousCateg['nom_souscateg']."\n";
 				echo "						</li>\n";
-				echo "						<ul class=\"sub-menu collapse\" id=\"service\">\n";
-									
+				echo "							<ul class=\"sub-sub-menu collapse\" id=\"souscateg".$cpt1."\">\n";
+								
 				// Boucle listant tous les articles d'une sous-catégorie
 				foreach($dataArticle as $nomArticle) {
+				$cpt2 = $cpt2+1;
 					if ($nomSousCateg['id_souscateg'] == $nomArticle['id_souscateg']) {	
-						echo "								<li data-toggle=\"collapse\" data-target=\"#new\" class=\"collapsed \">\n";
-						echo "									<form name=\"recup\" method=\"get\" action=\"".$nomArticle['url']."\">\n";
-						echo "										<input type=\"hidden\" name=\"id_article\" value=\"".$nomArticle['id_article']."\" />\n";
+						echo "						<li data-toggle=\"collapse\" data-target=\"#article".$cpt2."\" class=\"collapsed \">\n";
 						// Page accessible grâce à une redirection vers celle ci en cliquant
-						echo "										<a href=\"".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
-						echo "									</form>\n";
-						echo "								</li>\n";	
+						echo "							<a href=\"".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
+						echo "						</li>\n";	
 					}
 				}
 				echo "							</ul>\n";
 			}
-		}		
+		}	
 		echo " 					</ul>\n";
 	}
 	
@@ -55,7 +59,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo " 				<li>\n";
 		echo "					<a href=\"deconnexion.php\"><i class=\"fa fa-user fa-lg\"></i> Se déconnecter</a>\n";
 		echo "				</li>\n";	
-		echo " 				<li data-toggle=\"collapse\" data-target=\"#new\" class=\"collapsed\">\n";
+		echo " 				<li data-toggle=\"collapse\" data-target=\"#new\" class=\"collapsed \">\n";
 		echo "					Gérer les catégories<span class=\"arrow\"></span>\n";
 		echo " 					<ul class=\"sub-menu collapse\" id=\"new\">\n";
 		echo " 						<li>\n";
@@ -69,7 +73,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "						</li>\n";
 		echo "					</ul>\n";
 		echo "				</li>\n";
-		echo " 				<li data-toggle=\"collapse\" data-target=\"#new1\" class=\"collapsed\">\n";
+		echo " 				<li data-toggle=\"collapse\" data-target=\"#new1\" class=\"collapsed \">\n";
 		echo "					Gérer les sous-catégories<span class=\"arrow\"></span>\n";
 		echo " 					<ul class=\"sub-menu collapse\" id=\"new1\">\n";
 		echo " 						<li>\n";

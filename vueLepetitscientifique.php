@@ -21,9 +21,7 @@ function entete() {
 	</head>
 	<body>
 		<header>
-			<fieldset>
 				<h2>Le petit scientifique</h2>
-			</fieldset>
 		</header>		
 <?php
 }

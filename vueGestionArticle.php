@@ -19,7 +19,6 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "on va pouvoir créer l'article";
 		?>
 		<form method=\"post\" action=\"creerPage.php\">				
-	<fieldset class="cadre">
 		<h3>Créer une page</h3>
 		<input type="hidden" name="id_page" value="$tuplePage->id_page"/>
 		<label>
@@ -31,7 +30,6 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		</label>
 		<br>
 		<center><input type="submit" name="insertPage" value="Créer la page"/></center>
-	</fieldset>
 </form><?php
 		
 	} else {
@@ -40,12 +38,13 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 			echo "<p><strong>Erreur ! Ce nom est déjà utilisé pour une autre page. Veuillez choisir un autre nom pour votre page</strong><br>\n";					 
 		}
 	
-		echo "				<table>\n";	
-		echo "					<tr>\n";	
-		echo "						<th> ID + NOM CATEGORIE      </th>\n";	
-		echo "						<th> ID + NOM SOUS-CATEGORIE </th>\n";									
-		echo "						<th> NOM ARTICLE             </th>\n";									
-		echo "					</tr>\n";
+		echo "			<div class=\"row col-md-6 col-md-offset-2 custyle\">\n";	
+		echo "				<table class=\"table table-striped custab\">\n";	
+		echo "					<thead>\n";	
+		echo "						<tr> ID + NOM CATEGORIE      </tr>\n";	
+		echo "						<tr> ID + NOM SOUS-CATEGORIE </tr>\n";									
+		echo "						<tr> NOM ARTICLE             </tr>\n";									
+		echo "					</thead>\n";
 		
 		foreach($dataCateg as $tuple) {	
 			echo "					<tr>\n";
@@ -98,12 +97,12 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 			
 		echo "				</table>\n";			
 		echo "					<form action=\"lepetitscientifique\" method=\"get\">\n";	
-		echo "					<table>\n";
-		echo "					<tr>\n";	
-		echo "						<th> NOM SOUS-CATEGORIE </th>\n";	
-		echo "						<th> ID ARTICLE 	    </th>\n";	
-		echo "						<th> NOM ARTICLE	    </th>\n";													
-		echo "					</tr>\n";
+		echo "					<table class=\"table table-striped custab\">\n";
+		echo "					<thead>\n";	
+		echo "						<tr> NOM SOUS-CATEGORIE </tr>\n";	
+		echo "						<tr> ID ARTICLE 	    </tr>\n";	
+		echo "						<tr> NOM ARTICLE	    </tr>\n";													
+		echo "					</thead>\n";
 		echo "						<tr>\n";
 		
 		$nb = $stuple['id_souscateg'];
@@ -127,6 +126,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "						</table>\n";
 		echo "						<br /><input value=\"Valider\" type=\"submit\">\n";
 		echo "					</form>\n";
+		echo "				</div>\n";
 		echo " 				</section>\n";
 	}
 }

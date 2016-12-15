@@ -1,3 +1,125 @@
+/* ----------------------- */
+/* Gestion de bandeau haut */
+/* ----------------------- */
+header {
+	padding: 5px 0px;
+	width: 100%;
+	margin: auto;
+	background-color: #2e353d;
+	color: #e1ffff;
+	line-height: 70px ;
+}
+
+h2 {
+	text-align: center;
+	font-family: verdana;
+	font-size: 28px;
+
+}
+
+
+
+
+
+
+/* -------------------- */
+/* Gestion des articles */
+/* -------------------- */
+#article {
+	background-color: gray;
+	position: absolute;
+	left: 350px;
+	top: 150px;
+	width: 70%;
+}
+
+/* -------------------- */
+/* Gestion des sections */
+/* -------------------- */
+.centre {
+	text-align: center;
+	margin-top: 10px;
+	display: block;
+	margin-bottom: 60px;
+}
+
+.centre table {
+	margin: 10px auto auto auto;
+}
+
+.centre td, th, tr {
+	width: 120px;
+	height: 30px;
+	text-align: center;
+}
+
+.centre td {
+	border: none;
+}
+
+.enLigne {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 80%;
+	height: 100%;
+}
+
+table {
+	left: 250px;
+	top: 150px;
+	font-weight: bold;
+	border: none;
+}
+                      
+th {
+	background-color: silver;
+}
+
+tr:nth-child(2n + 1) {
+	background: #FAFAD2;
+}
+
+tr:nth-child(2n) {
+	background: skyblue;
+}
+
+tr td {
+	border: none;
+}
+
+.saisie {
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 2px;
+	width: 100px;
+}
+
+.lien {
+	text-align: center;
+	margin-top: 20px;
+	display: block;
+	margin-bottom: 60px;
+}
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+
+
+
+
+
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -72,6 +194,7 @@
   border-bottom: 1px solid #23282e;
   margin-left: 0px;
 }
+
 .nav-side-menu ul .sub-menu li:hover,
 .nav-side-menu li .sub-menu li:hover {
   background-color: #020203;
@@ -85,6 +208,38 @@
   padding-right: 10px;
   vertical-align: middle;
 }
+
+.nav-side-menu ul .sub-sub-menu li.active,
+.nav-side-menu li .sub-sub-menu li.active {
+  color: ##b58636;
+}
+.nav-side-menu ul .sub-sub-menu li.active a,
+.nav-side-menu li .sub-sub-menu li.active a {
+  color: ##b58636;
+}
+.nav-side-menu ul .sub-sub-menu li,
+.nav-side-menu li .sub-sub-menu li {
+  background-color: #000000;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e;
+  margin-left: 0px;
+}
+.nav-side-menu ul .sub-sub-menu li:hover,
+.nav-side-menu li .sub-sub-menu li:hover {
+  background-color: #000000;
+}
+.nav-side-menu ul .sub-sub-menu li:before,
+.nav-side-menu li .sub-sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+
+
 .nav-side-menu li {
   padding-left: 0px;
   border-left: 3px solid #2e353d;
@@ -128,12 +283,15 @@
     text-align: center;
   }
   .brand {
-    text-align: left !important;
+    text-align: left;
     font-size: 22px;
     padding-left: 20px;
-    line-height: 50px !important;
+    line-height: 70px ;
   }
 }
+
+
+
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block;

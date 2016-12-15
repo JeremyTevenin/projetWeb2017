@@ -15,9 +15,7 @@ function entete() {
 		<div id="fond">
 			<section id="accueil">
 				<header>
-					<fieldset>
 						<h2>Le petit scientifique</h2>
-					</fieldset>
 				</header>
 			
 <?php
