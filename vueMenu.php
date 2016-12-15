@@ -39,7 +39,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 					if ($nomSousCateg['id_souscateg'] == $nomArticle['id_souscateg']) {	
 						echo "						<li data-toggle=\"collapse\" data-target=\"#article".$cpt2."\" class=\"collapsed \">\n";
 						// Page accessible grâce à une redirection vers celle ci en cliquant
-						echo "							<a href=\"".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
+						echo "							<a href=\"lepetitscientifique?".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
 						echo "						</li>\n";	
 					}
 				}

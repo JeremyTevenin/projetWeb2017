@@ -4,66 +4,22 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 	echo "				<h1>Ajouter un article</h1>\n";				
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
-	if (isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {	
+	if ((isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) ||
+			(isset($_POST['insert_id_article']) && isset($_POST['insert_nom_article']))) {	
 		
 				
-		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur
-		foreach($dataArticle as $atuple) {	
-			if ($_GET['insert_nom_article'] == $atuple['nom_article']) {	
-				// Si le nom de la page est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
-				echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterArticle&erreurNomArticle');\");</script>\n";
-			} 
-		}	
+		if (isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {		
+			// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur
+			foreach($dataArticle as $atuple) {	
+				if ($_GET['insert_nom_article'] == $atuple['nom_article']) {	
+					// Si le nom de la page est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
+					echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterArticle&erreurNomArticle');\");</script>\n";
+				} 
+			}	
+		}
+		echo "<script>alert(".$_POST['creerArticle'].");</script>\n";
 		
 		
-			// Vérifie si on a créé une page
-			if (isset($_GET['creerArticle'])) {		
-				
-				$date = strftime('%A %d %B %Y');
-				$date.setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
-				$date = strftime('%A %d %B %Y');
-				
-				// On crée alors la page 
-				$handle = fopen( "./$tuplePage->repertoire/$tuplePage->url", "c+" );
-																							
-				$nom = $_SESSION['nom'];
-				$prenom = $_SESSION['prenom'];
-				
-				// Avec le texte renseigné dans le questionnaire
-				$texte = $_POST['textarea'];
-			
-				$handleTexte = fopen( "./$tuplePage->repertoire/texte.txt", "c+" );
-				fwrite( $handleTexte, $texte );
-				fclose( $handleTexte );
-
-				$texte = addcslashes( $texte, "\"" );
-								
-				$entetePage = "
-<?php
-	function $repertoire() {			
-		 
-		echo \" 					<h1> $tuplePage->nom_page </h1>\\n\"; 
-		echo \"						$texte\\n\";
-		echo \"						<br>\\n\"; 	";
-								
-					fwrite( $handle, $entetePage );						
-								
-										
-					$piedPage = "
-		echo \" 					<fieldset class='cadrePublication'>\\n\"; 
-		echo \" 						Article écrit par $prenom $nom le $date\\n\"; 
-		echo \" 					</fieldset>\\n\"; 
-		echo \"					</fieldset>\\n\"; 
-		echo \"				</div>\\n\"; 
-		echo \"			</div>\\n\"; 
-	} 
-?> 									";
-					
-					fwrite( $handle, $piedPage );
-					fclose( $handle );			
-					
-					header( "Location: $tuplePage->repertoire/$tuplePage->url" ); 
-			}
 				
 			// Formulaire de création de la page
 			echo " 					<h1> Formulaire de création de la page".$_GET['insert_nom_article']." </h1>\n";
@@ -71,9 +27,15 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 			// Pour ajouter le contenu de la page
 		
 		?>
-			<form method="post" action="lepetitscientifique?creerArticle">				
+			<form method="post" action="creerArticle.php">				
 				<h3>Créer une page</h3>
-				<input type="hidden" name="id_page" value="$tuplePage->id_page"/>
+				<?php
+				$id = $_GET['insert_id_article'];
+				$nom = $_GET['insert_nom_article'];
+				echo "<input type=\"hidden\" name=\"ajouterArticle\" />\n";
+				echo "<input type=\"hidden\" name=\"insert_id_article\" value=\"$id\"/>\n";
+				echo "<input type=\"hidden\" name=\"insert_nom_article\" value=\"$nom\"/>\n";
+					?>
 				<label>
 					<textarea name="textarea" id="textarea"></textarea>
 
@@ -82,7 +44,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 					</script>	
 				</label>
 				<br>
-				<center><input type="submit" name="insertPage" value="Créer la page"/></center>
+				<input type="submit" name="creerArticle" value="Créer la page"/>
 			</form><?php
 		
 	} else {
