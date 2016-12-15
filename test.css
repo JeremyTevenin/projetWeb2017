@@ -8,29 +8,49 @@ header {
 	background-color: #2e353d;
 	color: #e1ffff;
 	line-height: 70px ;
+	position: fixed;
+	z-index: 1;
 }
 
 h2 {
 	text-align: center;
 	font-family: verdana;
 	font-size: 28px;
-
 }
 
+.headerDec {
+	position: fixed;
+	right: 20px;
+	top:0;
+}
 
+/* -------------------- */
+/* Gestion des boutons */
+/* -------------------- */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  border:none;
+}
 
-
-
+.btn-circle:hover {
+  background-color: white;
+}
 
 /* -------------------- */
 /* Gestion des articles */
 /* -------------------- */
 #article {
-	background-color: gray;
 	position: absolute;
-	left: 350px;
-	top: 150px;
-	width: 70%;
+	left: 320px;
+	top: 100px;
+	right: 20px;
+	z-index: 0;
 }
 
 /* -------------------- */
@@ -53,10 +73,6 @@ h2 {
 	text-align: center;
 }
 
-.centre td {
-	border: none;
-}
-
 .enLigne {
 	display: block;
 	margin-top: 10px;
@@ -68,26 +84,13 @@ h2 {
 table {
 	left: 250px;
 	top: 150px;
+	border: none;
+}
+
+thead {
 	font-weight: bold;
-	border: none;
 }
-                      
-th {
-	background-color: silver;
-}
-
-tr:nth-child(2n + 1) {
-	background: #FAFAD2;
-}
-
-tr:nth-child(2n) {
-	background: skyblue;
-}
-
-tr td {
-	border: none;
-}
-
+                     
 .saisie {
 	margin-left: 5px;
 	margin-right: 5px;
@@ -121,13 +124,14 @@ tr td {
 
 
 .nav-side-menu {
+  position: fixed;
   overflow: auto;
   font-family: verdana;
   font-size: 12px;
   font-weight: 200;
   background-color: #2e353d;
   position: fixed;
-  top: 0px;
+  top: 70px;
   width: 300px;
   height: 100%;
   color: #e1ffff;

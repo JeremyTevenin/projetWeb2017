@@ -22,6 +22,14 @@ function entete() {
 	<body>
 		<header>
 				<h2>Le petit scientifique</h2>
+				<div class="headerDec">
+					<?php
+						if (isset($_SESSION['mail'])) {
+							echo "			Bonjour ".$_SESSION['prenom']." ".$_SESSION['nom']."\n";
+							echo "<a href=\"deconnexion.php\"><img width=\"25px\" height=\"25px\" src=\"images/dec.png\"/></a>\n";
+						}
+					?>
+				</div>
 		</header>		
 <?php
 }
