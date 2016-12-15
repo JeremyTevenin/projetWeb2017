@@ -113,7 +113,21 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 		tabSupprimerArticle($data3);
 	}
 
-	if (isset($_GET['delete_id_article'])) {
+	if (isset($_GET['delete_id_article']) && isset($_GET['delete_repertoire'])) {
+		$dirname = $_GET['delete_repertoire'];
+		// On vérifie si le repertoire contenant la page existe
+		if (is_dir($dirname)) {
+			$handle = opendir( "./$dirname" ); // On ouvre ce repertoire
+			// On parcoure son contenu
+			while (( $filename = readdir($handle))) {
+				// On supprime tous les fichiers sauf les fichiers spéciaux
+				if ( $filename != '.' && $filename != '..' && $filename != 'index.php' ) {
+					unlink("$dirname/$filename");
+				}
+			}
+			rmdir($dirname); // Quand tous les fichiers sont supprimer, on supprime le repertoire
+		}	
+		
 		$article->supprimerArticle($_GET['delete_id_article']);
 	}
 }
