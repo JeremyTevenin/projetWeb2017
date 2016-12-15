@@ -161,6 +161,7 @@ function tabSupprimerArticle($dataArticle) {
 	echo "						<tr>\n";	
 	echo "							<th> ID ARTICLE 		</th>\n";	
 	echo "							<th> NOM ARTICLE		</th>\n";																	
+	echo "							<th> SUPPRIMER			</th>\n";																	
 	echo "						</tr>\n";
 	echo "					</thead>\n";
 
@@ -173,8 +174,6 @@ function tabSupprimerArticle($dataArticle) {
 			echo "						<td>\n";
 			echo "							".$tuple['nom_article']."\n";
 			echo "						</td>\n";
-			echo "						<td></td>\n";
-			echo "						<td></td>\n";
 			echo "						<td>\n"; 
 			echo "							<a href=\"lepetitscientifique.php?supprimerArticle&delete_id_article=".$tuple['id_article']."&delete_repertoire=".$tuple['repertoire']."\"><img width=\"25px\" height=\"25px\" src=\"images/supp.png\"/></a>\n";
 			echo "						</td>\n";	
