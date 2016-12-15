@@ -44,7 +44,6 @@ function redirection() {
 
 function connexion() {
 ?>
-				<div class="container">
 					<div class="card card-container">
 						<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
 						<form class="form-signin" method='post' action='accueil.php'>
@@ -55,7 +54,6 @@ function connexion() {
 						<button class="btn btn-lg btn-primary btn-block btn-signin"><a href="lepetitscientifique.php">S'inscrire</a></button>
 						<button class="btn btn-lg btn-primary btn-block btn-signin"><a href="lepetitscientifique.php">Mode invité</a></button>
 					</div>
-				</div>
 <?php
 }
 

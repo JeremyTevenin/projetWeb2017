@@ -52,6 +52,7 @@ h2 {
 #article {
 	background-color:white;
 	position: absolute;
+	overflow:auto;
 	height:80%;
 	left: 380px;
 	top: 150px;
@@ -104,13 +105,17 @@ thead {
 	margin-bottom: 60px;
 }
 
+.custyle{
+    margin-right: 40px;
+    margin-bottom: 140px;
+}
+
 .custab{
     border: 1px solid #ccc;
     padding: 5px;
-    margin: 5% 0;
-    right:80px;
-    top:150px;
-    top:330px;
+    margin-left: 20px;
+    margin-top:50px;
+    overflow:auto;
     box-shadow: 3px 3px 2px #ccc;
     transition: 0.5s;
     }
@@ -146,6 +151,8 @@ thead {
   width: 300px;
   height: 80%;
   color: #e1ffff;
+  border-radius:10px;
+
 }
 .nav-side-menu .brand {
   background-color: #23282e;
