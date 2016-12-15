@@ -4,12 +4,17 @@ function entete() {
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-		<script type="text/javascript" src="script.js"></script>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script> 
-        <link href="bootstrap/css/styleAccueil.css" rel="stylesheet">
 		<title>Le petit Scientifique</title>
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />   
+		
+		<link href="styleAccueil.css" rel="stylesheet">
+		
+		<!--Scripts-->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+		<script src="test.js" type="text/javascript"></script>
+		<script src="script.js" type="text/javascript"></script>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script> 
 	</head>
 	<body>
 		<div id="fond">

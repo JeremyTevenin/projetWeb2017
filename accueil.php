@@ -4,14 +4,13 @@
 	include('auteurModel.php');
 		
 	entete();
-		
+	
 	if (!isset($_SESSION['mail'])) {
 		$auteur = new Auteur;
-	
+		
 		inscription();
 		connexion();
-		redirection();
-		
+			
 		if (isset($_POST['mailC']) && isset($_POST['passwordC'])) {
 			$mail = $_POST['mailC'];
 			$password = $_POST['passwordC'];
