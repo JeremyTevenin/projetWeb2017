@@ -1,12 +1,7 @@
 <?php
 function menu($dataCateg, $dataSousCateg, $dataArticle) {
 	echo " 		<div class=\"nav-side-menu\">\n";
-	echo " 		<div class=\"brand\"> sCims </div>\n";
 	echo "		<i class=\"fa fa-bars fa-2x toggle-btn\" data-toggle=\"collapse\" data-target=\"#menu-content\"></i>\n";
-	
-	if (isset($_SESSION['mail'])) {
-		echo "			Bonjour ".$_SESSION['prenom']." ".$_SESSION['nom']."\n";
-	}
 	
 	echo "		<div class=\"menu-list\">\n";
 	echo " 			<ul id=\"menu-content\" class=\"menu-content collapse out\">\n";
@@ -56,9 +51,6 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 	
 	// Menu de l'administrateur qui lui permet de gérer le contenu du site
 	if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {		
-		echo " 				<li>\n";
-		echo "					<a href=\"deconnexion.php\"><i class=\"fa fa-user fa-lg\"></i> Se déconnecter</a>\n";
-		echo "				</li>\n";	
 		echo " 				<li data-toggle=\"collapse\" data-target=\"#new\" class=\"collapsed \">\n";
 		echo "					Gérer les catégories<span class=\"arrow\"></span>\n";
 		echo " 					<ul class=\"sub-menu collapse\" id=\"new\">\n";
@@ -93,9 +85,6 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "					</li>\n";
 		echo "				</ul>\n";
 	} else if (isset($_SESSION['mail'])) {
-		echo " 				<li>\n";
-		echo "					<a href=\"deconnexion.php\"><i class=\"fa fa-user fa-lg\"></i>Se déconnecter</a>\n";
-		echo "				</li>\n";
 		echo " 				<li>\n";
 		echo "					<a href=\"lepetitscientifique?modifierAuteur\"><i class=\"fa fa-user fa-lg\"></i>Modifier son compte</a>\n";
 		echo "				</li>\n";

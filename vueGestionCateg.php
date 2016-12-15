@@ -1,21 +1,24 @@
 <?php
 function tabAjouteCateg($data1) {
-	echo " 			<section class=\"centre\">\n";
-	echo "				<h1>Ajouter une catégorie</h1>\n";				
+	echo "		<div class=\"container\">\n";
+	echo "			<div class=\"custyle\">\n";
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
 	if (isset($_GET['insert_id_categ']) && isset($_GET['insert_nom_categ'])) {	
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterCateg');\");</script>\n";
 	}	
 	
-	echo "				<table>\n";
+	echo "				<table class=\"table table-striped custab\">\n";
 	
 	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
 	if (count($data1) >= 1) {		
+		echo "				<thead>\n";	
 		echo "					<tr>\n";	
 		echo "						<th> ID CATEGORIE 		</th>\n";	
 		echo "						<th> NOM CATEGORIE		</th>\n";													
+		echo "						<th> AJOUTER		</th>\n";													
 		echo "					</tr>\n";
+		echo "				</thead>\n";
 	}
 	
 	foreach($data1 as $tuple) {	
@@ -26,36 +29,38 @@ function tabAjouteCateg($data1) {
 		echo "						<td>\n";
 		echo "							".$tuple['nom_categ']."\n";
 		echo "						</td>\n";
+		echo "						<td></td>\n";
 		echo "					</tr>\n";
 		
 		$dernierId = $tuple['id_categ'] + 1; 
 	}
 	
-	echo "				</table>\n";			
 	echo "					<form action=\"lepetitscientifique.php\" method=\"get\">\n";	
-	echo "						<table>\n";
 	echo "							<tr>\n";
 	
 	// Formulaire d'ajout d'un menu, l'utilisateur doit renseigner un id_menu unique et un nom_menu 
 	echo "								<input type=\"hidden\" name=\"ajouterCateg\">\n";
 	echo "								<td> $dernierId <input type=\"hidden\" name=\"insert_id_categ\" value=\"$dernierId\">	</td>\n";
 	echo "								<td> <input class=\"saisie\" type=\"text\" name=\"insert_nom_categ\" required=required pattern=\"([-A-z0-9À-ž\s]){3,}\">	</td>\n";
+	echo "								<td> <button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25px\" height=\"25px\" src=\"images/ajout.png\"/></button>	</td>\n";
 	echo "							</tr>\n";
 	echo "						</table>\n";
-	echo "						<br /><input value=\"Valider\" type=\"submit\">\n";
 	echo "					</form>\n";
-	echo " 				</section>\n";
+	echo " 				</div>\n";
+	echo " 			</div>\n";
 }
 
 function tabModifierCateg($data1) {
-	echo " 		<section class=\"centre\">\n";
-	echo "			<h1>Modifier une catégorie</h1>\n";			
-	echo "			<table>\n";
-	echo "				<tr>\n";	
-	echo "					<th> ID CATEGORIE  </th>\n";																	
-	echo "					<th> NOM CATEGORIE </th>\n";																		
-	echo "					<th>               </th>\n";																		
-	echo "				</tr>\n";
+	echo "	<div class=\"container\">\n";
+	echo "		<div class=\"custyle\">\n";
+	echo "			<table class=\"table table-striped custab\">\n";
+	echo "				<thead>\n";	
+	echo "					<tr>\n";	
+	echo "						<th> ID CATEGORIE  </th>\n";																	
+	echo "						<th> NOM CATEGORIE </th>\n";																		
+	echo "						<th> MODIFIER      </th>\n";																		
+	echo "					</tr>\n";
+	echo "				</thead>\n";
 						
 	// Vérifie si on a envoyé le formulaire de modification d'un menu
 	if (isset($_GET['update_id_categ']) && isset($_GET['update_nom_categ'])) {		
@@ -78,7 +83,7 @@ function tabModifierCateg($data1) {
 			echo " 							<input name=\"update_nom_categ\" value=\"".$tuple['nom_categ']."\" required=required pattern=\"([-A-z0-9À-ž\s]){3,}\">\n";
 			echo " 						</td>"; 
 			echo "						<td>\n";
-			echo "							<input value=\"Valider\" type=\"submit\">\n";
+			echo "							<button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25px\" height=\"25px\" src=\"images/val.png\"/></button>\n";
 			echo " 						</td>\n";
 			echo "					</form>";
 		} else {// Si l'utilisateur n'a pas cliqué sur un bouton modifier, on affiche les menus avec un bouton modifier
@@ -89,7 +94,7 @@ function tabModifierCateg($data1) {
 			echo "						".$tuple['nom_categ']."\n";
 			echo "					</td>\n";						
 			echo " 					<td>\n";
-			echo "						<a href=\"lepetitscientifique?modifierCateg&update=".$tuple['id_categ']."\"> modifier </a>\n";
+			echo "						<a href=\"lepetitscientifique?modifierCateg&update=".$tuple['id_categ']."\"><img width=\"25px\" height=\"25px\" src=\"images/modif.png\"/></a>\n";
 			echo "					</td>\n";
 		}
 		
@@ -97,12 +102,13 @@ function tabModifierCateg($data1) {
 	}	
 				
 	echo "			</table>\n";					
-	echo " 		</section>\n";
+	echo " 		</div>\n";
+	echo " 	</div>\n";
 }
 
 function tabSupprimeCateg($data1, $data2) {
-	echo " 			<section class=\"centre\">\n";
-	echo "				<h1>Supprimer une catégorie</h1>\n";				
+	echo "	<div class=\"container\">\n";
+	echo "		<div class=\"custyle\">\n";
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
 	if (isset($_GET['delete_id_categ'])) {		
@@ -113,17 +119,19 @@ function tabSupprimeCateg($data1, $data2) {
 		echo "				<p>Vous ne pouvez supprimer une catégorie que lorsque celle-ci ne possède aucune sous-catégorie.\n";
 	}
 	
-	echo "				<table>\n";
+	echo "			<table class=\"table table-striped custab\">\n";			
 	
 	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
 	if (count($data1) >= 1) {		
+		echo "				<thead>\n";	
 		echo "					<tr>\n";	
 		echo "						<th> ID CATEGORIE 		</th>\n";	
 		echo "						<th> NOM CATEGORIE		</th>\n";	
 		echo "						<th> ID SOUS-CATEGORIE  </th>\n";																		
 		echo "						<th> NOM SOUS-CATEGORIE	</th>\n";																		
-		echo "						<th> </th>\n";																		
+		echo "						<th> SUPPRIMER			</th>\n";																		
 		echo "					</tr>\n";
+		echo "				</thead>\n";
 	}
 	
 	foreach($data1 as $tuple) {	
@@ -160,13 +168,14 @@ function tabSupprimeCateg($data1, $data2) {
 			echo "						<td></td>\n";
 			echo "						<td></td>\n";
 			echo "						<td>\n"; 
-			echo "							<a href=\"lepetitscientifique.php?supprimerCateg&delete_id_categ=".$tuple['id_categ']."\"> Supprimer </a>\n";
+			echo "							<a href=\"lepetitscientifique.php?supprimerCateg&delete_id_categ=".$tuple['id_categ']."\"><img width=\"25px\" height=\"25px\" src=\"images/supp.png\"/></a>\n";
 			echo "						</td>\n";	
 			echo "					</tr>\n";
 		} 
 	}
 	
 	echo "				</table>\n";				
-	echo " 			</section>\n";
+	echo " 			</div>\n";
+	echo " 		</div>\n";
 }
 ?>
