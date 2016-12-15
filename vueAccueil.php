@@ -19,9 +19,6 @@ function entete() {
 	<body>
 		<div id="fond">
 			<section id="accueil">
-				<header>
-						<h2>Le petit scientifique</h2>
-				</header>
 			
 <?php
 }
@@ -55,6 +52,8 @@ function connexion() {
 							<input type='password' class="form-control" name='passwordC' id ='passwordC' placeholder="Password" autocomplete='off' required pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>	
 							<button class="btn btn-lg btn-primary btn-block btn-signin" type='submit' name='submitC' id='submitC' value='Valider'>Se connecter</button>
 						</form>
+						<button class="btn btn-lg btn-primary btn-block btn-signin"><a href="lepetitscientifique.php">S'inscrire</a></button>
+						<button class="btn btn-lg btn-primary btn-block btn-signin"><a href="lepetitscientifique.php">Mode invité</a></button>
 					</div>
 				</div>
 <?php
@@ -63,7 +62,7 @@ function connexion() {
 function inscription() {
 ?>
 				<section id="inscription">
-					<div class="card card-container">
+					<div class="card2 card-container">
 						<form class="form-signin2" method='post' action='accueil.php'>
 							<label>Nom : </label>
 							<input type='text' class="form-control" name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>

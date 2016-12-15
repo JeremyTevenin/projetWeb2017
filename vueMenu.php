@@ -5,7 +5,12 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 	
 	echo "		<div class=\"menu-list\">\n";
 	echo " 			<ul id=\"menu-content\" class=\"menu-content collapse out\">\n";
-	
+			echo " 				<li class=\"brand\">\n";
+						if (isset($_SESSION['mail'])) {
+							echo "			Bonjour ".$_SESSION['prenom']." ".$_SESSION['nom']."\n";
+							echo "<a href=\"deconnexion.php\"><img width=\"25px\" height=\"25px\" src=\"images/dec.png\"/></a>\n";
+						}
+								echo " 				</li>\n";
 		echo " 				<li>\n";
 		echo "					<a href=\"#\">\n";
 		echo "					<i class=\"fa fa-dashboard fa-lg\"></i> Accueil\n";

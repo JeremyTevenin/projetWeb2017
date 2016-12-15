@@ -8,7 +8,7 @@
 	if (!isset($_SESSION['mail'])) {
 		$auteur = new Auteur;
 		
-		inscription();
+		//inscription();
 		connexion();
 			
 		if (isset($_POST['mailC']) && isset($_POST['passwordC'])) {

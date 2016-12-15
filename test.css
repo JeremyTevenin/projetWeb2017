@@ -3,13 +3,17 @@
 /* ----------------------- */
 header {
 	padding: 5px 0px;
-	width: 100%;
+	top:20px;
+	left:80px;
+	right:80px;
 	margin: auto;
-	background-color: #2e353d;
-	color: #e1ffff;
+	background-color: white;
+	color: #2e353d;
+	opacity: 0.50;
 	line-height: 70px ;
 	position: fixed;
 	z-index: 1;
+	border-radius:10px;
 }
 
 h2 {
@@ -46,11 +50,16 @@ h2 {
 /* Gestion des articles */
 /* -------------------- */
 #article {
+	background-color:white;
 	position: absolute;
-	left: 320px;
-	top: 100px;
-	right: 20px;
+	height:80%;
+	left: 380px;
+	top: 150px;
+	right: 80px;
 	z-index: 0;
+	opacity:0.60;
+	border-radius:10px;
+
 }
 
 /* -------------------- */
@@ -72,7 +81,7 @@ h2 {
 }
 
 table {
-	left: 250px;
+	left: 300px;
 	top: 150px;
 	border: none;
 }
@@ -99,7 +108,7 @@ thead {
     border: 1px solid #ccc;
     padding: 5px;
     margin: 5% 0;
-    right:30px;
+    right:80px;
     top:150px;
     top:330px;
     box-shadow: 3px 3px 2px #ccc;
@@ -110,23 +119,32 @@ thead {
     transition: 0.5s;
     }
 
-
+#fond {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: url(images/fond2.jpeg) 0px center no-repeat;
+	background-size: cover;
+}
 
 
 
 
 
 .nav-side-menu {
+  opacity:0.90;
   position: fixed;
   overflow: auto;
   font-family: verdana;
   font-size: 12px;
   font-weight: 200;
-  background-color: #2e353d;
+  background-color: #414b56;
   position: fixed;
-  top: 70px;
+  z-index: 1;
+  left:80px;
+  top: 150px;
   width: 300px;
-  height: 100%;
+  height: 80%;
   color: #e1ffff;
 }
 .nav-side-menu .brand {
@@ -297,4 +315,5 @@ thead {
 body {
   margin: 0px;
   padding: 0px;
+  background: url(images/fond2.jpeg) 0px center no-repeat;
 }

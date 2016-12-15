@@ -12,7 +12,9 @@ header {
 	margin: auto;
 	background-color: white;
 	color: #2e353d;
-	opacity: 0.80;
+	opacity: 0.50;
+	line-height: 70px ;
+
 }
 
 h2 {
@@ -22,16 +24,13 @@ h2 {
 
 }
 
-
-
 #fond {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	background: url(images/fond.jpeg) 0px center no-repeat;
+	background: url(images/fond2.jpeg) 0px center no-repeat;
 	background-size: cover;
 }
-
 
 /* Gestion du lien de redirection */
 #redirection {
@@ -105,6 +104,10 @@ span.erreur {
     cursor: default;
 }
 
+a {
+	color: #F7F7F7;
+}
+
 /*
  * Card component
  */
@@ -113,15 +116,31 @@ span.erreur {
     /* just in case there no content*/
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
-    margin-top: 50px;
+    margin-top: 250px;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 10px;
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    opacity:0.80;
+    opacity:0.60;
+}
+
+.card2 {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin-top: 50px;
+    margin: auto;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 10px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    opacity:0.60;
 }
 
 .profile-img-card {
@@ -232,7 +251,7 @@ span.erreur {
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-    background-color: rgb(12, 97, 33);
+    background-color: rgb(19, 59, 160);
 }
 
 
