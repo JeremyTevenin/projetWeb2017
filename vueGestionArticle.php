@@ -15,20 +15,75 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 			} 
 		}	
 		
-		?>
-		<form method=\"post\" action=\"creerPage.php\">				
-		<h3>Créer une page</h3>
-		<input type="hidden" name="id_page" value="$tuplePage->id_page"/>
-		<label>
-		<textarea name="textarea" id="textarea"></textarea>
+		
+			// Vérifie si on a créé une page
+			if (isset($_GET['creerArticle'])) {		
+				
+				$date = strftime('%A %d %B %Y');
+				$date.setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
+				$date = strftime('%A %d %B %Y');
+				
+				// On crée alors la page 
+				$handle = fopen( "./$tuplePage->repertoire/$tuplePage->url", "c+" );
+																							
+				$nom = $_SESSION['nom'];
+				$prenom = $_SESSION['prenom'];
+				
+				// Avec le texte renseigné dans le questionnaire
+				$texte = $_POST['textarea'];
+			
+				$handleTexte = fopen( "./$tuplePage->repertoire/texte.txt", "c+" );
+				fwrite( $handleTexte, $texte );
+				fclose( $handleTexte );
 
-			<script type="text/javascript">
-				CKEDITOR.replace( 'textarea' );
-			</script>	
-		</label>
-		<br>
-		<center><input type="submit" name="insertPage" value="Créer la page"/></center>
-</form><?php
+				$texte = addcslashes( $texte, "\"" );
+								
+				$entetePage = "
+<?php
+	function $repertoire() {			
+		 
+		echo \" 					<h1> $tuplePage->nom_page </h1>\\n\"; 
+		echo \"						$texte\\n\";
+		echo \"						<br>\\n\"; 	";
+								
+					fwrite( $handle, $entetePage );						
+								
+										
+					$piedPage = "
+		echo \" 					<fieldset class='cadrePublication'>\\n\"; 
+		echo \" 						Article écrit par $prenom $nom le $date\\n\"; 
+		echo \" 					</fieldset>\\n\"; 
+		echo \"					</fieldset>\\n\"; 
+		echo \"				</div>\\n\"; 
+		echo \"			</div>\\n\"; 
+	} 
+?> 									";
+					
+					fwrite( $handle, $piedPage );
+					fclose( $handle );			
+					
+					header( "Location: $tuplePage->repertoire/$tuplePage->url" ); 
+			}
+				
+			// Formulaire de création de la page
+			echo " 					<h1> Formulaire de création de la page".$_GET['insert_nom_article']." </h1>\n";
+							
+			// Pour ajouter le contenu de la page
+		
+		?>
+			<form method="post" action="lepetitscientifique?creerArticle">				
+				<h3>Créer une page</h3>
+				<input type="hidden" name="id_page" value="$tuplePage->id_page"/>
+				<label>
+					<textarea name="textarea" id="textarea"></textarea>
+
+					<script type="text/javascript">
+						CKEDITOR.replace( 'textarea' );
+					</script>	
+				</label>
+				<br>
+				<center><input type="submit" name="insertPage" value="Créer la page"/></center>
+			</form><?php
 		
 	} else {
 	
@@ -119,7 +174,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		
 		//<input type=\"number\" min=\"1\" max=\"$nb\" name=\"insert_id_categ\" required=required> 	</td>\n";
 		echo "								<td> $dernierId <input type=\"hidden\" name=\"insert_id_article\" value=\"$dernierId\">	</td>\n";
-		echo "								<td> <input type=\"text\" name=\"insert_nom_article\" required=required pattern=\"([-A-z0-9À-ž\s]){3,}\"></td>\n";
+		echo "								<td> <input type=\"text\" name=\"insert_nom_article\" required=required pattern=\"([\'-A-z0-9À-ž\s]){3,}\"></td>\n";
 		echo "							</tr>\n";
 		echo "						</table>\n";
 		echo "						<br /><input value=\"Valider\" type=\"submit\">\n";
@@ -134,7 +189,7 @@ function tabSupprimerArticle($dataArticle) {
 	echo "				<h1>Supprimer un article</h1>\n";				
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
-	if (isset($_GET['delete_id_article'])) {		
+	if (isset($_GET['delete_id_article']) && isset($_GET['delete_repertoire'])) {		
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerArticle');\");</script>\n";
 	}
 
@@ -156,7 +211,7 @@ function tabSupprimerArticle($dataArticle) {
 			echo "						<td></td>\n";
 			echo "						<td></td>\n";
 			echo "						<td>\n"; 
-			echo "							<a href=\"lepetitscientifique.php?supprimerArticle&delete_id_article=".$tuple['id_article']."\"> Supprimer </a>\n";
+			echo "							<a href=\"lepetitscientifique.php?supprimerArticle&delete_id_article=".$tuple['id_article']."&delete_repertoire=".$tuple['repertoire']."\"> Supprimer </a>\n";
 			echo "						</td>\n";	
 			echo "					</tr>\n";
 		}
