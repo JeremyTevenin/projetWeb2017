@@ -13,10 +13,8 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 				// Si le nom de la page est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
 				echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterArticle&erreurNomArticle');\");</script>\n";
 			} 
-				//echo "<script> window.setTimeout(\"location=('lepetitscientifique?creerArticle');\");</script>\n";
 		}	
 		
-		echo "on va pouvoir créer l'article";
 		?>
 		<form method=\"post\" action=\"creerPage.php\">				
 		<h3>Créer une page</h3>
@@ -130,4 +128,42 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		echo " 				</section>\n";
 	}
 }
+
+function tabSupprimerArticle($dataArticle) {
+	echo " 			<section class=\"centre\">\n";
+	echo "				<h1>Supprimer un article</h1>\n";				
+									
+	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
+	if (isset($_GET['delete_id_article'])) {		
+		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerArticle');\");</script>\n";
+	}
+
+	echo "				<table>\n";
+	echo "					<tr>\n";	
+	echo "						<th> ID ARTICLE 		</th>\n";	
+	echo "						<th> NOM ARTICLE		</th>\n";																	
+	echo "					</tr>\n";
+
+	foreach($dataArticle as $tuple) {	
+		if ($tuple['id_auteur'] == $_SESSION['id']) {
+			echo "					<tr>\n";
+			echo "						<td>\n";
+			echo "							".$tuple['id_article']."\n";
+			echo "						</td>\n";
+			echo "						<td>\n";
+			echo "							".$tuple['nom_article']."\n";
+			echo "						</td>\n";
+			echo "						<td></td>\n";
+			echo "						<td></td>\n";
+			echo "						<td>\n"; 
+			echo "							<a href=\"lepetitscientifique.php?supprimerArticle&delete_id_article=".$tuple['id_article']."\"> Supprimer </a>\n";
+			echo "						</td>\n";	
+			echo "					</tr>\n";
+		}
+	}
+	
+	echo "				</table>\n";				
+	echo " 			</section>\n";
+}
 ?>
+
