@@ -6,7 +6,6 @@ function tabSupprimeAuteur($data) {
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerAuteur');\");</script>\n";
 	}
 	
-	echo "		<div class=\"container\">\n";
 	echo "			<div class=\"custyle\">\n";
 	echo "				<table class=\"table table-striped custab\">\n";
 	
@@ -43,11 +42,9 @@ function tabSupprimeAuteur($data) {
 	
 	echo "				</table>\n";				
 	echo " 			</div>\n";
-	echo " 		</div>\n";
 }
 
 function tabModifierAuteur() {
-	echo "		<div class=\"container\">\n";
 	echo "			<div class=\"custyle\">\n";
 	
 	// Vérifie si on a envoyé le formulaire de modification d'un menu
@@ -89,6 +86,5 @@ function tabModifierAuteur() {
 	echo "					</tr>\n";				
 	echo "				</table>\n";					
 	echo " 			</div>\n";
-	echo " 		</div>\n";
 }
 ?>

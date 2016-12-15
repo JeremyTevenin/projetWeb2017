@@ -1,6 +1,5 @@
 <?php
 function tabAjouteSousCateg($data1, $nomCateg) {
-	echo "		<div class=\"container\">\n";
 	echo "			<div class=\"custyle\">\n";			
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
@@ -66,11 +65,10 @@ function tabAjouteSousCateg($data1, $nomCateg) {
 	echo "							</tr>\n";
 	echo "						</table>\n";
 	echo "					</form>\n";
-	echo " 				</section>\n";
+	echo " 				</div>\n";
 }
 
 function tabModifierSousCateg($data1) {
-	echo "	<div class=\"container\">\n";
 	echo "		<div class=\"custyle\">\n";
 	echo "			<table class=\"table table-striped custab\">\n";
 	echo "				<thead>\n";	
@@ -122,11 +120,9 @@ function tabModifierSousCateg($data1) {
 				
 	echo "			</table>\n";					
 	echo " 		</div>\n";
-	echo " 	</div>\n";
 }
 
 function tabSupprimeSousCateg($data1, $data2) {
-	echo "	<div class=\"container\">\n";
 	echo "		<div class=\"custyle\">\n";			
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
@@ -194,6 +190,6 @@ function tabSupprimeSousCateg($data1, $data2) {
 	}
 	
 	echo "				</table>\n";				
-	echo " 			</section>\n";
+	echo " 			</div>\n";
 }
 ?>
