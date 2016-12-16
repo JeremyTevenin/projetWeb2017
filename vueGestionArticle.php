@@ -21,7 +21,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		
 				
 			// Formulaire de création de la page
-			echo " 					<h1> Formulaire de création de la page".$_GET['insert_nom_article']." </h1>\n";
+			echo " 					<h1> Formulaire de création de la page ".$_GET['insert_nom_article']." </h1>\n";
 							
 			// Pour ajouter le contenu de la page
 		

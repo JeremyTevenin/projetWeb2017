@@ -12,7 +12,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 						}
 								echo " 				</li>\n";
 		echo " 				<li>\n";
-		echo "					<a href=\"#\">\n";
+		echo "					<a class=\"block\" href=\"lepetitscientifique.php\">\n";
 		echo "					<i class=\"fa fa-dashboard fa-lg\"></i> Accueil\n";
 		echo "					</a>\n";
 		echo "				</li>\n";
@@ -44,7 +44,7 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 					if ($nomSousCateg['id_souscateg'] == $nomArticle['id_souscateg']) {	
 						echo "						<li data-toggle=\"collapse\" data-target=\"#article".$cpt2."\" class=\"collapsed \">\n";
 						// Page accessible grâce à une redirection vers celle ci en cliquant
-						echo "							<a href=\"lepetitscientifique?".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
+						echo "							<a class=\"block\" href=\"lepetitscientifique?".$nomArticle['repertoire']."/".$nomArticle['url']."\" onClick=\"recup.submit();\">".$nomArticle['nom_article']."</a>\n";
 						echo "						</li>\n";	
 					}
 				}
@@ -61,13 +61,13 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "					Gérer les catégories<span class=\"arrow\"></span>\n";
 		echo " 					<ul class=\"sub-menu collapse\" id=\"new\">\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?ajouterCateg\">Ajouter une catégorie</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?ajouterCateg\">Ajouter une catégorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?modifierCateg\">Modifier une catégorie</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?modifierCateg\">Modifier une catégorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?supprimerCateg\">Supprimer une catégorie</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?supprimerCateg\">Supprimer une catégorie</a>\n";
 		echo "						</li>\n";
 		echo "					</ul>\n";
 		echo "				</li>\n";
@@ -75,13 +75,13 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "					Gérer les sous-catégories<span class=\"arrow\"></span>\n";
 		echo " 					<ul class=\"sub-menu collapse\" id=\"new1\">\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?ajouterSousCateg\"></i>Ajouter une sous-categorie</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?ajouterSousCateg\"></i>Ajouter une sous-categorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?modifierSousCateg\">Modifier une sous-categorie</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?modifierSousCateg\">Modifier une sous-categorie</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?supprimerSousCateg\">Supprimer une sous-categorie</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?supprimerSousCateg\">Supprimer une sous-categorie</a>\n";
 		echo "						</li>\n";		
 		echo "					</ul>\n";		
 		echo "				</li>\n";
@@ -92,25 +92,25 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "				</ul>\n";
 	} else if (isset($_SESSION['mail'])) {
 		echo " 				<li>\n";
-		echo "					<a href=\"lepetitscientifique?modifierAuteur\"><i class=\"fa fa-user fa-lg\"></i>Modifier son compte</a>\n";
+		echo "					<a class=\"block\" href=\"lepetitscientifique?modifierAuteur\"><i class=\"fa fa-user fa-lg\"></i>Modifier son compte</a>\n";
 		echo "				</li>\n";
 		echo " 				<li data-toggle=\"collapse\" data-target=\"#new2\" class=\"collapsed \">\n";
 		echo "					Gérer les articles<span class=\"arrow\"></span>\n";
 		echo " 					<ul class=\"sub-menu collapse\" id=\"new2\">\n";		
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?ajouterArticle\">Ajouter un article</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?ajouterArticle\">Ajouter un article</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?modifierArticle\"></i>Modifier un article</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?modifierArticle\"></i>Modifier un article</a>\n";
 		echo "						</li>\n";
 		echo " 						<li>\n";
-		echo "							<a href=\"lepetitscientifique?supprimerArticle\"></i>Supprimer un article</a>\n";
+		echo "							<a class=\"block\" href=\"lepetitscientifique?supprimerArticle\"></i>Supprimer un article</a>\n";
 		echo "						</li>\n";
 		echo "					</ul>\n";
 		echo "				</li>\n";
 	} else {
 		echo " 				<li>\n";
-		echo "					<a href=\"accueil.php\"><i class=\"fa fa-user fa-lg\"></i>S'incrire/Se connecter</a>\n";
+		echo "					<a class=\"block\" href=\"accueil.php\"><i class=\"fa fa-user fa-lg\"></i>S'incrire/Se connecter</a>\n";
 		echo "				</li>\n";
 	}
 	

@@ -22,7 +22,7 @@ function entete() {
 	<body>
 		<div id="fond">
 		<header>
-				<h2>Le petit scientifique</h2>
+				<h2>LE PETIT SCIENTIFIQUE</h2>
 				<div class="headerDec">
 
 				</div>
