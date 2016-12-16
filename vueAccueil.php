@@ -51,7 +51,7 @@ function connexion() {
 							<input type='password' class="form-control" name='passwordC' id ='passwordC' placeholder="Password" autocomplete='off' required pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>	
 							<button class="btn btn-lg btn-primary btn-block btn-signin" type='submit' name='submitC' id='submitC' value='Valider'>Se connecter</button>
 						</form>
-						<a href="accueil?inscription" class="btn btn-lg btn-primary btn-block btn-signin">S'inscrire</a>
+						<a href="accueil?inscription" class="btn btn-lg btn-block btn-signin">S'inscrire</a>
 						<a href="lepetitscientifique.php" class="btn btn-lg btn-primary btn-block btn-signin">Mode invité</a>
 					</div>
 <?php
