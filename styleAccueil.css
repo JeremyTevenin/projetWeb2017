@@ -110,6 +110,7 @@ a {
 
 a:hover {
 	color: #F7F7F7;
+	text-decoration: none;
 }
 
 /*

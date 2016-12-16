@@ -110,7 +110,10 @@ function menu($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "				</li>\n";
 	} else {
 		echo " 				<li>\n";
-		echo "					<a class=\"block\" href=\"accueil.php\"><i class=\"fa fa-user fa-lg\"></i>S'incrire/Se connecter</a>\n";
+		echo "					<a class=\"block\" href=\"accueil?inscription\"><i class=\"fa fa-user fa-lg\"></i>S'incrire</a>\n";
+		echo "				</li>\n";
+		echo " 				<li>\n";
+		echo "					<a class=\"block\" href=\"accueil?connexion\"><i class=\"fa fa-user fa-lg\"></i>Se connecter</a>\n";
 		echo "				</li>\n";
 	}
 	
