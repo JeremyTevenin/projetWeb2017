@@ -15,6 +15,17 @@ include('vueGestionAuteur.php');
 
 include('vueLepetitScientifique.php');
 
+/*
+$dossierAticle = 'articles';
+$dossier = opendir($cfg);
+while($fichier = readdir($dossier)){
+    if(is_file($cfg.'/'.$fichier) && $fichier !='/' && $fichier !='.' && $fichier != '..'){
+        include $cfg.'/'.$fichier;
+    }
+}
+closedir($dossier);*/
+
+
 entete();
 
 $categorie = new Categorie;
@@ -106,7 +117,20 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 		$date = date("Y-m-d"); 
 		$id = $_SESSION['id'];
 	
-		$article->ajouterArticle($_GET['insert_id_souscateg'], $_GET['insert_id_article'], $id, $date, $_GET['insert_nom_article']);
+		$bool = true;
+	
+		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur
+		foreach($data3 as $atuple) {	
+			if ($_GET['insert_nom_article'] == $atuple['nom_article']) {	
+				$bool = false;
+				// Si le nom de la page est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
+				echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterArticle&erreurNomArticle');\");</script>\n";
+			}
+		}	
+	
+		if ($bool) {
+			$article->ajouterArticle($_GET['insert_id_souscateg'], $_GET['insert_id_article'], $id, $date, $_GET['insert_nom_article']);
+		}
 	}
 	
 	if (isset($_GET['supprimerArticle'])) {
@@ -114,7 +138,7 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	}
 
 	if (isset($_GET['delete_id_article']) && isset($_GET['delete_repertoire'])) {
-		$dirname = $_GET['delete_repertoire'];
+		$dirname = "articles/".$_GET['delete_repertoire'];
 		// On vérifie si le repertoire contenant la page existe
 		if (is_dir($dirname)) {
 			$handle = opendir( "./$dirname" ); // On ouvre ce repertoire

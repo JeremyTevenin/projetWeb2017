@@ -20,7 +20,7 @@ if (isset($_POST['creerArticle'])) {
 	$date = strftime('%A %d %B %Y');
 	
 	// On crée alors la page 
-	$handle = fopen( "./$repertoire/$url", "c+" );
+	$handle = fopen( "./articles/$repertoire/$url", "c+" );
 																				
 	$nom = $_SESSION['nom'];
 	$prenom = $_SESSION['prenom'];
@@ -28,7 +28,7 @@ if (isset($_POST['creerArticle'])) {
 	// Avec le texte renseigné dans le questionnaire
 	$texte = $_POST['textarea'];
 
-	$handleTexte = fopen( "./$repertoire/texte.txt", "c+" );
+	$handleTexte = fopen( "./articles/$repertoire/texte.txt", "c+" );
 	fwrite($handleTexte, $texte);
 	fclose($handleTexte);
 

@@ -2,52 +2,45 @@
 function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 	echo "			<div class=\"custyle\">\n";
 									
-	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
+									
+	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime			
+	if (isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {		
+		
+	}	
+		
 	if ((isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) ||
 			(isset($_POST['insert_id_article']) && isset($_POST['insert_nom_article']))) {	
 		
 				
-		if (isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {		
-			// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur
-			foreach($dataArticle as $atuple) {	
-				if ($_GET['insert_nom_article'] == $atuple['nom_article']) {	
-					// Si le nom de la page est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
-					echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterArticle&erreurNomArticle');\");</script>\n";
-				} 
-			}	
-		}
-		echo "<script>alert(".$_POST['creerArticle'].");</script>\n";
-		
 		
 				
-			// Formulaire de création de la page
-			echo " 					<h1> Formulaire de création de la page ".$_GET['insert_nom_article']." </h1>\n";
-							
-			// Pour ajouter le contenu de la page
+		// Formulaire de création de la page
+		echo " 					<h1> Formulaire de création de la page ".$_GET['insert_nom_article']." </h1>\n";
+						
+		// Pour ajouter le contenu de la page
 		
-		?>
-			<form method="post" action="creerArticle.php">				
-				<h3>Créer une page</h3>
-				<?php
-				$id = $_GET['insert_id_article'];
-				$nom = $_GET['insert_nom_article'];
-				echo "<input type=\"hidden\" name=\"ajouterArticle\" />\n";
-				echo "<input type=\"hidden\" name=\"insert_id_article\" value=\"$id\"/>\n";
-				echo "<input type=\"hidden\" name=\"insert_nom_article\" value=\"$nom\"/>\n";
-					?>
-				<label>
-					<textarea name="textarea" id="textarea"></textarea>
+?>
+		<form method="post" action="creerArticle.php">				
+			<h3>Créer une page</h3>
+			<?php
+			$id = $_GET['insert_id_article'];
+			$nom = $_GET['insert_nom_article'];
+			echo "<input type=\"hidden\" name=\"ajouterArticle\" />\n";
+			echo "<input type=\"hidden\" name=\"insert_id_article\" value=\"$id\"/>\n";
+			echo "<input type=\"hidden\" name=\"insert_nom_article\" value=\"$nom\"/>\n";
+				?>
+			<label>
+				<textarea name="textarea" id="textarea"></textarea>
 
-					<script type="text/javascript">
-						CKEDITOR.replace( 'textarea' );
-					</script>	
-				</label>
-				<br>
-				<input type="submit" name="creerArticle" value="Créer la page"/>
-			</form><?php
-		
+				<script type="text/javascript">
+					CKEDITOR.replace( 'textarea' );
+				</script>	
+			</label>
+			<br>
+			<input type="submit" name="creerArticle" value="Créer la page"/>
+		</form>
+<?php		
 	} else {
-	
 		if (isset($_GET['erreurNomArticle'])) {
 			echo "<p><strong>Erreur ! Ce nom est déjà utilisé pour une autre page. Veuillez choisir un autre nom pour votre page</strong><br>\n";					 
 		}

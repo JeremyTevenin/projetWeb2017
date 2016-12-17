@@ -57,7 +57,7 @@ class Article {
 
 		// Crée un dossier avec pour nom le même que celui de l'url, on vérifie avant que le dossier n'existe pas									
 		if (!is_dir($repertoire)) {
-			mkdir($repertoire, 777, true);
+			mkdir("articles/".$repertoire, 777, true);
 		}
 	}
 	
