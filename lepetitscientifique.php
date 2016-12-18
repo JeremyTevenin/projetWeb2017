@@ -15,15 +15,16 @@ include('vueGestionAuteur.php');
 
 include('vueLepetitScientifique.php');
 
-/*
+
+
 $dossierAticle = 'articles';
-$dossier = opendir($cfg);
+$dossier = opendir($dossierAticle);
 while($fichier = readdir($dossier)){
-    if(is_file($cfg.'/'.$fichier) && $fichier !='/' && $fichier !='.' && $fichier != '..'){
-        include $cfg.'/'.$fichier;
+    if(is_file($dossierAticle.'/'.$fichier) && $fichier !='/' && $fichier !='.' && $fichier != '..'){
+        include $dossierAticle.'/'.$fichier;
     }
 }
-closedir($dossier);*/
+closedir($dossier);
 
 
 entete();
@@ -43,6 +44,11 @@ $dataAuteur = $auteur->getAuteurs();
 menu($data1, $data2, $data3);
 
 contenu();
+
+if (isset($_GET['url'])) {
+	$dossierAticle = 'articles';
+	$dossier = opendir($dossierAticle);
+}
 
 if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {				
 	if (isset($_GET['ajouterCateg'])) {

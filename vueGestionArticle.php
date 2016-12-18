@@ -10,9 +10,6 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		
 	if ((isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) ||
 			(isset($_POST['insert_id_article']) && isset($_POST['insert_nom_article']))) {	
-		
-				
-		
 				
 		// Formulaire de création de la page
 		echo " 					<h1> Formulaire de création de la page ".$_GET['insert_nom_article']." </h1>\n";
@@ -54,6 +51,8 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "						</tr>\n";
 		echo "					</thead>\n";
 		
+		$dernierId = 0;
+		
 		foreach($dataCateg as $tuple) {	
 			echo "					<tr>\n";
 			echo "						<td>\n";
@@ -87,6 +86,8 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 							
 							$bool2 = true;
 						}
+						
+						$dernierId = $atuple['id_article'] + 1; 
 					}
 					
 					if (!$bool2) {	
@@ -94,6 +95,8 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 						echo "					</tr>\n";
 					} 
 				}
+				
+				$nb = $stuple['id_souscateg'];
 			}
 			
 			if (!$bool1) {	
@@ -101,6 +104,8 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 				echo "						<td></td>\n";
 				echo "					</tr>\n";
 			} 	
+			
+			
 		}
 			
 		echo "				</table>\n";			
@@ -115,10 +120,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "						</tr>\n";
 		echo "					</thead>\n";
 		echo "						<tr>\n";
-		
-		$nb = $stuple['id_souscateg'];
-		$dernierId = $atuple['id_article'] + 1; 
-		
+				
 		// Formulaire d'ajout d'un menu, l'utilisateur doit renseigner un id_menu unique et un nom_menu 
 		echo "								<input type=\"hidden\" name=\"ajouterArticle\">\n";
 		echo "								<td>\n";

@@ -19,6 +19,8 @@ function tabAjouteSousCateg($data1, $nomCateg) {
 		echo "					</thead>\n";
 	}
 	
+	$dernierId = 0;
+	
 	foreach($data1 as $tuple) {	
 		echo "					<tr>\n";
 		echo "						<td>\n";
@@ -30,6 +32,7 @@ function tabAjouteSousCateg($data1, $nomCateg) {
 		echo "					</tr>\n";
 		
 		$dernierId = $tuple['id_souscateg'] + 1; 
+		$nb = $tuple['id_categ'];
 	}
 		
 	echo "				</table>\n";			
@@ -45,7 +48,7 @@ function tabAjouteSousCateg($data1, $nomCateg) {
 	echo "						</thead>\n";
 	echo "							<tr>\n";
 	
-	$nb = $tuple['id_categ'];
+	
 	
 	// Formulaire d'ajout d'un menu, l'utilisateur doit renseigner un id_menu unique et un nom_menu 
 	echo "								<input type=\"hidden\" name=\"ajouterSousCateg\">\n";

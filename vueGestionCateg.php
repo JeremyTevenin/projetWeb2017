@@ -20,6 +20,8 @@ function tabAjouteCateg($data1) {
 		echo "				</thead>\n";
 	}
 	
+	$dernierId = 0;
+	
 	foreach($data1 as $tuple) {	
 		echo "					<tr>\n";
 		echo "						<td>\n";
