@@ -1,26 +1,10 @@
-\BOOKMARK [1][-]{section.1}{Objet du projet}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Reverse}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{G\351n\351rateur de diagramme}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{Documents applicables de r\351f\351rence}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{Expression du besoin du projet UML Reverse}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Lexique}{}% 6
-\BOOKMARK [1][-]{section.4}{Fonctionnalit\351s}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{Diagramme de cas d\220utilisation}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{Cr\351ation de diagramme}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.3}{G\351n\351ration de diagramme en reverse}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.4}{Exportation/Importation de diagramme}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.5}{Exigences fonctionnelles de l'IHM}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.6}{Exigences fonctionnelles des g\351n\351rations de diagrammes}{section.4}% 13
-\BOOKMARK [2][-]{subsection.4.7}{Cas d\220utilisation de modification d\220un diagramme de s\351quence}{section.4}% 14
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Sch\351ma fonctionnel d\220utilisation}{subsection.4.7}% 15
-\BOOKMARK [3][-]{subsubsection.4.7.2}{Pr\351cisions}{subsection.4.7}% 16
-\BOOKMARK [3][-]{subsubsection.4.7.3}{Liste des cas d\220utilisation suppl\351mentaires}{subsection.4.7}% 17
-\BOOKMARK [3][-]{subsubsection.4.7.4}{Liste des cas d\220utilisation}{subsection.4.7}% 18
-\BOOKMARK [2][-]{subsection.4.8}{Cas d\220utilisation de modification d\220un diagramme de paquetage}{section.4}% 19
-\BOOKMARK [3][-]{subsubsection.4.8.1}{Liste des cas d\220utilisation}{subsection.4.8}% 20
-\BOOKMARK [3][-]{subsubsection.4.8.2}{Sch\351ma fonctionnel d\220utilisation}{subsection.4.8}% 21
-\BOOKMARK [3][-]{subsubsection.4.8.3}{Pr\351cisions}{subsection.4.8}% 22
-\BOOKMARK [1][-]{section.5}{Exigences}{}% 23
-\BOOKMARK [2][-]{subsection.5.1}{Exigences fonctionnelles}{section.5}% 24
-\BOOKMARK [2][-]{subsection.5.2}{Exigences de qualit\351s}{section.5}% 25
-\BOOKMARK [2][-]{subsection.5.3}{Exigences techniques}{section.5}% 26
+\BOOKMARK [1][-]{section.0.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.0.2}{Manuel d'utilisation}{}% 2
+\BOOKMARK [1][-]{section.0.3}{Conception}{}% 3
+\BOOKMARK [1][-]{section.0.4}{Les bases de donn\351es}{}% 4
+\BOOKMARK [1][-]{section.0.5}{Inscription/connexion}{}% 5
+\BOOKMARK [1][-]{section.0.6}{Administration du site}{}% 6
+\BOOKMARK [2][-]{subsection.0.6.1}{Par l'administrateur}{section.0.6}% 7
+\BOOKMARK [2][-]{subsection.0.6.2}{Par les r\351dacteurs}{section.0.6}% 8
+\BOOKMARK [1][-]{section.0.7}{Le style du site \(CSS\)}{}% 9
+\BOOKMARK [1][-]{section.0.8}{Conclusion}{}% 10

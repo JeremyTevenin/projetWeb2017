@@ -4,7 +4,7 @@ function entete() {
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Le petit Scientifique</title>
+		<title>Le Petit Scientifique</title>
 		
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<!-- CSS -->
