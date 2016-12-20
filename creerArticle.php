@@ -16,7 +16,7 @@ if (isset($_POST['creerArticle'])) {
 	$url = "$repertoire.php";
 					
 	$date = strftime('%A %d %B %Y');
-	$date.setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
+	$date.setlocale (LC_TIME, 'fr_FR','fra'); 
 	$date = strftime('%A %d %B %Y');
 	
 	// On crée alors la page 
@@ -37,21 +37,14 @@ if (isset($_POST['creerArticle'])) {
 	$entetePage = "
 <?php
 	function $repertoire() {			
-		 
-		echo \" 					<h1> $nom </h1>\\n\"; 
 		echo \"						$texte\\n\";
-		echo \"						<br>\\n\"; 	";
+		echo \"						<br /><br />\\n\"; 	";
 								
 	fwrite( $handle, $entetePage );						
 				
 						
 	$piedPage = "
-		echo \" 					<fieldset class='cadrePublication'>\\n\"; 
-		echo \" 						Article écrit par $prenom $nom le $date\\n\"; 
-		echo \" 					</fieldset>\\n\"; 
-		echo \"					</fieldset>\\n\"; 
-		echo \"				</div>\\n\"; 
-		echo \"			</div>\\n\"; 
+		echo \" 				Article écrit par $prenom $nom le $date\\n\"; 
 	} 
 ?> 									";
 					

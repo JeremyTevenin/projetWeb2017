@@ -1,0 +1,27 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Objet du projet}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Reverse}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}G\IeC {\'e}n\IeC {\'e}rateur de diagramme}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Documents applicables de r\IeC {\'e}f\IeC {\'e}rence}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Expression du besoin du projet UML Reverse}{4}{subsection.2.1}
+\contentsline {section}{\numberline {3}Lexique}{5}{section.3}
+\contentsline {section}{\numberline {4}Fonctionnalit\IeC {\'e}s}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Diagramme de cas d\IeC {\textquoteright }utilisation}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Cr\IeC {\'e}ation de diagramme}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}G\IeC {\'e}n\IeC {\'e}ration de diagramme en reverse}{7}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Exportation/Importation de diagramme}{8}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Exigences fonctionnelles de l'IHM}{9}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Exigences fonctionnelles des g\IeC {\'e}n\IeC {\'e}rations de diagrammes}{9}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Cas d\IeC {\textquoteright }utilisation de modification d\IeC {\textquoteright }un diagramme de s\IeC {\'e}quence}{10}{subsection.4.7}
+\contentsline {subsubsection}{\numberline {4.7.1}Sch\IeC {\'e}ma fonctionnel d\IeC {\textquoteright }utilisation}{11}{subsubsection.4.7.1}
+\contentsline {subsubsection}{\numberline {4.7.2}Pr\IeC {\'e}cisions}{11}{subsubsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.3}Liste des cas d\IeC {\textquoteright }utilisation suppl\IeC {\'e}mentaires}{12}{subsubsection.4.7.3}
+\contentsline {subsubsection}{\numberline {4.7.4}Liste des cas d\IeC {\textquoteright }utilisation}{12}{subsubsection.4.7.4}
+\contentsline {subsection}{\numberline {4.8}Cas d\IeC {\textquoteright }utilisation de modification d\IeC {\textquoteright }un diagramme de paquetage}{12}{subsection.4.8}
+\contentsline {subsubsection}{\numberline {4.8.1}Liste des cas d\IeC {\textquoteright }utilisation}{14}{subsubsection.4.8.1}
+\contentsline {subsubsection}{\numberline {4.8.2}Sch\IeC {\'e}ma fonctionnel d\IeC {\textquoteright }utilisation}{15}{subsubsection.4.8.2}
+\contentsline {subsubsection}{\numberline {4.8.3}Pr\IeC {\'e}cisions}{15}{subsubsection.4.8.3}
+\contentsline {section}{\numberline {5}Exigences}{16}{section.5}
+\contentsline {subsection}{\numberline {5.1}Exigences fonctionnelles}{16}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Exigences de qualit\IeC {\'e}s}{16}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Exigences techniques}{16}{subsection.5.3}

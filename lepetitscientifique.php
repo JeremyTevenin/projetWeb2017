@@ -17,17 +17,32 @@ include('vueLepetitScientifique.php');
 
 
 
-$dossierAticle = 'articles';
-$dossier = opendir($dossierAticle);
+/*
+$dossierAticles = 'articles';
+$dossier = opendir($dossierAticles);
 while($fichier = readdir($dossier)){
-    if(is_file($dossierAticle.'/'.$fichier) && $fichier !='/' && $fichier !='.' && $fichier != '..'){
-        include $dossierAticle.'/'.$fichier;
-    }
+	while($fichier = readdir($dossier)){
+		if(is_file($dossierAticles.'/'.$fichier) && $fichier !='/' && $fichier !='.' && $fichier != '..'){
+			echo "<script>alert(\"$dossierAticles/$dossier/$dossier.php\");</script>";
+
+			include $dossierAticles.'/'.$dossier.'/'.$dossier.'.php';
+		}
+	}
+	
 }
-closedir($dossier);
+closedir($dossier);*/
 
 
 entete();
+$dossierAticles = 'articles';
+$dossier = opendir($dossierAticles);
+while($fichier = readdir($dossier)){
+	while($fichier = readdir($dossier)){
+		include $dossierAticles.'/'.$fichier.'/'.$fichier.'.php';
+	}
+}
+closedir($dossier);
+
 
 $categorie = new Categorie;
 $souscategorie = new SousCategorie;
@@ -46,8 +61,10 @@ menu($data1, $data2, $data3);
 contenu();
 
 if (isset($_GET['url'])) {
-	$dossierAticle = 'articles';
+	/*$dossierAticle = 'articles';
 	$dossier = opendir($dossierAticle);
+	$dossierArticle = opendir($_GET['url']);*/
+	$_GET['url']();
 }
 
 if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {				

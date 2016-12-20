@@ -1,0 +1,273 @@
+\documentclass[hidelinks, 10pt,a4paper]{article}
+
+\usepackage[english,francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{adjustbox}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[french]{varioref}
+\usepackage{comment}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{}
+\fancyhead[C]{\textbf{UML Reverse}}
+\fancyhead[R]{\includegraphics[width=2cm]{imgSTB/universite-rouen.jpg}}
+
+%Opening
+UFR des SCIENCES et TECHNIQUES
+Département informatique
+
+
+\title{\bfseries Projet Langages Web\\Le Petit Scientifique}
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Amine \textsc{Bouaziz}\\
+               & Jérémy \textsc{Tevenin}\\
+               &\\[.5em]
+  Rendu à~: & M. \textsc{Mallet}\\[.5em]
+\end{tabular}
+\end{center}
+
+\newpage
+%Table of contents
+\tableofcontents
+
+\newpage
+\section{Objet du projet}
+Le projet \textbf{UML Reverse} vise à reprendre le projet des anciens étudiants du master 1 en ajoutant et en améliorant des fonctionnalités de l'application UML
+afin de satisfaire les besoins des futurs étudiants. Le projet est décomposé en deux parties~:
+
+\subsection{Reverse}
+Le programme produit un diagramme UML à partir d’un code source. Pour cette version, seul le code Java est concerné.\\
+Les diagrammes créés pourront être sauvegardés en XMI ou Plant UML et pourront être modifiés grâce au générateur de diagramme.\\
+
+\subsection{Générateur de diagramme}
+Le générateur de diagramme permet à l’utilisateur de construire son propre diagramme UML graphiquement. \\
+Il pourra soit en créer un nouveau, soit en charger un à partir d'un projet existant ou d’un fichier PlantUML ou XMI.\\
+L’utilisateur pourra sauvegarder ses diagrammes avec ses paramètres. ou bien les exporter.\\
+
+\section{Documents applicables de référence}
+\subsection{Expression du besoin du projet UML Reverse}
+L’utilisation des diagrammes UML fait partie des outils de tout développeur informatique. Les applications (ou plugins) de bon niveau permettant d’utiliser efficacement ces diagrammes sont limités dans le domaine du libre, et ne disposent pas de toutes les fonctionnalités utiles.\\
+\emph{Remarque~: Les logiciels disponibles en libre ne sont pas pérennes. En effet, souvent rachetés par des entreprises, les allers-retours entre versions libres et propriétaires sont très fréquents. Quant aux versions restées libres, elles ont pour défaut leur manque de fonctionnalités, l’ergonomie très discutable et le manque de documentation fiable.}
+\subsubsection*{Objectifs}
+Développer une application ergonomique permettant d'effectuer rapidement un développement informatique intégrant des diagrammes UML. La première phase du projet a été développée l'année dernière, et doit être complétée en exploitant les éléments déjà disponibles. Cette contrainte est fréquemment rencontrée en entreprise ou il est demandé de faire évoluer une application existante.
+\subsubsection*{Objectifs imposés}
+Afin de limiter le périmètre de l’application et d’en faire un outil exploitable, les contraintes imposées sont les suivantes~:
+\begin{itemize}
+\item Améliorer le code existant (Correction de bugs).
+\item Exporter/Importer au format XMI.
+\item Générer des diagrammes de séquence, d'état et de package.
+Une interface graphique doit permettre de définir les paramètres graphiques~:
+\begin{itemize}
+\item positionnement des éléments.
+\item sélection des éléments affichés/cachés.
+\end{itemize}
+\item L’application doit permettre le \textit{reverse engineering}, c’est-à-dire l’extraction du diagramme de classe à partir du code source en Java d’une application. Le résultat sera stocké au format XMI.
+\item POC : Réaliser un reverse engineering en exploitant l'introspection JAVA.
+\end{itemize}
+
+\section{Lexique}
+Se référer au document Terminologie.
+
+\section{Fonctionnalités}
+\subsection{Diagramme de cas d’utilisation}
+\begin{center}
+    \includegraphics[width=18cm]{imgSTB/useCase.png} %mettre notre diagramme ?
+\end{center}
+\newpage
+
+\subsection{Création de diagramme}
+\begin{center}
+    \begin{tabular}{|l|r|}
+        \hline{\textbf{Nom~:}} & {\textbf{Création de diagramme}} \\\hline
+        {Acteurs concernés} & {Utilisateurs} \\\hline
+        {Description} & {Crée un diagramme UML} \\\hline
+        {Pré-Conditions} & {Un projet doit être créé} \\\hline
+        {Evénements déclenchants} & {} \\\hline
+        {Conditions d’arrêt} & {Le diagramme a été créé} \\\hline
+        \multicolumn{2}{|c|}{Description du flot d ’événements principal~:} \\\hline
+        \multicolumn{2}{|c|}{\includegraphics[width=8cm]{imgSTB/creer-un-diagramme.png}} \\\hline
+    \end{tabular}
+\end{center}
+\newpage
+
+\subsection{Génération de diagramme en reverse}
+\begin{center}
+    \begin{tabular}{|l|r|}
+        \hline{\textbf{Nom~:}} & {\textbf{Génération de diagramme en reverse}} \\\hline
+        {Acteurs concernés} & {Utilisateurs} \\\hline
+        {Description} & {Générer un diagramme en reverse} \\\hline
+        {Pré-Conditions} & {Un diagramme doit être créé} \\\hline
+        {Evénements déclenchants} & {} \\\hline
+        {Conditions d’arrêt} & {Le diagramme en reverse a été généré} \\\hline
+        \multicolumn{2}{|c|}{Description du flot d ’événements principal~:} \\\hline
+        \multicolumn{2}{|c|}{\includegraphics[width=12cm]{imgSTB/generer-un-diagramme-reverse.png}} \\\hline
+    \end{tabular}
+\end{center}
+
+\subsection{Exportation/Importation de diagramme}
+\begin{center}
+    \begin{tabular}{|l|r|}
+        \hline{\textbf{Nom~:}} & {\textbf{Exportation/Importation de diagramme}} \\\hline
+        {Acteurs concernés} & {Utilisateurs} \\\hline
+        {Description} & {Exporter/Importer un diagramme UML} \\\hline
+        {Pré-Conditions} & {Un diagramme UML doit être créé} \\\hline
+        {Evénements déclenchants} & {} \\\hline
+        {Conditions d’arrêt} & {L'exportation/Importation a été réalisé} \\\hline
+        \multicolumn{2}{|c|}{Description du flot d ’événements principal~:} \\\hline
+        \multicolumn{2}{|c|}{\includegraphics[width=12cm]{imgSTB/exporter-un-diagramme.png}} \\\hline
+    \end{tabular}
+\end{center}
+\newpage
+
+\subsection{Exigences fonctionnelles de l'IHM}
+\begin{center}
+    \begin{tabular}{|l|p{8cm}|r|}
+        \hline\multicolumn{3}{|c|}{Cas d’utilisation de l'IHM} \\\hline
+        {\textbf{Identification}} & {\textbf{Description}} & {\textbf{Priorité}} \\\hline
+        {IHM\_10} & {Changer le point d'apparition d'une entité} & {Indispensable} \\\hline
+        {IHM\_20} & {Pouvoir mettre plusieurs flêches entre deux classes} & {Indispensable} \\\hline
+        {IHM\_30} & {Exporter un diagramme au format XMI} & {Indispensable} \\\hline
+        {IHM\_40} & {Importer/charger un diagramme UML écrit en XMI compatible dans un projet} & {Indispensable} \\\hline
+        {IHM\_50} & {Valider un diagramme UML grâce à un validateur} & {Optionnelle} \\\hline
+    \end{tabular}
+\end{center}
+
+\subsection{Exigences fonctionnelles des générations de diagrammes}
+\begin{center}
+    \begin{tabular}{|l|p{8cm}|r|}
+        \hline\multicolumn{3}{|c|}{Cas d’utilisation des diagrammes} \\\hline
+        {\textbf{Identification}} & {\textbf{Description}} & {\textbf{Priorité}} \\\hline
+        {DIA\_10} & {Créer un nouveau diagramme de séquence} & {Indispensable} \\\hline
+        {DIA\_20} & {Créer un nouveau diagramme de paquetages} & {Indispensable} \\\hline
+        {DIA\_30} & {Créer un nouveau diagramme d’états} & {Indispensable} \\\hline
+        {DIA\_40} & {Générer un diagramme de séquence par \textit{reverse engineering}} & {Indispensable} \\\hline
+        {DIA\_50} & {Réaliser une étude sur l'introspection java} & {Indispensable} \\\hline
+    \end{tabular}
+\end{center}
+
+\newpage
+
+\subsection{Cas d’utilisation de modification d’un diagramme de séquence}
+\begin{center}
+    \includegraphics[width=10cm]{imgSTB/diagramme-de-sequence.png}
+    \includegraphics[width=10cm]{imgSTB/diagramme-de-sequence(suite).png}
+\end{center}
+\subsubsection{Schéma fonctionnel d’utilisation}
+\begin{center}
+    \includegraphics[width=14cm]{imgSTB/E-R-Sequence.png}
+\end{center}
+
+
+\subsubsection{Précisions}
+\begin{itemize}
+ \item Un acteur contient un nom.
+ \item Un objet contient un nom (un unique mot) et possède une ligne de vie.
+ \item Une note contient un texte.
+ \item Une relation est une flèche.
+ \item Un cadre d’itération contient un texte et regroupe des messages.
+ \item Un cadre else suit imédiatement un cadre alt. Sans alt, il ne peut y avoir de else.
+ \item Un message est une flèche.
+ \item Déplacer un objet déplace aussi tout ce qui lui est lié, c’est-à-dire les flèches, les cadres d’itération et sa ligne de vie.
+\end{itemize}
+
+\subsubsection{Liste des cas d’utilisation supplémentaires}
+\subsubsection{Liste des cas d’utilisation}
+\begin{center}
+    \begin{tabular}{|l|p{8cm}|r|}
+        \hline\multicolumn{3}{|c|}{Modification d’un diagramme de séquence} \\\hline
+        {\textbf{Numéro}} & {\textbf{Description}} & {\textbf{Priorité}}\\\hline
+        {SEQ\_10} & {Créer un acteur. Ce nom est une chaîne de caractères quelconque} & {Indispensable}\\\hline
+        {SEQ\_20} & {Modifier le nom d’un acteur. Ce nom est une chaîne de caractères quelconque} & {Indispensable}\\\hline
+        {SEQ\_30} & {Ajouter une référence à un acteur} & {Optionnelle}\\\hline
+        {SEQ\_40} & {Créer une note} & {Indispensable}\\\hline
+        {SEQ\_50} & {Modifier le texte d'une note} & {Indispensable}\\\hline
+        {SEQ\_60} & {Créer un cadre d'itération (alt, for...)} & {Indispensable}\\\hline
+        {SEQ\_70} & {Modifier les messages contenus dans un cadre d’itération} & {Indispensable}\\\hline
+        {SEQ\_80} & {Créer une relation entre deux acteurs} & {Indispensable}\\\hline
+        {SEQ\_90} & {Modifier le texte de la relation} & {Indispensable}\\\hline
+        {SEQ\_100} & {Déplacer un acteur} & {Indispensable}\\\hline
+        {SEQ\_110} & {Déplacer une relation} & {Optionnelle}\\\hline
+        {SEQ\_120} & {Supprimer un acteur} & {Indispensable}\\\hline
+        {SEQ\_130} & {Supprimer un élément} & {Indispensable}\\\hline
+    \end{tabular}
+\end{center}
+
+\subsection{Cas d’utilisation de modification d’un diagramme de paquetage}
+\begin{center}
+    \includegraphics[width=10cm]{imgSTB/diagramme-de-package.png}
+    \includegraphics[width=12cm]{imgSTB/diagramme-de-package(suite).png}
+\end{center}
+\subsubsection{Liste des cas d’utilisation}
+\begin{center}
+    \begin{tabular}{|l|p{8cm}|r|}
+        \hline\multicolumn{3}{|c|}{Modification d'un diagramme de paquetage} \\\hline
+        {\textbf{Identification}} & {\textbf{Description}} & {\textbf{Priorité}} \\\hline
+        {PAQ\_10} & {Créer un paquetage} & {Indispensable} \\\hline
+        {PAQ\_20} & {Modifier le nom d'un paquetage} & {Indispensable} \\\hline
+        {PAQ\_30} & {Ajouter un élément à un paquetage} & {Indispensable} \\\hline
+        {PAQ\_40} & {Modifier le nom des éléments du paquetage} & {Indispensable} \\\hline
+        {PAQ\_50} & {Modifier la visibilité des éléments du paquetage} & {Indispensable} \\\hline
+        {PAQ\_60} & {Supprimer un élément d'un paquetage} & {Indispensable} \\\hline
+        {PAQ\_70} & {Créer une note} & {Indispensable} \\\hline
+        {PAQ\_80} & {Modifier le texte d'une note} & {Indispensable} \\\hline
+        {PAQ\_90} & {Redimensionner un paquetage} & {Optionnelle} \\\hline
+        {PAQ\_100} & {Créer une relation entre deux paquetages} & {Indispensable} \\\hline
+        {PAQ\_110} & { Supprimer une relation entre deux paquetages} & {Indispensable} \\\hline
+        {PAQ\_120} & { Supprimer un paquetage} & {Indispensable} \\\hline
+        \multicolumn{3}{|c|}{Exemple de diagramme de paquetage~:} \\\hline
+        \multicolumn{3}{|c|}{\includegraphics[width=8cm]{imgSTB/diagramme-de-paquetage.png}} \\\hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Schéma fonctionnel d’utilisation}
+\begin{center}
+    \includegraphics[width=16cm]{imgSTB/E-R-Paquetage.png}
+\end{center}
+
+\subsubsection{Précisions}
+\begin{itemize}
+ \item Les relations se font entre les paquetages
+\end{itemize}
+
+\section{Exigences}
+  \subsection{Exigences fonctionnelles}
+    \begin{center}
+	\begin{tabular}{|l|p{10cm}|}
+	    \hline{\textbf{Identifiant}} & {\textbf{Description}}\\\hline
+	    {EXF\_20} & {L’interface graphique doit être fonctionnelle, pratique et adaptée aux besoins.}\\\hline
+	    {EXF\_30} & {Le \textit{reverse} permet de générer un diagramme à partir d'un fichier compatible Java 7.}\\\hline
+	    {EXF\_40} & {L’application implémente tous les élements d’un diagramme UML2 pour les diagrammes compatibles.}\\\hline
+	    {EXF\_50} & {À tout moment de l’édition d’un diagramme non vide, un fichier PlantUML ou XMI compilable peut être généré à partir du diagramme.}\\\hline
+	    {EXF\_60} & {L’utilisateur ne peut pas avoir deux entités du même nom dans un diagramme.}\\\hline
+	\end{tabular}
+    \end{center}
+  \subsection{Exigences de qualités}
+    \begin{center}
+      \begin{tabular}{|l|p{10cm}|}
+	\hline{\textbf{Identifiant}} & {\textbf{Description}}\\\hline
+	{EXF\_70} & {Le code de l’application doit être modulaire.}\\\hline
+      \end{tabular}
+    \end{center}
+  \subsection{Exigences techniques}
+    \begin{center}
+      \begin{tabular}{|l|p{10cm}|}
+	\hline{\textbf{Identifiant}} & {\textbf{Description}}\\\hline
+	{EXF\_10} & {L’application est codée en Java.}\\\hline
+	{EXF\_80} & {L’application doit fonctionner sur les ordinateurs de l’Université.}\\\hline
+	{EXF\_90} & {L’application finale doit respecter la licence open source.}\\\hline
+      \end{tabular}
+    \end{center}
+\end{document}
