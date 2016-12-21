@@ -52,26 +52,6 @@ h2 {
 	color: red;
 }
 
-/* Gestion de l'inscription */
-#inscription {
-	padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-	position: absolute;
-	top: 120px;
-	width: 650px;
-}
-
-#inscription label {
-    width: 150px;
-	float: left;
-	padding: 2px;
-}
-
-#inscription  img {
-	vertical-align: middle;
-	width: 25px;
-}
-
 span.erreur {
 	vertical-align: middle;
 	text-align: left;
@@ -92,6 +72,7 @@ span.erreur {
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
+    overflow:auto;
 
 }
 
@@ -130,23 +111,7 @@ a:hover {
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     opacity:0.60;
-}
-
-.card2 {
-	overflow:auto;
-    background-color: #F7F7F7;
-    /* just in case there no content*/
-    padding: 20px 25px 30px;
-    margin:-20% 100%;
-    width:100%;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 10px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    opacity:0.60;
+    overflow:auto;
 }
 
 .profile-img-card {
