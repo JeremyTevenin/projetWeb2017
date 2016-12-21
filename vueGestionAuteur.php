@@ -6,19 +6,22 @@ function tabSupprimeAuteur($data) {
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerAuteur');\");</script>\n";
 	}
 	
+	echo "			<h4>Supprimer les rédacteurs</h4>\n";
 	echo "			<div class=\"custyle\">\n";
-	echo "				<table class=\"table table-striped custab\">\n";
 	
 	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
-	if (count($data) >= 1) {		
-		echo "				<thead>\n";	
-		echo "					<tr>\n";	
-		echo "						<th> NOM	</th>\n";	
-		echo "						<th> PRENOM	</th>\n";	
-		echo "						<th> MAIL   </th>\n";																		
-		echo "						<th> SUPPRIMER   </th>\n";																		
-		echo "					</tr>\n";
-		echo "				</thead>\n";
+	if (count($data) >= 2) {		
+		echo "				<table class=\"table table-striped custab\">\n";
+		echo "					<thead>\n";	
+		echo "						<tr>\n";	
+		echo "							<th> NOM	   </th>\n";	
+		echo "							<th> PRENOM	   </th>\n";	
+		echo "							<th> MAIL      </th>\n";																		
+		echo "							<th> SUPPRIMER </th>\n";																		
+		echo "						</tr>\n";
+		echo "					</thead>\n";
+	} else {
+		echo "				<p>Il n'y a aucun rédacteur inscrit.</p>\n";
 	}
 	
 	foreach($data as $tuple) {	
@@ -34,13 +37,16 @@ function tabSupprimeAuteur($data) {
 			echo "							".$tuple['mail']."\n";
 			echo "						</td>\n";
 			echo "						<td>\n"; 
-			echo "							<a href=\"lepetitscientifique.php?supprimerAuteur&delete_auteur=".$tuple['id']."\"><img width=\"25px\" height=\"25px\" src=\"images/supp.png\"/></a>\n";
+			echo "							<a href=\"lepetitscientifique.php?supprimerAuteur&delete_auteur=".$tuple['id']."\"><img width=\"25\" height=\"25\" src=\"images/supp.png\" alt=\"supprimer\"/></a>\n";
 			echo "						</td>\n";	
 			echo "					</tr>\n";
 		}
 	}
 	
-	echo "				</table>\n";				
+	if (count($data) >= 2) {
+		echo "				</table>\n";	
+	}
+	
 	echo " 			</div>\n";
 }
 

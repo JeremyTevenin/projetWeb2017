@@ -1,79 +1,79 @@
 <?php
 include('connect.php');
 
+// On inclut les modèles
 include('categorieModel.php');
 include('sousCategorieModel.php');
 include('articleModel.php');
-
 include('auteurModel.php');
 
+// On inclut les vues
 include('vueMenu.php');
 include('vueGestionCateg.php');
 include('vueGestionSousCateg.php');
 include('vueGestionArticle.php');
 include('vueGestionAuteur.php');
-
 include('vueLepetitScientifique.php');
-
-entete();
-
+	
+// On inclut tous les fichier php du dossier articles
 $dossierArticles = 'articles';
 $dossier = opendir($dossierArticles);
 while($fichier = readdir($dossier)){
 	while($fichier = readdir($dossier)){
-		if ($fichier != '..' && $fichier != '.') {
+		if ($fichier != '/' && $fichier != '...' && $fichier != '..' && $fichier != '.') {
 			include $dossierArticles.'/'.$fichier.'/'.$fichier.'.php';
 		}
 	}
 }
-closedir($dossier);
+closedir($dossier);	
+	
+entete();
 
+// On crée les modèles
 $categorie = new Categorie;
 $souscategorie = new SousCategorie;
 $article = new Article;
-
 $auteur = new Auteur;
 
-$data1 = $categorie->getCategories();
-$data2 = $souscategorie->getSousCategories();
-$data3 = $article->getArticles();
+$dataCateg = $categorie->getCategories();
+$dataSousCateg = $souscategorie->getSousCategories();
+$dataArticle = $article->getArticles();
 
 $dataAuteur = $auteur->getAuteurs();
 
-menu($data1, $data2, $data3);
+menu($dataCateg, $dataSousCateg, $dataArticle);
 
 contenu();
 
+// Si on est en mode invité
 if (isset($_GET['url'])) {
-	/*$dossierAticle = 'articles';
-	$dossier = opendir($dossierAticle);
-	$dossierArticle = opendir($_GET['url']);*/
 	$_GET['url']();
 }
 
+// Si on est connecté en tant qu'administrateur
 if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {				
 	if (isset($_GET['ajouterCateg'])) {
-		tabAjouteCateg($data1);
+		tabAjouteCateg($dataCateg);
 	}
 	
 	if (isset($_GET['modifierCateg'])) {
-		tabModifierCateg($data1);
+		tabModifierCateg($dataCateg);
 	}
 	
 	if (isset($_GET['supprimerCateg'])) {
-		tabSupprimeCateg($data1, $data2);
+		tabSupprimeCateg($dataCateg, $dataSousCateg);
 	}
 	
 	if (isset($_GET['ajouterSousCateg'])) {
-		tabAjouteSousCateg($data2, $data1);
+		tabAjouteSousCateg($dataSousCateg, $dataCateg);
 	}
 	
 	if (isset($_GET['modifierSousCateg'])) {
-		tabModifierSousCateg($data2);
+		tabModifierSousCateg($dataSousCateg);
 	}
 	
 	if (isset($_GET['supprimerSousCateg'])) {
-		tabSupprimeSousCateg($data2, $data3);
+		tabSupprimeSousCateg($dataSousCateg, $dataArticle);
 	}
 					
 	if (isset($_GET['supprimerAuteur'])) {
@@ -107,7 +107,7 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	if (isset($_GET['delete_auteur'])) {
 		$auteur->supprimerAuteur($_GET['delete_auteur']);
 	}
-} else if (isset($_SESSION['mail'])) {
+} else if (isset($_SESSION['mail'])) { // Si on est juste rédacteur
 	if (isset($_GET['modifierAuteur'])) {
 		tabModifierAuteur();
 	}
@@ -117,7 +117,7 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	}
 	
 	if (isset($_GET['ajouterArticle'])) {
-		ajouterArticle($data1, $data2, $data3);
+		ajouterArticle($dataCateg, $dataSousCateg, $dataArticle);
 	}
 	
 	if (isset($_GET['insert_id_souscateg']) && isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {
@@ -127,10 +127,10 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 		$bool = true;
 	
 		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur
-		foreach($data3 as $atuple) {	
+		foreach($dataArticle as $atuple) {	
 			if ($_GET['insert_nom_article'] == $atuple['nom_article']) {	
 				$bool = false;
-				// Si le nom de la page est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
+				// Si le nom de l'article est déjà prit, on redirige l'utilisateur vers l'ajout d'un autre page avec un message d'erreur			
 				echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterArticle&erreurNomArticle');\");</script>\n";
 			}
 		}	
@@ -141,20 +141,20 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 	}
 	
 	if (isset($_GET['modifierArticle'])) {
-		modifierArticle($data3);
+		modifierArticle($dataArticle);
 	}
 	
 	if (isset($_GET['supprimerArticle'])) {
-		tabSupprimerArticle($data3);
+		tabSupprimerArticle($dataArticle);
 	}
 
 	if (isset($_GET['delete_id_article']) && isset($_GET['delete_repertoire'])) {
 		$dirname = "articles/".$_GET['delete_repertoire'];
-		// On vérifie si le repertoire contenant la page existe
+		// On vérifie si le repertoire contenant l'article existe
 		if (is_dir($dirname)) {
 			$handle = opendir( "./$dirname" ); // On ouvre ce repertoire
 			// On parcoure son contenu
-			while (( $filename = readdir($handle))) {
+			while (($filename = readdir($handle))) {
 				// On supprime tous les fichiers sauf les fichiers spéciaux
 				if ( $filename != '.' && $filename != '..' && $filename != 'index.php' ) {
 					unlink("$dirname/$filename");
