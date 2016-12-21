@@ -169,4 +169,3 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 
 pied();
 ?>		
-

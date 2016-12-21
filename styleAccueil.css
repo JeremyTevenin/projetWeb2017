@@ -24,6 +24,10 @@ h2 {
 
 }
 
+label, input {
+	display:inline-block;
+}
+
 #fond {
 	width: 100%;
 	height: 100%;
@@ -72,8 +76,11 @@ span.erreur {
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
-    overflow:auto;
+}
 
+.card-container2.card {
+    max-width: 700px;
+    padding: 40px 40px;
 }
 
 .btn {
@@ -111,7 +118,6 @@ a:hover {
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     opacity:0.60;
-    overflow:auto;
 }
 
 .profile-img-card {
@@ -150,28 +156,6 @@ a:hover {
     box-sizing: border-box;
 }
 
-.form-signin2 #nom,
-.form-signin2 #prenom,
-.form-signin2 #ville,
-.form-signin2 #mail,
-.form-signin2 #password,
-.form-signin2 #password2 {
-    direction: ltr;
-    height: 20px;
-    font-size: 16px;
-}
-
-.form-signin2 button {
-    width: 50%;
-    display: block;
-    margin-bottom: 10px;
-    z-index: 1;
-    position: relative;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 .form-signin #mailC,
 .form-signin #passwordC {
     direction: ltr;
@@ -192,6 +176,23 @@ a:hover {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.form-signin2 input[type=text]{
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label
+{
+	display: block;
+	width:150px;
+	float: left;
+}
+
 
 .form-signin .form-control:focus {
     border-color: rgb(104, 145, 162);

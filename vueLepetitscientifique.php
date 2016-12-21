@@ -11,8 +11,8 @@ function entete() {
 		<!-- CSS -->
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />   
 		
-		<link href="test.css" rel="stylesheet" />
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		
 		<!--Scripts-->
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
