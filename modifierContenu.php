@@ -45,3 +45,4 @@ if (isset($_POST['modifierArticle'])) {
 	
 	header("Location: lepetitscientifique.php"); 
 }
+?>

@@ -47,7 +47,7 @@ class Article {
 					str_replace(array(" ", "'"), "_", 
 					strtolower(iconv('utf-8', 'us-ascii//TRANSLIT', iconv('utf-8', 'utf-8//IGNORE', $nomArticle)))));
 		
-		$url = $repertoire.".php";
+		$url = "$repertoire.php";
 				
 		$query = "INSERT INTO article (id_souscateg, id_article, id_auteur, date, nom_article, texte_page, repertoire, url) 
 					VALUES ('".$idSousCateg."', '".$idArticle."', '".$idAuteur."', '".$date."', '".$nomArticle."', '', '".$repertoire."', '".$url."')";
