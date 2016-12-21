@@ -12,13 +12,13 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 			(isset($_POST['insert_id_article']) && isset($_POST['insert_nom_article']))) {	
 				
 		// Formulaire de création de la page
-		echo " 					<h1> Formulaire de création de la page ".$_GET['insert_nom_article']." </h1>\n";
+		echo " 					<h2> Formulaire de création de la page : ".$_GET['insert_nom_article']." </h2>\n";
 						
 		// Pour ajouter le contenu de la page
 		
 ?>
 		<form method="post" action="creerArticle.php">				
-			<h3>Créer une page</h3>
+			<h2>Créer une page</h2>
 			<?php
 			$id = $_GET['insert_id_article'];
 			$nom = $_GET['insert_nom_article'];
@@ -34,7 +34,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 				</script>	
 			</label>
 			<br>
-			<input type="submit" name="creerArticle" value="Créer la page"/>
+			<button class="btn btn-primary  btn-signin" type="submit" name="creerArticle" value="Créer la page">Créer la page</button>
 		</form>
 <?php		
 	} else {
