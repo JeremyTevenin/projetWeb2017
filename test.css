@@ -52,6 +52,7 @@ h2 {
 #article {
 	background-color:white;
 	position: fixed;
+	padding-left:40px;
 	overflow:auto;
 	height:80%;
 	margin-left: 10%;
@@ -332,14 +333,8 @@ body {
   background: url(images/fond2.jpeg) 0px center no-repeat;
 }
 
-textarea {
-	width:100%;
-	height:100%;
-}
-
-label {
-	width:100%;
-	height:100%;
+.art {
+height:100%;
 }
 
 .btn.btn-signin {
@@ -347,6 +342,7 @@ label {
     background-color: rgb(104, 145, 162);
     /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
     margin-top: 13px;
+    margin:auto;
     font-weight: 700;
     font-size: 14px;
     height: 36px;

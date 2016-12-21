@@ -11,7 +11,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		// Pour ajouter le contenu de la page
 		
 ?>
-		<form method="post" action="creerArticle.php">				
+		<form class="art" method="post" action="creerArticle.php">				
 			<h2>Créer une page</h2>
 			<?php
 			$id = $_GET['insert_id_article'];
@@ -28,7 +28,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 				</script>	
 			</label>
 			<br>
-			<button class="btn btn-primary  btn-signin" type="submit" name="creerArticle" value="Créer la page">Créer la page</button>
+			<button class="btn btn-primary btn-block btn-signin" type="submit" name="creerArticle" value="Créer la page">Créer la page</button>
 		</form>
 <?php		
 	} else {
