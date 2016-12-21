@@ -2,12 +2,6 @@
 function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 	echo "			<div class=\"custyle\">\n";
 									
-									
-	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime			
-	if (isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) {		
-		
-	}	
-		
 	if ((isset($_GET['insert_id_article']) && isset($_GET['insert_nom_article'])) ||
 			(isset($_POST['insert_id_article']) && isset($_POST['insert_nom_article']))) {	
 				
@@ -140,6 +134,77 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		echo "						</table>\n";
 		echo "					</form>\n";
 		echo "				</div>\n";
+	}
+}
+
+function modifierArticle($dataArticle) {
+	echo "		<div class=\"custyle\">\n";
+									
+	if (isset($_GET['update_id_article']) && isset($_GET['update_nom_article']) && isset($_GET['repertoire'])) {	
+				
+		echo " 					<h1> Formulaire de modification de l'article ".$_GET['update_nom_article']." </h1>\n";
+						
+		// Pour modifier le contenu de l'article
+?>
+		<form method="post" action="modifierContenu.php">				
+<?php
+			$id = $_GET['update_id_article'];
+			$nom = $_GET['update_nom_article'];
+			$repertoire = $_GET['repertoire'];
+			echo "<input type=\"hidden\" name=\"modifierArticle\" />\n";
+			echo "<input type=\"hidden\" name=\"update_id_article\" value=\"$id\"/>\n";
+			echo "<input type=\"hidden\" name=\"update_nom_article\" value=\"$nom\"/>\n";
+			echo "<input type=\"hidden\" name=\"repertoire\" value=\"$repertoire\"/>\n";
+			
+			// On récupère le texte stocké dans le fichier texte.txt
+			$texte = file_get_contents( "articles/".$_GET['repertoire']."/texte.txt" );
+
+			echo "<label>\n";
+			echo "	<textarea name=\"textarea\" id=\"textarea\"> $texte </textarea>\n";
+?>
+				<script type="text/javascript">
+					CKEDITOR.replace( 'textarea' );
+				</script>	
+			</label>
+			<br>
+			<input type="submit" name="modifierArticle" value="Valider la modification"/>
+		</form>
+<?php		
+	} else {
+
+		echo "			<table class=\"table table-striped custab\">\n";			
+		echo "					<thead>\n";	
+		echo "						<tr>\n";	
+		echo "							<th> ID ARTICLE 		</th>\n";	
+		echo "							<th> NOM ARTICLE		</th>\n";																	
+		echo "							<th> MODIFIER			</th>\n";																	
+		echo "						</tr>\n";
+		echo "					</thead>\n";
+
+		foreach($dataArticle as $tuple) {	
+			if ($tuple['id_auteur'] == $_SESSION['id']) {
+				echo "						<form action=\"lepetitscientifique.php\" method=\"get\">";	
+				echo "							<input type=\"hidden\" name=\"modifierArticle\">\n";
+				echo "							<input type=\"hidden\" name=\"repertoire\"  value=\"".$tuple['repertoire']."\">\n";
+				echo "							<tr>\n";
+				echo "								<td>\n";
+				echo "									".$tuple['id_article']."\n";
+				echo "									<input type=\"hidden\" name=\"update_id_article\" value=\"".$tuple['id_article']."\">\n";
+				echo "								</td>\n";
+				echo "								<td>\n";
+				echo "									".$tuple['nom_article']."\n";
+				echo "									<input type=\"hidden\" name=\"update_nom_article\" value=\"".$tuple['nom_article']."\">\n";
+				echo "								</td>\n";						
+				echo " 								<td>\n";
+				echo "									<button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25px\" height=\"25px\" src=\"images/modif.png\"/></button>\n";
+				echo "								</td>\n";				
+				echo "							</tr>\n";
+				echo "						</form>\n";
+			}
+		}
+		
+		echo "				</table>\n";				
+		echo " 			</div>\n";
 	}
 }
 

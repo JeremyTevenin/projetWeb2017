@@ -24,3 +24,7 @@
 </ul>
 
 <p>&nbsp;</p>
+
+<p><ins><strong>5) Conclusion</strong></ins></p>
+
+<p>Fin du cours, merci !</p>

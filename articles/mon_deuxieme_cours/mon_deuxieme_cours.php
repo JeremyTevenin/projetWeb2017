@@ -1,8 +1,7 @@
 
 <?php
-	function mon_deuxieme_cours() {			
-		 
-		echo " 					<h1> Jérémy </h1>\n"; 
+	function mon_deuxieme_cours() {	
+		echo " 					<h2> Mon deuxième cours </h2>\n"; 
 		echo "						<p>Chapitre 2 : Mol&eacute;cules d&#39;eau</p>
 
 <p><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Water-3D-balls.png/200px-Water-3D-balls.png\" style=\"height:136px; width:200px\" /></p>
@@ -29,13 +28,13 @@
 </ul>
 
 <p>&nbsp;</p>
+
+<p><ins><strong>5) Conclusion</strong></ins></p>
+
+<p>Fin du cours, merci !</p>
 \n";
-		echo "						<br>\n"; 	
-		echo " 					<fieldset class='cadrePublication'>\n"; 
-		echo " 						Article écrit par Tévenin Jérémy le mardi 20 d�cembre 2016\n"; 
-		echo " 					</fieldset>\n"; 
-		echo "					</fieldset>\n"; 
-		echo "				</div>\n"; 
-		echo "			</div>\n"; 
+		echo "						<br /><br />\n"; 	
+		echo " 				Article écrit par Tévenin Jérémy le mercredi 21 d�cembre 2016\n"; 
+		echo " 				(modifié le mercredi 21 d�cembre 2016)\n"; 
 	} 
-?> 									
+?> 									?> 									
