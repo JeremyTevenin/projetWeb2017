@@ -32,17 +32,20 @@ while($fichier = readdir($dossier)){
 }
 closedir($dossier);*/
 
-
-entete();
-$dossierAticles = 'articles';
-$dossier = opendir($dossierAticles);
+/*
+$dossierArticles = 'articles';
+$dossier = opendir($dossierArticles);
 while($fichier = readdir($dossier)){
 	while($fichier = readdir($dossier)){
-		include $dossierAticles.'/'.$fichier.'/'.$fichier.'.php';
+		if ($fichier !='/' && $fichier !='.' && $fichier != '..') {
+			include $dossierArticles.'/'.$fichier.'/'.$fichier.'.php';
+		}
 	}
 }
 closedir($dossier);
+*/
 
+entete();
 
 $categorie = new Categorie;
 $souscategorie = new SousCategorie;
@@ -154,6 +157,10 @@ if (isset($_SESSION['mail']) && $_SESSION['admin'] == 1) {
 		if ($bool) {
 			$article->ajouterArticle($_GET['insert_id_souscateg'], $_GET['insert_id_article'], $id, $date, $_GET['insert_nom_article']);
 		}
+	}
+	
+	if (isset($_GET['modifierArticle'])) {
+		modifierArticle($data3);
 	}
 	
 	if (isset($_GET['supprimerArticle'])) {

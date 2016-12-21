@@ -2,31 +2,22 @@
 include('connect.php');
 
 // Vérifie si on a créé une page
-if (isset($_POST['creerArticle'])) {		
-	$nomArticle = $_POST['insert_nom_article'];
+if (isset($_POST['modifierArticle'])) {		
+	$nomArticle = $_POST['update_nom_article'];
+	$repertoire = $_POST['repertoire'];
+	$nom = $_SESSION['nom'];
+	$prenom = $_SESSION['prenom'];
 	
-	// On crée un nom de répertoire valide
-	// - preg_replace recherche et remplace l'expression 
-	// - str_replace remplace les espaces par '_'
-	// - strtolower retourne tout les caractère en minuscule
-	$repertoire = preg_replace('/[^a-z0-9-_]/', '', 
-			str_replace(array(" ", "'"), "_", 
-			strtolower(iconv('utf-8', 'us-ascii//TRANSLIT', iconv('utf-8', 'utf-8//IGNORE', $nom)))));
-	
-	$url = "$repertoire.php";
-					
+	$texte = $_POST['textarea'];
+
+						
 	$date = strftime('%A %d %B %Y');
 	$date.setlocale (LC_TIME, 'fr_FR','fra'); 
 	$date = strftime('%A %d %B %Y');
 	
 	// On crée alors la page 
-	$handle = fopen( "./articles/$repertoire/$url", "c+" );
-																				
-	$nom = $_SESSION['nom'];
-	$prenom = $_SESSION['prenom'];
-	
-	// Avec le texte renseigné dans le questionnaire
-	$texte = $_POST['textarea'];
+	$handle = fopen( "./articles/$repertoire/$repertoire.php", "c+" );
+																					
 
 	$handleTexte = fopen( "./articles/$repertoire/texte.txt", "c+" );
 	fwrite($handleTexte, $texte);
@@ -36,16 +27,16 @@ if (isset($_POST['creerArticle'])) {
 					
 	$entetePage = "
 <?php
-	function $repertoire() {			
+	function $repertoire() {	
 		echo \" 					<h2> $nomArticle </h2>\\n\"; 
 		echo \"						$texte\\n\";
 		echo \"						<br /><br />\\n\"; 	";
 								
 	fwrite( $handle, $entetePage );						
-				
-						
+										
 	$piedPage = "
 		echo \" 				Article écrit par $prenom $nom le $date\\n\"; 
+		echo \" 				(modifié le $date)\\n\"; 
 	} 
 ?> 									";
 					
