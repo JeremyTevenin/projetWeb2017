@@ -11,7 +11,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		// Pour ajouter le contenu de la page
 		
 ?>
-		<form class="art" method="post" action="creerArticle.php">				
+		<form method="post" action="creerArticle.php">				
 			<h2>Créer une page</h2>
 			<?php
 			$id = $_GET['insert_id_article'];
@@ -142,7 +142,7 @@ function modifierArticle($dataArticle) {
 									
 	if (isset($_GET['update_id_article']) && isset($_GET['update_nom_article']) && isset($_GET['repertoire'])) {	
 				
-		echo " 					<h1> Formulaire de modification de l'article ".$_GET['update_nom_article']." </h1>\n";
+		echo " 					<h2> Formulaire de modification de l'article ".$_GET['update_nom_article']." </h2>\n";
 						
 		// Pour modifier le contenu de l'article
 ?>
@@ -167,7 +167,7 @@ function modifierArticle($dataArticle) {
 				</script>	
 			</label>
 			<br>
-			<input type="submit" name="modifierArticle" value="Valider la modification"/>
+			<button class="btn btn-primary btn-block btn-signin" type="submit" name="modifierArticle" value="Valider la modification">Valider la modification</button>
 		</form>
 <?php		
 	} else {

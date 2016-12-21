@@ -54,9 +54,9 @@ h2 {
 	position: fixed;
 	padding-left:40px;
 	overflow:auto;
-	height:80%;
+	height:70%;
 	margin-left: 10%;
-	left: 300px;
+	left: 315px;
 	top: 150px;
 	right: 10%;
 	z-index: 0;
@@ -156,8 +156,8 @@ a.block {
   z-index: 1;
   left:10%;
   top: 150px;
-  width: 300px;
-  height: 80%;
+  width: 315px;
+  height: 70%;
   color: #e1ffff;
   border-radius:10px;
 
@@ -331,10 +331,6 @@ body {
   margin: 0px;
   padding: 0px;
   background: url(images/fond2.jpeg) 0px center no-repeat;
-}
-
-.art {
-height:100%;
 }
 
 .btn.btn-signin {
