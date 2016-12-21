@@ -32,16 +32,6 @@ function pied() {
 <?php
 }
 
-function redirection() {
-?>
-				<section id="redirection">
-					<fieldset>
-						<h3><a href="lepetitscientifique.php">Accéder directement aux articles !</a></h3>
-					</fieldset>
-				</section>
-<?php
-}
-
 function connexion() {
 ?>
 					<div class="card card-container">
@@ -59,49 +49,47 @@ function connexion() {
 
 function inscription() {
 ?>
-				<section id="inscription">
-					<div class="card2 card-container">
-						<form class="form-signin" method='post' action='accueil.php'>
-							<label>Nom : </label>
-							<input type='text' class="form-control" name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>
-							<img src="images/cross.png" class="erreurNom" style="display:none" alt="" />
-							<span class="erreur"></span>
-							</br></br>
+				<div class="card card-container">
+					<form class="form-signin" method='post' action='accueil.php'>
+						<label>Nom : </label>
+						<input type='text' class="form-control" name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>
+						<img width="25px" height="25px" src="images/cross.png" class="erreurNom" style="display:none" alt="" />
+						<span class="erreur"></span>
+						</br></br>
 
-							<label>Prenom : </label>
-							<input type='text' class="form-control" name='prenom' required='required' id='prenom' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,15}'>
-							<img src="images/cross.png" class="erreurPrenom" style="display:none" alt="" />
-							<span class="erreur"></span>
-							</br></br>
-							
-							<label>Ville : </label>
-							<input type='text' class="form-control" name='ville' required='required' id='ville' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,20}'>
-							<img src="images/cross.png" class="erreurVille" style="display:none" alt="" />
-							<span class="erreur"></span>
-							</br></br>
-							
-							<label>Email : </label>
-							<input type='email' class="form-control" name='mail' required='required' id='mail' autocomplete='off' pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$'>
-							<img src="images/cross.png" class="erreurEmail" style="display:none" alt="" />
-							<span class="erreur"></span>
-							</br></br>
+						<label>Prenom : </label>
+						<input type='text' class="form-control" name='prenom' required='required' id='prenom' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,15}'>
+						<img width="25px" height="25px" src="images/cross.png" class="erreurPrenom" style="display:none" alt="" />
+						<span class="erreur"></span>
+						</br></br>
+						
+						<label>Ville : </label>
+						<input type='text' class="form-control" name='ville' required='required' id='ville' autocomplete='off' pattern='([-A-zÀ-ž\s]){1,20}'>
+						<img width="25px" height="25px" src="images/cross.png" class="erreurVille" style="display:none" alt="" />
+						<span class="erreur"></span>
+						</br></br>
+						
+						<label>Email : </label>
+						<input type='email' class="form-control" name='mail' required='required' id='mail' autocomplete='off' pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$'>
+						<img width="25px" height="25px" src="images/cross.png" class="erreurEmail" style="display:none" alt="" />
+						<span class="erreur"></span>
+						</br></br>
 
-							<label>Mot de passe : </label>
-							<input type='password' class="form-control" name='password' id ='password' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
-							<img src="images/cross.png" class="erreurMDP1" style="display:none" alt="" />
-							<span class="erreur"></span>
-							</br></br>
+						<label>Mot de passe : </label>
+						<input type='password' class="form-control" name='password' id ='password' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
+						<img width="25px" height="25px" src="images/cross.png" class="erreurMDP1" style="display:none" alt="" />
+						<span class="erreur"></span>
+						</br></br>
 
-							<label>Confirmer le mot de passe : </label>
-							<input type='password' class="form-control" name='password2' id ='password2' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
-							<img src="images/cross.png" class="erreurMDP2" style="display:none" alt="" />
-							<span class="erreur"></span>
-							</br></br>
-							
-							<button class="btn btn-lg btn-primary btn-block btn-signin" type='submit' name='submit' id='submit' value='Envoyer'>S'inscrire</button>
-						</form>
-					</div>
-				</section>
+						<label>Confirmer le mot de passe : </label>
+						<input type='password' class="form-control" name='password2' id ='password2' required='required' pattern='(?=^.{6,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$'>
+						<img width="25px" height="25px" src="images/cross.png" class="erreurMDP2" style="display:none" alt="" />
+						<span class="erreur"></span>
+						</br></br>
+						
+						<button class="btn btn-lg btn-primary btn-block btn-signin" type='submit' name='submit' id='submit' value='Envoyer'>S'inscrire</button>
+					</form>
+				</div>
 <?php
 }
 ?>
