@@ -108,7 +108,6 @@ class Auteur {
 				header ("Location: lepetitscientifique.php");
 			} 
 		} else {
-			echo 'Vous n\'avez pas rentré les bons identifiants, vous allez etre redirige dans 5 secondes';
 			header ("Refresh: 5;URL=index.php");
 		}
 	}	
