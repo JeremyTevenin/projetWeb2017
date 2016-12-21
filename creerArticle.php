@@ -11,7 +11,7 @@ if (isset($_POST['creerArticle'])) {
 	// - strtolower retourne tout les caractère en minuscule
 	$repertoire = preg_replace('/[^a-z0-9-_]/', '', 
 			str_replace(array(" ", "'"), "_", 
-			strtolower(iconv('utf-8', 'us-ascii//TRANSLIT', iconv('utf-8', 'utf-8//IGNORE', $nom)))));
+			strtolower(iconv('utf-8', 'us-ascii//TRANSLIT', iconv('utf-8', 'utf-8//IGNORE', $nomArticle)))));
 	
 	$url = "$repertoire.php";
 					

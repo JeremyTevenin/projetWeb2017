@@ -33,13 +33,17 @@ function entete() {
 }
 
 function pied() {
-	echo "		</section>\n";
-	echo "	</body>\n";
-	echo "</html>\n";
+?>
+				</section>
+			</body>
+		</html>
+<?php
 }
 
 function contenu() {
-	echo "		<section id=\"article\">\n";
+?>
+				<section id="article">
+<?php
 }
 ?>
 

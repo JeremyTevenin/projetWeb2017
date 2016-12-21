@@ -15,37 +15,18 @@ include('vueGestionAuteur.php');
 
 include('vueLepetitScientifique.php');
 
+entete();
 
-
-/*
-$dossierAticles = 'articles';
-$dossier = opendir($dossierAticles);
-while($fichier = readdir($dossier)){
-	while($fichier = readdir($dossier)){
-		if(is_file($dossierAticles.'/'.$fichier) && $fichier !='/' && $fichier !='.' && $fichier != '..'){
-			echo "<script>alert(\"$dossierAticles/$dossier/$dossier.php\");</script>";
-
-			include $dossierAticles.'/'.$dossier.'/'.$dossier.'.php';
-		}
-	}
-	
-}
-closedir($dossier);*/
-
-/*
 $dossierArticles = 'articles';
 $dossier = opendir($dossierArticles);
 while($fichier = readdir($dossier)){
 	while($fichier = readdir($dossier)){
-		if ($fichier !='/' && $fichier !='.' && $fichier != '..') {
+		if ($fichier != '..' && $fichier != '.') {
 			include $dossierArticles.'/'.$fichier.'/'.$fichier.'.php';
 		}
 	}
 }
 closedir($dossier);
-*/
-
-entete();
 
 $categorie = new Categorie;
 $souscategorie = new SousCategorie;
