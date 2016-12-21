@@ -23,10 +23,6 @@ h2 {
 
 }
 
-label, input {
-	display: inline-block;
-}
-
 #fond {
 	width: 100%;
 	height: 100%;
