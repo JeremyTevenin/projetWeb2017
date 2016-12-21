@@ -14,7 +14,6 @@ header {
 	color: #2e353d;
 	opacity: 0.50;
 	line-height: 70px ;
-
 }
 
 h2 {
@@ -25,7 +24,7 @@ h2 {
 }
 
 label, input {
-	display:inline-block;
+	display: inline-block;
 }
 
 #fond {
@@ -34,26 +33,6 @@ label, input {
 	position: fixed;
 	background: url(images/fond2.jpeg) 0px center no-repeat;
 	background-size: cover;
-}
-
-/* Gestion du lien de redirection */
-#redirection {
-	position: absolute;
-	right: 110px;
-	top: 150px;
-	width: 350px;
-	height: 220px;
-	padding: 5px;
-	text-align: center;
-}
-
-#redirection  a {
-	text-decoration: none;
-	color: black;
-}
-
-#redirection  a:hover {
-	color: red;
 }
 
 span.erreur {
@@ -71,16 +50,14 @@ span.erreur {
 /*
  * General styles
  */
-
-
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
 }
 
 .card-container2.card {
-    max-width: 700px;
-    padding: 40px 40px;
+    max-width: 50%;
+    padding: 20px 20px;
 }
 
 .btn {
@@ -117,7 +94,7 @@ a:hover {
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    opacity:0.60;
+    opacity: 0.60;
 }
 
 .profile-img-card {
@@ -156,17 +133,13 @@ a:hover {
     box-sizing: border-box;
 }
 
-.form-signin #mailC,
-.form-signin #passwordC {
+.form-signin #mailC, .form-signin #passwordC {
     direction: ltr;
     height: 44px;
     font-size: 16px;
 }
 
-.form-signin input[type=email],
-.form-signin input[type=password],
-.form-signin input[type=text],
-.form-signin button {
+.form-signin input[type=email], .form-signin input[type=password], .form-signin input[type=text], .form-signin button {
     width: 100%;
     display: block;
     margin-bottom: 10px;
@@ -177,7 +150,7 @@ a:hover {
     box-sizing: border-box;
 }
 
-.form-signin2 input[type=text]{
+.form-signin2 input[type=text] {
     margin-bottom: 10px;
     z-index: 1;
     position: relative;
@@ -186,8 +159,7 @@ a:hover {
     box-sizing: border-box;
 }
 
-label
-{
+label {
 	display: block;
 	width:150px;
 	float: left;
@@ -202,9 +174,7 @@ label
 }
 
 .btn.btn-signin {
-    /*background-color: #4d90fe; */
     background-color: rgb(104, 145, 162);
-    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
     margin-top: 13px;
     font-weight: 700;
     font-size: 14px;
@@ -219,8 +189,6 @@ label
     transition: all 0.218s;
 }
 
-.btn.btn-signin:hover,
-.btn.btn-signin:active,
-.btn.btn-signin:focus {
+.btn.btn-signin:hover, .btn.btn-signin:active, .btn.btn-signin:focus {
     background-color: rgb(19, 59, 160);
 }

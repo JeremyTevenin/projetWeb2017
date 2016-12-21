@@ -128,7 +128,7 @@ function ajouterArticle($dataCateg, $dataSousCateg, $dataArticle) {
 		
 		//<input type=\"number\" min=\"1\" max=\"$nb\" name=\"insert_id_categ\" required=required> 	</td>\n";
 		echo "								<td> $dernierId <input type=\"hidden\" name=\"insert_id_article\" value=\"$dernierId\">	</td>\n";
-		echo "								<td> <input type=\"text\" name=\"insert_nom_article\" required=required pattern=\"([\'-A-z0-9À-ž\s]){3,}\"></td>\n";
+		echo "								<td> <input type=\"text\" name=\"insert_nom_article\" required=required pattern=\"([\'-A-zÀ-ž\s]){3,}\"></td>\n";
 		echo "								<td><button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25px\" height=\"25px\" src=\"images/ajout.png\"/></button></td>\n";
 		echo "							</tr>\n";
 		echo "						</table>\n";
