@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 18 Décembre 2016 à 09:20
+-- Généré le :  Jeu 22 Décembre 2016 à 13:02
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -42,7 +42,8 @@ CREATE TABLE `auteur` (
 
 INSERT INTO `auteur` (`id`, `nom`, `prenom`, `ville`, `mail`, `password`, `admin`) VALUES
 (0, 'Administrateur', '', '', 'admin@admin.fr', '$2y$10$dh0no0dq5wBqzNufBj.iRejaHBPBu4CmjU3oGXqj0ekLA4aE834li', 1),
-(1, 'JÃ©rÃ©my', 'TÃ©venin', 'Rouen', 'jeremy_tevenin@hotmail.fr', '$2y$10$6gdn87R/aQXWsuEpnDn3Pu757AshLib7dpz1IJyTX7HDqOpWeLC5y', 0);
+(1, 'JÃ©rÃ©my', 'TÃ©venin', 'Rouen', 'jeremy_tevenin@hotmail.fr', '$2y$10$6gdn87R/aQXWsuEpnDn3Pu757AshLib7dpz1IJyTX7HDqOpWeLC5y', 0),
+(2, 'Amine', 'Bouaziz', 'Petit-Quevilly', 'amine.bouaziz@gmail.com', '$2y$10$amwhtC.m0VFGlKeWsCDfw.UywtEWnDHnyQL8xRTRlwVPygT.SXRIq', 0);
 
 --
 -- Index pour les tables exportées
@@ -63,7 +64,7 @@ ALTER TABLE `auteur` ADD FULLTEXT KEY `mdp` (`password`);
 -- AUTO_INCREMENT pour la table `auteur`
 --
 ALTER TABLE `auteur`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
