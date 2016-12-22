@@ -42,7 +42,7 @@ class Auteur {
 		
 		$lignes = $request->fetchAll();
 		if (count($lignes) >= 1) {
-			header( "Location: index.php" );
+			header('Location: accueil?inscription&erreurMail');
 			exit();
 		}
 		$request->closeCursor();
@@ -68,7 +68,7 @@ class Auteur {
 		
 			header('Location: lepetitscientifique.php');
 		} else {
-			header('Location: index.php');
+			header('Location: accueil?inscription&erreurMDP');
 		}
 	}
 		

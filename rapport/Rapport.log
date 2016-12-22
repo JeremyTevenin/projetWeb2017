@@ -1,23 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.1)  20 DEC 2016 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.1)  22 DEC 2016 16:12
 entering extended mode
 **./Rapport.tex
 (Rapport.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -360,9 +359,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count88
-\Gm@cntv=\count89
-\c@Gm@tempcnt=\count90
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
 \Gm@bindingoffset=\dimen103
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
@@ -384,17 +383,23 @@ Package: babel 2016/04/23 3.9r The Babel package
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-french\frenchb.ldf"
-Language: frenchb 2016/05/14 v3.2c French support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count91
+\babel@savecnt=\count90
 \U@D=\dimen111
 )
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-french\frenchb.ldf"
+Language: frenchb 2016/05/14 v3.2c French support from the babel system
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
-\FB@nonchar=\count92
+\FB@nonchar=\count91
 \FBcolonskip=\skip43
 \FBthinskip=\skip44
 Package babel Info: Making : an active character on input line 365.
@@ -402,11 +407,11 @@ Package babel Info: Making ; an active character on input line 366.
 Package babel Info: Making ! an active character on input line 367.
 Package babel Info: Making ? an active character on input line 368.
 \FBguillskip=\skip45
-\FBguill@level=\count93
+\FBguill@level=\count92
 \FB@everypar=\toks18
 \FB@Mht=\dimen112
-\std@mcc=\count94
-\dec@mcc=\count95
+\std@mcc=\count93
+\dec@mcc=\count94
 \listindentFB=\skip46
 \labelwidthFB=\skip47
 \leftmarginFB=\skip48
@@ -414,6 +419,10 @@ Package babel Info: Making ? an active character on input line 368.
 \FBfnindent=\skip49
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\varioref.sty"
+Package: varioref 2016/02/16 v1.5c package for extended references (FMi)
+\c@vrcnt=\count95
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\libertine.sty"
 Package: libertine 2014/11/25 (Bob Tennent) Supports Libertine and Biolinum fon
 ts for all LaTeX engines.
@@ -818,36 +827,36 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 ) (Rapport.aux)
 \openout1 = `Rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Try loading font information for T1+LinuxLibertineT-TLF on 
-input line 27.
+input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\t1linuxlibertinet-tlf.fd"
 File: T1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for T1/Li
 nuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 27.
+(Font)              scaled to size 12.0pt on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -868,12 +877,12 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -883,9 +892,9 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \degres on input line 27.
-LaTeX Info: Redefining \dots on input line 27.
-LaTeX Info: Redefining \up on input line 27.
+LaTeX Info: Redefining \degres on input line 30.
+LaTeX Info: Redefining \dots on input line 30.
+LaTeX Info: Redefining \up on input line 30.
 \c@mv@tabular=\count110
 \c@mv@boldtabular=\count111
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -915,7 +924,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -924,156 +933,270 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count118
+LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (Rapport.out) (Rapport.out)
 \@outlinefile=\write4
 \openout4 = `Rapport.out'.
 
+LaTeX Info: Redefining \Ref on input line 30.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 30.
+nput line 33.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\t1linuxbiolinumt-tlf.fd"
 File: T1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 30.
+(Font)              scaled to size 12.0pt on input line 33.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 36.
+(Font)              scaled to size 12.0pt on input line 39.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 17.28pt on input line 36.
+(Font)              scaled to size 20.74pt on input line 39.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 38.
+(Font)              scaled to size 17.28pt on input line 41.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 42.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <20.74> not
+(Font)              scaled to size 24.88pt on input line 45.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <24.88> not
  available
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/n' tried instead on inp
-ut line 42.
+ut line 45.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 42.
+(Font)              scaled to size 24.88pt on input line 45.
 
-<images/universite-rouen.jpg, id=43, 652.4375pt x 234.8775pt>
+<images/accueil2.png, id=59, 892.83563pt x 460.72125pt>
+File: images/accueil2.png Graphic file (type png)
+
+<use images/accueil2.png>
+Package pdftex.def Info: images/accueil2.png used on input line 48.
+(pdftex.def)             Requested size: 446.41672pt x 230.36006pt.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 53.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
+(Font)              scaled to size 14.4pt on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 57.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 14.4pt on input line 60.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/accueil2.png>]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 75.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 17.28pt on input line 75.
+ (Rapport.toc
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
+)
+\tf@toc=\write5
+\openout5 = `Rapport.toc'.
+
+
+<images/universite-rouen.jpg, id=85, 652.4375pt x 234.8775pt>
 File: images/universite-rouen.jpg Graphic file (type jpg)
 
 <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 45.
-(pdftex.def)             Requested size: 130.48518pt x 46.97466pt.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 50.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 54.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 54.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 54.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 57.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.79993pt on input line 64.
- [1
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 77.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/universite-rouen
-.jpg>]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 72.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 72.
- (Rapport.toc)
-\tf@toc=\write5
-\openout5 = `Rapport.toc'.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 29.95726pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \newpage
-              [1
+l.77 \newpage
+              [1 <./images/universite-rouen.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
-]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 75.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 75.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 83.
+ []
+
 File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 83.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 29.68726pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2]
-File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 86.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [3]
-File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
+<use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 89.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
-[4]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
 File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 93.
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 125.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+<images/diag.png, id=100, 755.82375pt x 454.69875pt>
+File: images/diag.png Graphic file (type png)
+ <use images/diag.png>
+Package pdftex.def Info: images/diag.png used on input line 138.
+(pdftex.def)             Requested size: 455.24408pt x 273.869pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 144.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [4 <./images/diag.png>]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 146.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 146.
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+File: images/universite-rouen.jpg Graphic file (type jpg)
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 185.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
  [5]
-File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 97.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
-[6]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 99.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 99.
-File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 104.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [7]
-File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 107.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ []
 
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+<images/inscriptionvalid.png, id=110, 520.19344pt x 408.77719pt>
+File: images/inscriptionvalid.png Graphic file (type png)
+
+<use images/inscriptionvalid.png>
+Package pdftex.def Info: images/inscriptionvalid.png used on input line 193.
+(pdftex.def)             Requested size: 416.1553pt x 327.02219pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+
+ []
+
+<images/inscriptionnnvalid.png, id=111, 524.71031pt x 408.02437pt>
+File: images/inscriptionnnvalid.png Graphic file (type png)
+
+<use images/inscriptionnnvalid.png>
+Package pdftex.def Info: images/inscriptionnnvalid.png used on input line 200.
+(pdftex.def)             Requested size: 419.7688pt x 326.41994pt.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 110.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 201.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [6 <./images/inscriptionvalid.png>]
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 206.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [7 <./images/inscriptionnnvalid.png>]
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 213.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [8]
+File: images/universite-rouen.jpg Graphic file (type jpg)
+
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 216.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 219.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+
+[10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
  (Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 1E34C7B4713939C65AC62D7CC1786D3B;596.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
+(rerunfilecheck)             Checksum: F1B02B490408E98F886A751FBF01FBAA;806.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 9562 strings out of 493333
- 146664 string characters out of 3139185
- 231004 words of memory out of 3000000
- 12898 multiletter control sequences out of 15000+200000
- 96028 words of font info for 54 fonts, out of 3000000 for 9000
+ 9698 strings out of 493333
+ 148634 string characters out of 3139185
+ 235180 words of memory out of 3000000
+ 13016 multiletter control sequences out of 15000+200000
+ 80639 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,15n,48p,242b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,15n,49p,482b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Program Fi
 les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Program Files/MiKT
@@ -1083,9 +1206,9 @@ onts/type1/public/libertine/LinBiolinumT.pfb><C:/Program Files/MiKTeX 2.9/fonts
 pe1/public/libertine/LinBiolinumTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/libertine/LinLibertineTB.pfb>
-Output written on Rapport.pdf (10 pages, 332628 bytes).
+Output written on Rapport.pdf (11 pages, 893192 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

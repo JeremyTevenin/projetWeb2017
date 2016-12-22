@@ -50,6 +50,13 @@ function connexion() {
 function inscription() {
 ?>
 				<div class="card card-container2">
+<?php
+					if (isset($_GET['erreurMail'])) {
+						echo "					<p>Ce mail est déjà utilisé</p>\n";
+					} else if (isset($_GET['erreurMDP'])) {
+						echo "					<p>Mots de passe non-identique</p>\n";
+					}
+?>
 					<form method='post' action='accueil.php'>
 						<label>Nom :</label>
 						<input type='text' class="form-control" name='nom' required='required' id='nom' autocomplete='off' pattern='([-A-z0-9À-ž\s]){1,15}'>
