@@ -36,7 +36,7 @@ class SousCategorie {
 		return $data;
 	}
 	
-	// Supprime la catégorie renseignée par l'id
+	// Supprime la sous-catégorie renseignée par l'id
 	public function supprimerSousCategorie($id) {
 		$query = "DELETE FROM souscategorie WHERE id_souscateg=$id";
 		$request = $this->_db->prepare($query);		
@@ -54,7 +54,7 @@ class SousCategorie {
 		$request->execute();						
 	}
 
-	// Modifie le nom d'une catégorie en fonction de l'id	
+	// Modifie le nom d'une sous-catégorie en fonction de l'id	
 	public function modifierSousCategorie($id, $nom) {
 		// On change les ' en \' pour que la requête interprête bien le nom de la catégorie
 		$nom = str_replace( "'", "\'", $nom);

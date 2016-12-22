@@ -23,7 +23,7 @@ class Article {
 		return $request->fetchAll();
 	}
 	
-	// Retourne la ligne de la sous-catégorie
+	// Retourne la ligne de l'article
 	public function getArticle($id) {
 		$query = "SELECT * FROM article WHERE id_souscateg=$id";	
 		$request = $this->_db->prepare($query);
@@ -61,7 +61,7 @@ class Article {
 		}
 	}
 	
-	// Supprime la catégorie renseigné par l'id
+	// Supprime l'article renseigné par l'id
 	public function supprimerArticle($id) {
 		$query = "DELETE FROM article WHERE id_article=$id";
 		$request = $this->_db->prepare($query);		

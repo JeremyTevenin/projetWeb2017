@@ -25,18 +25,8 @@ class Auteur {
 		
 		return $data;
 	}
-  
-	// Ajoute une catégorie renseignée par un nom
-/*	public function ajouterCategorie($id, $nom) {
-		// On change les ' en \' pour que la requête interprête bien le nom de la catégorie
-		$nom = str_replace("'", "\'", $nom);
-		$nom = htmlspecialchars($nom);
 
-		$query = "INSERT INTO categorie (id_categ, nom_categ) VALUES('".$id."', '".$nom."')";
-		$request = $this->_db->prepare($query);		
-		$request->execute();						
-	}*/
-	
+	// Ajoute un rédacteur dans la base AUTEUR
 	public function inscription($nom, $prenom, $ville, $mail, $password, $password2) {
 		$nom = htmlspecialchars($nom);
 		$prenom = htmlspecialchars($prenom);
@@ -45,7 +35,7 @@ class Auteur {
 		$password = htmlspecialchars($password);
 		$password2 = htmlspecialchars($password2);
 		
-		// On vérifie si le nom_utilisateur n'est pas déjà utilisé par un autre utilisateur	
+		// On vérifie si l'adresse mail n'est pas déjà utilisé par un autre utilisateur	
 		$query = "SELECT * FROM auteur WHERE mail='$mail'";
 		$request = $this->_db->prepare($query);
 		$request->execute();
@@ -82,6 +72,7 @@ class Auteur {
 		}
 	}
 		
+	// Vérifie si on renseigne les bons identifiants pour se connecter
 	public function connexion($mail, $password) {
 		$mail = htmlspecialchars($mail);
 		$password = htmlspecialchars($password);
@@ -124,7 +115,7 @@ class Auteur {
 		$request->execute();						
 	}
 	
-	// Supprime la catégorie renseignée par l'id
+	// Supprime l'auteur renseignée par l'id
 	public function supprimerAuteur($id) {
 		$query = "DELETE FROM auteur WHERE id=$id";
 		$request = $this->_db->prepare($query);		

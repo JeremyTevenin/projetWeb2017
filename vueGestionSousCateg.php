@@ -1,16 +1,16 @@
 <?php
 function tabAjouteSousCateg($data1, $nomCateg) {
+	echo "			<h4>Ajouter une sous-catégorie</h4>\n";			
 	echo "			<div class=\"custyle\">\n";			
 									
-	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
+	// On vérifie si l'utilisateur a cliqué sur un bouton pour ajouter une sous-catégorie
 	if (isset($_GET['insert_id_souscateg']) && isset($_GET['insert_nom_souscateg'])) {	
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterSousCateg');\");</script>\n";
 	}	
 	
-	echo "				<table class=\"table table-striped custab\">\n";
-	
-	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
+	// Si il n'y a pas de sous-catégorie, on n'affiche pas le tableau
 	if (count($data1) >= 1) {		
+		echo "				<table class=\"table table-striped custab\">\n";
 		echo "					<thead>\n";	
 		echo "						<tr>\n";	
 		echo "							<th> ID SOUS-CATEGORIE 	</th>\n";	
@@ -36,7 +36,7 @@ function tabAjouteSousCateg($data1, $nomCateg) {
 	}
 		
 	echo "				</table>\n";			
-	echo "					<form action=\"lepetitscientifique.php\" method=\"get\">\n";	
+	echo "				<form action=\"lepetitscientifique.php\" method=\"get\">\n";	
 	echo "					<table class=\"table table-striped custab\">\n";
 	echo "						<thead>\n";	
 	echo "							<tr>\n";	
@@ -47,85 +47,96 @@ function tabAjouteSousCateg($data1, $nomCateg) {
 	echo "							</tr>\n";
 	echo "						</thead>\n";
 	echo "							<tr>\n";
-	
-	
-	
-	// Formulaire d'ajout d'un menu, l'utilisateur doit renseigner un id_menu unique et un nom_menu 
+
+	// Formulaire d'ajout d'une sous-catégorie, l'administrateur doit choisir une catégorie et renseigné un nom de sous-catégorie 
+	echo "							<td>\n";
 	echo "								<input type=\"hidden\" name=\"ajouterSousCateg\">\n";
-	echo "								<td>\n";
+	echo "								<select name=insert_id_categ>\n";
 	
-	echo "			<select name=insert_id_categ>\n";
-	foreach($nomCateg as $n) {	
-		echo "			<option value=".$n['id_categ'].">".$n['nom_categ']."</option>\n";  
+	foreach($nomCateg as $n) {		
+		echo "									<option value=".$n['id_categ'].">".$n['nom_categ']."</option>\n";  
 	}
 	
-	echo "								</td>\n";
+	echo "								</select>\n";
+	echo "							</td>\n";
+	echo "							<td> $dernierId <input type=\"hidden\" name=\"insert_id_souscateg\" value=\"$dernierId\">	</td>\n";
+	echo "							<td> <input type=\"text\" name=\"insert_nom_souscateg\" required=required pattern=\"([-A-zÀ-ž\s]){3,}\"></td>\n";
+	echo "							<td> <button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25\" height=\"25\" src=\"images/ajout.png\" alt=\"ajouter\"/></button></td>\n";
+	echo "						</tr>\n";
 	
-	//<input type=\"number\" min=\"1\" max=\"$nb\" name=\"insert_id_categ\" required=required> 	</td>\n";
-	echo "								<td> $dernierId <input type=\"hidden\" name=\"insert_id_souscateg\" value=\"$dernierId\">	</td>\n";
-	echo "								<td> <input type=\"text\" name=\"insert_nom_souscateg\" required=required pattern=\"([-A-z0-9À-ž\s]){3,}\"></td>\n";
-	echo "								<td> <button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25px\" height=\"25px\" src=\"images/ajout.png\"/></button></td>\n";
-	echo "							</tr>\n";
-	echo "						</table>\n";
-	echo "					</form>\n";
-	echo " 				</div>\n";
+	if (count($data1) >= 1) {		
+		echo "					</table>\n";
+	}
+	
+	echo "				</form>\n";
+	echo " 			</div>\n";
 }
 
 function tabModifierSousCateg($data1) {
-	echo "		<div class=\"custyle\">\n";
-	echo "			<table class=\"table table-striped custab\">\n";
-	echo "				<thead>\n";	
-	echo "					<tr>\n";	
-	echo "						<th> ID SOUS-CATEGORIE  </th>\n";																	
-	echo "						<th> NOM SOUS-CATEGORIE </th>\n";																		
-	echo "						<th> MODIFIER           </th>\n";																		
-	echo "					</tr>\n";
-	echo "				</thead>\n";
+	echo "			<h4>Modifier une sous-catégorie</h4>\n";			
+	echo "			<div class=\"custyle\">\n";
+	
+	// Si il n'y a pas de sous-catégorie, on n'affiche pas le tableau
+	if (count($data1) >= 1) {		
+		echo "				<form action=\"lepetitscientifique.php\" method=\"get\">\n";		
+		echo "					<table class=\"table table-striped custab\">\n";
+		echo "						<thead>\n";	
+		echo "							<tr>\n";	
+		echo "								<th> ID SOUS-CATEGORIE  </th>\n";																	
+		echo "								<th> NOM SOUS-CATEGORIE </th>\n";																		
+		echo "								<th> MODIFIER           </th>\n";																		
+		echo "							</tr>\n";
+		echo "						</thead>\n";
+	} else {
+		echo "				<p>Il n'y a aucune sous-catégrie à modifier</>\n";		
+	}
 						
-	// Vérifie si on a envoyé le formulaire de modification d'un menu
+	// Vérifie si on a envoyé le formulaire de modification d'une sous-catégorie
 	if (isset($_GET['update_id_souscateg']) && isset($_GET['update_nom_souscateg'])) {		
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?modifierSousCateg');\");</script>\n";
 	}
 	
 	foreach($data1 as $tuple) {	
-		echo "				<tr>\n";
+		echo "						<tr>\n";
 		
 		// On vérifie si que l'utilisateur a remplit tous les champs et qu'il a envoyé le formulaire
-		// Dans un menu, on ne peut changer que le nom de celui-ci
 		if (isset($_GET['update']) && $_GET['update'] == $tuple['id_souscateg']) {
-			echo "					<form action=\"lepetitscientifique.php\" method=\"get\">";		
-			echo "						<input type=\"hidden\" name=\"modifierSousCateg\">\n";
-			echo "						<td>\n";
-			echo "							".$tuple['id_souscateg']."\n";
-			echo " 							<input type=\"hidden\" name=\"update_id_souscateg\" value=\"".$tuple['id_souscateg']."\">\n";
-			echo "						</td>\n";
-			echo "						<td>\n";
-			echo " 							<input name=\"update_nom_souscateg\" value=\"".$tuple['nom_souscateg']."\" required=required pattern=\"([-A-z0-9À-ž\s]){3,}\">\n";
-			echo " 						</td>"; 
-			echo "						<td>\n";
-			echo "							<button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25px\" height=\"25px\" src=\"images/val.png\"/></button>\n";
-			echo " 						</td>\n";
-			echo "					</form>";
-		} else {// Si l'utilisateur n'a pas cliqué sur un bouton modifier, on affiche les menus avec un bouton modifier
-			echo "					<td>\n";
-			echo "						".$tuple['id_souscateg']."\n";
-			echo "					</td>\n";
-			echo "					<td>\n";
-			echo "						".$tuple['nom_souscateg']."\n";
-			echo "					</td>\n";						
-			echo " 					<td>\n";
-			echo "						<a href=\"lepetitscientifique?modifierSousCateg&update=".$tuple['id_souscateg']."\"><img width=\"25px\" height=\"25px\" src=\"images/modif.png\"/></a>\n";
-			echo "					</td>\n";
+			echo "								<td>\n";
+			echo "								<input type=\"hidden\" name=\"modifierSousCateg\">\n";
+			echo "									".$tuple['id_souscateg']."\n";
+			echo " 									<input type=\"hidden\" name=\"update_id_souscateg\" value=\"".$tuple['id_souscateg']."\">\n";
+			echo "								</td>\n";
+			echo "								<td>\n";
+			echo " 									<input name=\"update_nom_souscateg\" value=\"".$tuple['nom_souscateg']."\" required=required pattern=\"([-A-z0-9À-ž\s]){3,}\">\n";
+			echo " 								</td>"; 
+			echo "								<td>\n";
+			echo "									<button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25\" height=\"25\" src=\"images/val.png\" alt=\"valider\"/></button>\n";
+			echo " 								</td>\n";
+		} else {// Si l'utilisateur n'a pas cliqué sur un bouton modifier
+			echo "							<td>\n";
+			echo "								".$tuple['id_souscateg']."\n";
+			echo "							</td>\n";
+			echo "							<td>\n";
+			echo "								".$tuple['nom_souscateg']."\n";
+			echo "							</td>\n";						
+			echo " 							<td>\n";
+			echo "								<a href=\"lepetitscientifique?modifierSousCateg&update=".$tuple['id_souscateg']."\"><img width=\"25\" height=\"25\" src=\"images/modif.png\" alt=\"modifier\"/></a>\n";
+			echo "							</td>\n";
 		}
 		
-		echo "				</tr>\n";
+		echo "						</tr>\n";
 	}	
 				
-	echo "			</table>\n";					
-	echo " 		</div>\n";
+	if (count($data1) >= 1) {		
+		echo "					</table>\n";	
+		echo "				</form>\n";
+	}
+	
+	echo " 			</div>\n";
 }
 
 function tabSupprimeSousCateg($data1, $data2) {
+	echo "		<h4>Supprimer une sous-catégorie</h4>\n";			
 	echo "		<div class=\"custyle\">\n";			
 									
 	// On vérifie si l'utilisateur a cliqué sur un bouton pour supprimer une catégorie et on la supprime
@@ -133,14 +144,10 @@ function tabSupprimeSousCateg($data1, $data2) {
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?supprimerSousCateg');\");</script>\n";
 	}
 	
-	if (count($data1) >= 1 ) {
-		echo "				<p>Vous ne pouvez supprimer une sous-catégorie que lorsque celle-ci ne possède aucun article.\n";
-	}
-	
-	echo "			<table class=\"table table-striped custab\">\n";			
-	
-	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
+	// Si il n'y a pas de sous-catégorie, on n'affiche pas le tableau
 	if (count($data1) >= 1) {		
+		echo "			<p>Vous ne pouvez supprimer une sous-catégorie que lorsque celle-ci ne possède aucun article.\n";
+		echo "			<table class=\"table table-striped custab\">\n";
 		echo "				<thead>\n";	
 		echo "					<tr>\n";	
 		echo "						<th> ID SOUS-CATEGORIE 	</th>\n";	
@@ -150,6 +157,8 @@ function tabSupprimeSousCateg($data1, $data2) {
 		echo "						<th> SUPPRIMER			</th>\n";																		
 		echo "					</tr>\n";
 		echo "				</thead>\n";
+	} else {
+		echo "				<p>Il n'y a aucune sous-catégorie à suppirmer\n";
 	}
 	
 	foreach($data1 as $tuple) {	
@@ -186,13 +195,16 @@ function tabSupprimeSousCateg($data1, $data2) {
 			echo "						<td></td>\n";
 			echo "						<td></td>\n";
 			echo "						<td>\n"; 
-			echo "							<a href=\"lepetitscientifique.php?supprimerSousCateg&delete_id_souscateg=".$tuple['id_souscateg']."\"><img width=\"25px\" height=\"25px\" src=\"images/supp.png\"/></a>\n";
+			echo "							<a href=\"lepetitscientifique.php?supprimerSousCateg&delete_id_souscateg=".$tuple['id_souscateg']."\"><img width=\"25\" height=\"25\" src=\"images/supp.png\" alt=\"supprimer\"/></a>\n";
 			echo "						</td>\n";	
 			echo "					</tr>\n";
 		} 
 	}
 	
-	echo "				</table>\n";				
+	if (count($data1) >= 1) {	
+		echo "				</table>\n";
+	}
+	
 	echo " 			</div>\n";
 }
 ?>

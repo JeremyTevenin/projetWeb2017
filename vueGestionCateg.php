@@ -73,7 +73,7 @@ function tabModifierCateg($data1) {
 		echo "				<p>Il n'y a aucune catégorie à modifier</p>\n";
 	}
 						
-	// Vérifie si on a envoyé le formulaire de modification d'un menu
+	// Vérifie si on a envoyé le formulaire de modification d'une catégorie
 	if (isset($_GET['update_id_categ']) && isset($_GET['update_nom_categ'])) {		
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?modifierCateg');\");</script>\n";
 	}
@@ -82,7 +82,6 @@ function tabModifierCateg($data1) {
 		echo "						<tr>\n";
 		
 		// On vérifie si que l'utilisateur a remplit tous les champs et qu'il a envoyé le formulaire
-		// Dans un menu, on ne peut changer que le nom de celui-ci
 		if (isset($_GET['update']) && $_GET['update'] == $tuple['id_categ']) {			
 			echo "							<td>\n";
 			echo "								".$tuple['id_categ']."\n";
@@ -95,8 +94,7 @@ function tabModifierCateg($data1) {
 			echo "							<td>\n";
 			echo "								<button class=\"btn btn-default btn-circle\" type=\"submit\"><img width=\"25\" height=\"25\" src=\"images/val.png\" alt=\"valider\"/></button>\n";
 			echo " 							</td>\n";
-			
-		} else {// Si l'utilisateur n'a pas cliqué sur un bouton modifier, on affiche les menus avec un bouton modifier
+		} else {// Si l'utilisateur n'a pas cliqué sur un bouton modifier
 			echo "							<td>\n";
 			echo "								".$tuple['id_categ']."\n";
 			echo "							</td>\n";
