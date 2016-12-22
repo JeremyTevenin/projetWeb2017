@@ -32,19 +32,9 @@ CREATE TABLE `article` (
   `id_auteur` int(11) NOT NULL,
   `date` date NOT NULL,
   `nom_article` varchar(50) NOT NULL,
-  `texte_page` text NOT NULL,
   `repertoire` varchar(45) NOT NULL,
   `url` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `article`
---
-
-INSERT INTO `article` (`id_souscateg`, `id_article`, `id_auteur`, `date`, `nom_article`, `texte_page`, `repertoire`, `url`) VALUES
-(1, 1, 1, '2016-12-18', 'Mon premier cours', '', 'mon_premier_cours', 'mon_premier_cours.php'),
-(1, 2, 1, '2016-12-20', 'Mon deuxiÃ¨me cours', '', 'mon_deuxieme_cours', 'mon_deuxieme_cours.php'),
-(1, 3, 1, '2016-12-20', 'Mon troisiÃ¨me cours', '', 'mon_troisieme_cours', 'mon_troisieme_cours.php');
 
 -- --------------------------------------------------------
 
@@ -57,15 +47,6 @@ CREATE TABLE `categorie` (
   `nom_categ` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Contenu de la table `categorie`
---
-
-INSERT INTO `categorie` (`id_categ`, `nom_categ`) VALUES
-(1, 'Informatique'),
-(2, 'MathÃ©matique'),
-(3, 'Physique-Chimie');
-
 -- --------------------------------------------------------
 
 --
@@ -77,14 +58,6 @@ CREATE TABLE `souscategorie` (
   `id_souscateg` int(11) NOT NULL,
   `nom_souscateg` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `souscategorie`
---
-
-INSERT INTO `souscategorie` (`id_categ`, `id_souscateg`, `nom_souscateg`) VALUES
-(3, 1, 'Chimie'),
-(3, 2, 'Physique');
 
 --
 -- Index pour les tables exportées
@@ -118,17 +91,17 @@ ALTER TABLE `souscategorie`
 -- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id_categ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_categ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- AUTO_INCREMENT pour la table `souscategorie`
 --
 ALTER TABLE `souscategorie`
-  MODIFY `id_souscateg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_souscateg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- Contraintes pour les tables exportées
 --

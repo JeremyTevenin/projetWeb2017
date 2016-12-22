@@ -61,6 +61,11 @@ h2 {
 /* -------------------- */
 /* Gestion des sections */
 /* -------------------- */
+h4 {
+	margin-top: 10px;
+	text-align: center;
+}
+
 .centre td, th, tr {
 	width: 120px;
 	height: 30px;

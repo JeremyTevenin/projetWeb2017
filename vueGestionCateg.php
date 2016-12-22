@@ -8,21 +8,16 @@ function tabAjouteCateg($data1) {
 		echo "<script> window.setTimeout(\"location=('lepetitscientifique?ajouterCateg');\");</script>\n";
 	}	
 		
-	// Si il n'y a pas de catégorie, on n'affiche pas le tableau
-	if (count($data1) >= 1) {		
-		echo "				<form action=\"lepetitscientifique.php\" method=\"get\">\n";	
-		echo "					<table class=\"table table-striped custab\">\n";
-		echo "						<thead>\n";	
-		echo "							<tr>\n";	
-		echo "								<th> ID CATEGORIE 	</th>\n";	
-		echo "								<th> NOM CATEGORIE	</th>\n";													
-		echo "								<th> AJOUTER		</th>\n";													
-		echo "							</tr>\n";
-		echo "						</thead>\n";
-	} else {
-		echo "				<p>Il n'y a aucune catégories pour l'instant</p>\n";	
-	}
-	
+	echo "				<form action=\"lepetitscientifique.php\" method=\"get\">\n";	
+	echo "					<table class=\"table table-striped custab\">\n";
+	echo "						<thead>\n";	
+	echo "							<tr>\n";	
+	echo "								<th> ID CATEGORIE 	</th>\n";	
+	echo "								<th> NOM CATEGORIE	</th>\n";													
+	echo "								<th> AJOUTER		</th>\n";													
+	echo "							</tr>\n";
+	echo "						</thead>\n";
+		
 	$dernierId = 0;
 	
 	foreach($data1 as $tuple) {	

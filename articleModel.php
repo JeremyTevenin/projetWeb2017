@@ -49,8 +49,8 @@ class Article {
 		
 		$url = "$repertoire.php";
 				
-		$query = "INSERT INTO article (id_souscateg, id_article, id_auteur, date, nom_article, texte_page, repertoire, url) 
-					VALUES ('".$idSousCateg."', '".$idArticle."', '".$idAuteur."', '".$date."', '".$nomArticle."', '', '".$repertoire."', '".$url."')";
+		$query = "INSERT INTO article (id_souscateg, id_article, id_auteur, date, nom_article, repertoire, url) 
+					VALUES ('".$idSousCateg."', '".$idArticle."', '".$idAuteur."', '".$date."', '".$nomArticle."', '".$repertoire."', '".$url."')";
 		
 		$request = $this->_db->prepare($query);		
 		$request->execute();
