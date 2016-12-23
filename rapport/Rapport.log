@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.1)  23 DEC 2016 13:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  23 DEC 2016 15:03
 entering extended mode
-**./Rapport.tex
-(Rapport.tex
+**C:/wamp64/www/projetWeb/projetWeb2017/rapport/Rapport.tex
+(C:/wamp64/www/projetWeb/projetWeb2017/rapport/Rapport.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -824,7 +824,8 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@erf=\skip57
 \f@ncyO@olf=\skip58
 \f@ncyO@orf=\skip59
-) (Rapport.aux)
+)
+(C:/wamp64/www/projetWeb/projetWeb2017/rapport\Rapport.aux)
 \openout1 = `Rapport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -939,7 +940,8 @@ LaTeX Info: Redefining \ref on input line 30.
 LaTeX Info: Redefining \pageref on input line 30.
 LaTeX Info: Redefining \nameref on input line 30.
 
-(Rapport.out) (Rapport.out)
+(C:/wamp64/www/projetWeb/projetWeb2017/rapport\Rapport.out)
+(C:/wamp64/www/projetWeb/projetWeb2017/rapport\Rapport.out)
 \@outlinefile=\write4
 \openout4 = `Rapport.out'.
 
@@ -988,12 +990,14 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 14.4pt on input line 60.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/accueil2.png>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/wamp64/www/projetWeb/p
+rojetWeb2017/rapport/images/accueil2.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 75.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 75.
- (Rapport.toc
+
+(C:/wamp64/www/projetWeb/projetWeb2017/rapport\Rapport.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
 )
@@ -1019,7 +1023,8 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.77 \newpage
-              [1 <./images/universite-rouen.jpg>]
+              [1 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/universi
+te-rouen.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
@@ -1096,7 +1101,7 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
 <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 143.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [4 <./images/diag.png>]
+ [4 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/diag.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 12.0pt on input line 145.
 
@@ -1110,7 +1115,7 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 149.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [5 <./images/maquette.png>]
+ [5 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/maquette.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 151.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -1170,12 +1175,15 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 207.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [7 <./images/inscriptionvalid.png>]
+ [7 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/inscriptionvalid.png>
+]
 File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
+
+<use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 211.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [8 <./images/inscriptionnnvalid.png>]
+ [8 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/inscriptionnnvalid.pn
+g>]
 Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
@@ -1190,11 +1198,10 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 222.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [9 <./images/connexion.png>] <images/menu2.png, id=170, 237.13594pt x 326.7206
-3pt>
+ [9 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/connexion.png>]
+<images/menu2.png, id=170, 237.13594pt x 326.72063pt>
 File: images/menu2.png Graphic file (type png)
-
-<use images/menu2.png>
+ <use images/menu2.png>
 Package pdftex.def Info: images/menu2.png used on input line 230.
 (pdftex.def)             Requested size: 227.62204pt x 313.6233pt.
 
@@ -1216,7 +1223,7 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
 <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 239.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [10 <./images/menu2.png>]
+ [10 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/menu2.png>]
 <images/ajoutcat.png, id=176, 536.75531pt x 187.45032pt>
 File: images/ajoutcat.png Graphic file (type png)
 
@@ -1234,7 +1241,8 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 250.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [11 <./images/ajoutcat.png> <./images/modifcateg.png>]
+ [11 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/ajoutcat.png> <C:/wa
+mp64/www/projetWeb/projetWeb2017/rapport/images/modifcateg.png>]
 <images/modifcateg2.png, id=184, 534.49687pt x 261.97874pt>
 File: images/modifcateg2.png Graphic file (type png)
 
@@ -1259,7 +1267,9 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 269.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [12 <./images/modifcateg2.png> <./images/suppcat.png> <./images/suppaut.png>]
+ [12 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/modifcateg2.png> <C:
+/wamp64/www/projetWeb/projetWeb2017/rapport/images/suppcat.png> <C:/wamp64/www/
+projetWeb/projetWeb2017/rapport/images/suppaut.png>]
 <images/ajoutart.png, id=194, 536.0025pt x 314.67563pt>
 File: images/ajoutart.png Graphic file (type png)
 
@@ -1284,7 +1294,8 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 286.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [13 <./images/ajoutart.png> <./images/ajoutart2.png>]
+ [13 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/ajoutart.png> <C:/wa
+mp64/www/projetWeb/projetWeb2017/rapport/images/ajoutart2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
@@ -1306,7 +1317,8 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 299.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [14 <./images/ajoutart3.png> <./images/modifart.png>]
+ [14 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/ajoutart3.png> <C:/w
+amp64/www/projetWeb/projetWeb2017/rapport/images/modifart.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
@@ -1332,21 +1344,21 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 317.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [15 <./images/modifart2.png> <./images/suppart.png> <./images/modifauteur.png>
-]
+ [15 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/modifart2.png> <C:/w
+amp64/www/projetWeb/projetWeb2017/rapport/images/suppart.png> <C:/wamp64/www/pr
+ojetWeb/projetWeb2017/rapport/images/modifauteur.png>]
 File: images/universite-rouen.jpg Graphic file (type jpg)
-
-<use images/universite-rouen.jpg>
+ <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 321.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [16]
+
+[16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 324.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
-
-[17]
+ [17]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
  (Rapport.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
@@ -1356,13 +1368,13 @@ Package rerunfilecheck Info: File `Rapport.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
  ) 
 Here is how much of TeX's memory you used:
- 9797 strings out of 493333
- 150670 string characters out of 3139185
+ 9798 strings out of 493333
+ 151176 string characters out of 3139193
  236180 words of memory out of 3000000
  13084 multiletter control sequences out of 15000+200000
  84867 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,15n,49p,490b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,15n,49p,534b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Program Fi
 les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Program Files/MiKT
@@ -1373,7 +1385,7 @@ ublic/libertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/libertine/LinBiolinumTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lib
 ertine/LinLibertineTB.pfb>
-Output written on Rapport.pdf (18 pages, 1907281 bytes).
+Output written on Rapport.pdf (18 pages, 1812556 bytes).
 PDF statistics:
  259 PDF objects out of 1000 (max. 8388607)
  40 named destinations out of 1000 (max. 500000)

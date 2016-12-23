@@ -78,10 +78,10 @@
 \section{Introduction}
 Le projet consiste en l'écriture d'un mini CMS pour la mise en ligne d'articles à caractère scientifique.
 
-Le site sera divisé en catégories, sous-catégorie et articles pour organiser le contenu.
+Le site sera divisé en catégories, sous-catégories et articles pour organiser le contenu.
 Il y a 3 types d'utilisateurs ~:\\ 
 \begin{itemize}
-\item l'administrateur qui peut gérer les catégories, sous-catégories et rédacteurs
+\item l'administrateur peut gérer les catégories, sous-catégories et rédacteurs
 \item les rédacteurs peuvent ajouter des articles et ils peuvent aussi modifier ou supprimer leur propre articles 
 \item les simples utilisateurs peuvent juste visionner les articles
 \end{itemize}
@@ -94,7 +94,7 @@ Nous vous fournissons des fichiers sql contenant nos deux bases de données (AUT
 
 Il vous suffit d'importer ces fichiers sql et de lancer index.php qui vous redirigera vers la page d'accueil.\\
 
-Les identifiant de connexion à la base sont par défaut ``root'' et le mot de passe est vide. Si votre serveur à des identifiants différents, vous trouverez un fichier config.php où vous changerez les identifiants ``USER'' ET ``PASSWD''.\\
+Les identifiants de connexion à la base sont par défaut ``root'' et le mot de passe est vide. Si votre serveur à des identifiants différents, vous trouverez un fichier config.php où vous changerez les identifiants ``USER'' ET ``PASSWD''.\\
 
 \begin{tabbing}
 \hspace{2cm}\=\hspace{2cm}\=\kill
@@ -106,7 +106,7 @@ Les identifiant de connexion à la base sont par défaut ``root'' et le mot de p
 \>	define('DBAUTEUR','auteur');\\
 ?>\\
 \end{tabbing} 
-Vous pourrez vous connectez en mode administrateur en vous connectant avec ~:
+Vous pourrez vous connecter en mode administrateur en vous connectant avec ~:
 \begin{itemize}
 \item admin@admin.fr
 \item Admin0\\
@@ -124,10 +124,10 @@ Vous pouvez aussi créer votre propre rédacteur ou simplement lire les articles
 
 \newpage
 \section{Conception}
-Pour concevoir notre application, nous avons utiliser un modèle MVC. Notre application contient deux parties différentes ~:\\
+Pour concevoir notre application, nous avons utilisé un modèle MVC. Notre application contient deux parties différentes ~:
 \begin{itemize}
 \item la partie accueil permettant de se connecter ou de s'inscrire
-\item la partie site permettant de lire les articles ou de les administrer
+\item la partie site permettant de lire les articles ou de les administrer\\
 \end{itemize}
 
 Comme nous avons deux parties, nous avons deux contrôleurs différents, acceuil.php et lepetitscientifique.php.\\
@@ -189,16 +189,16 @@ Table auteur ~:
 
 \newpage
 \section{Inscription/connexion}
-Un utilisateur peut se connecter si il a déjà un compte, s'inscrire pour devenir rédacteur ou simplement visiter le site.
+Un utilisateur peut se connecter s'il a déjà un compte, s'inscrire pour devenir rédacteur ou simplement visiter le site.
 
 \subsection{Inscription}
-Pour s'inscrire sur le site, il remplir un questionnaire. Tout se passe sur la page d'accueil où l'utilisateur peut remplir ce questionnaire ~:\\
+Pour s'inscrire sur le site, il doit remplir un formulaire. Tout se passe sur la page d'accueil où l'utilisateur peut remplir ce formulaire ~:\\
 
 \begin{center}
 \includegraphics[scale=0.8]{images/inscriptionvalid.png} 
 \end{center}
 
-Il doit remplir tous les champs pour pourvoir envoyer le formulaire ! Tant qu'il n'a pas rempli tous les champs, le formulaire ne peut pas être envoyé Pour cela, nous avons utilisé les fonctionnalités de JQuery. Chaque input est géré par des fonctions gérant la couleur et les messages d'erreurs. C’est le fichier script.js qui gère tout cela. Il y a aussi des sécurités avec des patterns, required et des htmlspecialchar sur les valeurs reçu.
+Il doit remplir tous les champs pour pouvoir envoyer le formulaire ! Tant qu'il n'a pas rempli tous les champs, le formulaire ne peut pas être envoyé. Pour cela, nous avons utilisé les fonctionnalités de JQuery. Chaque input est géré par des fonctions gérant la couleur et les messages d'erreurs. C’est le fichier script.js qui gère tout cela. Il y a aussi des sécurités avec des patterns, required et des htmlspecialchar sur les variables reçues.
 Le mot de passe est hashé avec la méthode password\_hash() avant d'être mis dans la base de données.\\
 
 
@@ -206,7 +206,7 @@ Le mot de passe est hashé avec la méthode password\_hash() avant d'être mis d
 \includegraphics[scale=0.8]{images/inscriptionnnvalid.png}\\
 \end{center}
 
-Lors de l'inscription, l'utilisateur est alerté si jamais il utilise une adresse mail déjà existante. Une fois inscrit, il est automatiquement redirigé vers le site.
+Lors de l'inscription, l'utilisateur est alerté si jamais il utilise une adresse mail déjà existante. Une fois inscrit, il est automatiquement redirigé vers la page lepetitscientifique.php.
 
 \newpage
 \subsection{Connexion}
@@ -216,7 +216,7 @@ Un utilisateur peut se connecter en remplissant le formulaire suivant ~:\\
 \includegraphics[scale=0.8]{images/connexion.png}\\
 \end{center}
 
-Il y a les même sécurité au niveau de la connexion.\\
+Il y a les mêmes sécurités au niveau de la connexion.\\
 Lorsqu'il se connecte, en fonction de ses droits, l'utilisateur peut administrer le site.
 
 \newpage
@@ -230,9 +230,9 @@ L'administrateur peut gérer toutes les catégories, sous-catégories et les ré
 \includegraphics[width=8cm]{images/menu2.png}\\
 \end{center}
 
-Dans le premier encadré rouge, on voit l'arborescence généré automatiquement en fonction de la base de données. Dans le deuxième, on voit le menu de gestion pour l'administrateur.\\
+Dans le premier encadré rouge, on voit l'arborescence générée automatiquement en fonction de la base de données. Dans le deuxième, on voit le menu de gestion pour l'administrateur.\\
 
-Lors de l'administration, l'administrateur peut ajouter un nouveau élément (catégories ou sous-catégorie), modifier le nom de cet élément ou supprimer cet élément si il ne possède aucun fils.\\
+Lors de l'administration, l'administrateur peut ajouter un nouveau élément (catégorie ou sous-catégorie), modifier le nom de cet élément ou supprimer cet élément s'il ne possède aucun fils.\\
 
 A chaque fois qu'on envoie un formulaire, on modifie la base de données MENU grâce à des requêtes.\\
 
@@ -279,16 +279,16 @@ Pour créer un article, le rédacteur doit choisir la sous-catégorie et un nom 
 \includegraphics[width=16cm]{images/ajoutart2.png}\\
 \end{center}
 
-Pour rédiger un article, nous avons intégrer l'éditeur CKeditor qui permet au rédacteur d'écrire ses articles.
+Pour rédiger un article, nous avons intégré l'éditeur CKeditor qui permet au rédacteur d'écrire ses articles.
 
 \begin{center}
 \includegraphics[width=16cm]{images/ajoutart3.png}\\
 \end{center}
 
-Lorsque le rédacteur à validé le contenu de son article, un répertoire au nom de l'article est crée dans le dossier articles. Un fichier php est crée et contient une fonction qui sera appelé pour afficher l'article.
+Lorsque le rédacteur a validé le contenu de son article, un répertoire au nom de l'article est créé dans le dossier articles. Un fichier php est créé et contient une fonction qui sera appelé pour afficher l'article.
 
 \subsubsection{Modifier un article}
-Un rédacteur ne peut modifier le contenu que de ses articles.\\
+Un rédacteur ne peut modifier que le contenu de ses articles.\\
 
 \begin{center}
 \includegraphics[width=16cm]{images/modifart.png}\\
@@ -300,7 +300,7 @@ Un rédacteur ne peut modifier le contenu que de ses articles.\\
 
 
 \subsubsection{Supprimer un article}
-Un rédacteur ne peut supprimer le contenu que de ses articles.\\
+Un rédacteur ne peut supprimer que le contenu de ses articles.\\
 \begin{center}
 \includegraphics[width=16cm]{images/suppart.png}\\
 \end{center}
@@ -316,9 +316,14 @@ Un rédacteur ne peut modifier son mot de passe.\\
 
 \newpage
 \section{Le style du site (CSS)}
+Le CSS a été réalisé grâce au framework Bootstrap 3 qui nous a permis de réaliser un site plus ergonomique et harmonieux.
+\subsection{Le site}
+Nous avons majoritairement utilisé des \% afin que tous les éléments soit bien dimensionnés par rapport à la taille de l'écran.
 \subsection{Le menu}
+Voici l'arborescence du menu déroulant. Une classe CSS lui a été défini afin de le rendre plus agréble et élégant.
 
 \newpage
 \section{Conclusion}
+Ce projet nous a permis de mettre à profit nos compétences et connaissances en Web grâce notamment aux differents TPs vus ce semestre. Nous avons donc pu grâce à ça, developper notre site en modèle MVC. Bien sûre, notre projet peut recevoir des améliorations comme par exemple l'implémentation de notre propre éditeur de texte. Toutes nos pages ainsi que le CSS sont validées par le W3C.
 
 \end{document}
