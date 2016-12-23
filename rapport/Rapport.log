@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.1)  22 DEC 2016 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.1)  23 DEC 2016 13:20
 entering extended mode
 **./Rapport.tex
 (Rapport.tex
@@ -968,7 +968,7 @@ ut line 45.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 45.
 
-<images/accueil2.png, id=59, 892.83563pt x 460.72125pt>
+<images/accueil2.png, id=87, 892.83563pt x 460.72125pt>
 File: images/accueil2.png Graphic file (type png)
 
 <use images/accueil2.png>
@@ -1001,7 +1001,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 \openout5 = `Rapport.toc'.
 
 
-<images/universite-rouen.jpg, id=85, 652.4375pt x 234.8775pt>
+<images/universite-rouen.jpg, id=120, 652.4375pt x 234.8775pt>
 File: images/universite-rouen.jpg Graphic file (type jpg)
 
 <use images/universite-rouen.jpg>
@@ -1049,12 +1049,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
@@ -1087,38 +1082,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-<images/diag.png, id=100, 755.82375pt x 454.69875pt>
+<images/diag.png, id=135, 755.82375pt x 454.69875pt>
 File: images/diag.png Graphic file (type png)
  <use images/diag.png>
 Package pdftex.def Info: images/diag.png used on input line 138.
 (pdftex.def)             Requested size: 455.24408pt x 273.869pt.
-File: images/universite-rouen.jpg Graphic file (type jpg)
 
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+File: images/universite-rouen.jpg Graphic file (type jpg)
 <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 144.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 143.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
  [4 <./images/diag.png>]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 145.
+
+<images/maquette.png, id=141, 450.18187pt x 206.27063pt>
+File: images/maquette.png Graphic file (type png)
+
+<use images/maquette.png>
+Package pdftex.def Info: images/maquette.png used on input line 146.
+(pdftex.def)             Requested size: 455.24408pt x 208.5992pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 149.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [5 <./images/maquette.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 146.
+(Font)              scaled to size 14.4pt on input line 151.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 146.
+(Font)              scaled to size 14.4pt on input line 151.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
@@ -1127,88 +1135,247 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-File: images/universite-rouen.jpg Graphic file (type jpg)
-<use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 185.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-<images/inscriptionvalid.png, id=110, 520.19344pt x 408.77719pt>
+File: images/universite-rouen.jpg Graphic file (type jpg)
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 190.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+<images/inscriptionvalid.png, id=152, 520.19344pt x 408.77719pt>
 File: images/inscriptionvalid.png Graphic file (type png)
 
 <use images/inscriptionvalid.png>
-Package pdftex.def Info: images/inscriptionvalid.png used on input line 193.
+Package pdftex.def Info: images/inscriptionvalid.png used on input line 198.
 (pdftex.def)             Requested size: 416.1553pt x 327.02219pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
  []
 
-<images/inscriptionnnvalid.png, id=111, 524.71031pt x 408.02437pt>
+<images/inscriptionnnvalid.png, id=153, 524.71031pt x 408.02437pt>
 File: images/inscriptionnnvalid.png Graphic file (type png)
 
 <use images/inscriptionnnvalid.png>
-Package pdftex.def Info: images/inscriptionnnvalid.png used on input line 200.
+Package pdftex.def Info: images/inscriptionnnvalid.png used on input line 206.
 (pdftex.def)             Requested size: 419.7688pt x 326.41994pt.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 201.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 207.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [6 <./images/inscriptionvalid.png>]
+ [7 <./images/inscriptionvalid.png>]
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 206.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 211.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [7 <./images/inscriptionnnvalid.png>]
+ [8 <./images/inscriptionnnvalid.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+<images/connexion.png, id=164, 276.28218pt x 331.2375pt>
+File: images/connexion.png Graphic file (type png)
+
+<use images/connexion.png>
+Package pdftex.def Info: images/connexion.png used on input line 216.
+(pdftex.def)             Requested size: 221.02603pt x 264.99034pt.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 213.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 222.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [8]
+ [9 <./images/connexion.png>] <images/menu2.png, id=170, 237.13594pt x 326.7206
+3pt>
+File: images/menu2.png Graphic file (type png)
+
+<use images/menu2.png>
+Package pdftex.def Info: images/menu2.png used on input line 230.
+(pdftex.def)             Requested size: 227.62204pt x 313.6233pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+File: images/universite-rouen.jpg Graphic file (type jpg)
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 239.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [10 <./images/menu2.png>]
+<images/ajoutcat.png, id=176, 536.75531pt x 187.45032pt>
+File: images/ajoutcat.png Graphic file (type png)
+
+<use images/ajoutcat.png>
+Package pdftex.def Info: images/ajoutcat.png used on input line 242.
+(pdftex.def)             Requested size: 455.24408pt x 158.98456pt.
+
+<images/modifcateg.png, id=177, 532.99126pt x 258.21469pt>
+File: images/modifcateg.png Graphic file (type png)
+
+<use images/modifcateg.png>
+Package pdftex.def Info: images/modifcateg.png used on input line 247.
+(pdftex.def)             Requested size: 455.24408pt x 220.5552pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 250.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [11 <./images/ajoutcat.png> <./images/modifcateg.png>]
+<images/modifcateg2.png, id=184, 534.49687pt x 261.97874pt>
+File: images/modifcateg2.png Graphic file (type png)
+
+<use images/modifcateg2.png>
+Package pdftex.def Info: images/modifcateg2.png used on input line 253.
+(pdftex.def)             Requested size: 455.24408pt x 223.14268pt.
+
+<images/suppcat.png, id=185, 534.49687pt x 293.59688pt>
+File: images/suppcat.png Graphic file (type png)
+
+<use images/suppcat.png>
+Package pdftex.def Info: images/suppcat.png used on input line 258.
+(pdftex.def)             Requested size: 455.24408pt x 250.0737pt.
+
+<images/suppaut.png, id=186, 548.0475pt x 103.13531pt>
+File: images/suppaut.png Graphic file (type png)
+
+<use images/suppaut.png>
+Package pdftex.def Info: images/suppaut.png used on input line 266.
+(pdftex.def)             Requested size: 455.24408pt x 85.67308pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 269.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [12 <./images/modifcateg2.png> <./images/suppcat.png> <./images/suppaut.png>]
+<images/ajoutart.png, id=194, 536.0025pt x 314.67563pt>
+File: images/ajoutart.png Graphic file (type png)
+
+<use images/ajoutart.png>
+Package pdftex.def Info: images/ajoutart.png used on input line 275.
+(pdftex.def)             Requested size: 455.24408pt x 267.26427pt.
+
+<images/ajoutart2.png, id=195, 536.0025pt x 74.52844pt>
+File: images/ajoutart2.png Graphic file (type png)
+
+<use images/ajoutart2.png>
+Package pdftex.def Info: images/ajoutart2.png used on input line 279.
+(pdftex.def)             Requested size: 455.24408pt x 63.29942pt.
+
+<images/ajoutart3.png, id=196, 532.99126pt x 268.75406pt>
+File: images/ajoutart3.png Graphic file (type png)
+
+<use images/ajoutart3.png>
+Package pdftex.def Info: images/ajoutart3.png used on input line 285.
+(pdftex.def)             Requested size: 455.24408pt x 229.55745pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 286.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [13 <./images/ajoutart.png> <./images/ajoutart2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+<images/modifart.png, id=201, 546.54187pt x 179.16937pt>
+File: images/modifart.png Graphic file (type png)
+
+<use images/modifart.png>
+Package pdftex.def Info: images/modifart.png used on input line 294.
+(pdftex.def)             Requested size: 455.24408pt x 149.2409pt.
+
+<images/modifart2.png, id=202, 532.99126pt x 268.00125pt>
+File: images/modifart2.png Graphic file (type png)
+
+<use images/modifart2.png>
+Package pdftex.def Info: images/modifart2.png used on input line 298.
+(pdftex.def)             Requested size: 455.24408pt x 228.91443pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 299.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [14 <./images/ajoutart3.png> <./images/modifart.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
+
+ []
+
+<images/suppart.png, id=207, 548.0475pt x 103.13531pt>
+File: images/suppart.png Graphic file (type png)
+
+<use images/suppart.png>
+Package pdftex.def Info: images/suppart.png used on input line 305.
+(pdftex.def)             Requested size: 455.24408pt x 85.67308pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+<images/modifauteur.png, id=208, 544.28343pt x 71.51718pt>
+File: images/modifauteur.png Graphic file (type png)
+
+<use images/modifauteur.png>
+Package pdftex.def Info: images/modifauteur.png used on input line 313.
+(pdftex.def)             Requested size: 455.24408pt x 59.81757pt.
+File: images/universite-rouen.jpg Graphic file (type jpg)
+ <use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 317.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [15 <./images/modifart2.png> <./images/suppart.png> <./images/modifauteur.png>
+]
 File: images/universite-rouen.jpg Graphic file (type jpg)
 
 <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 216.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 321.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
+ [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 219.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 324.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
 
-[10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
  (Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: F1B02B490408E98F886A751FBF01FBAA;806.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
+(rerunfilecheck)             Checksum: C19748A0BF715ECF3EAAF275EF68A636;1355.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
  ) 
 Here is how much of TeX's memory you used:
- 9698 strings out of 493333
- 148634 string characters out of 3139185
- 235180 words of memory out of 3000000
- 13016 multiletter control sequences out of 15000+200000
- 80639 words of font info for 49 fonts, out of 3000000 for 9000
+ 9797 strings out of 493333
+ 150670 string characters out of 3139185
+ 236180 words of memory out of 3000000
+ 13084 multiletter control sequences out of 15000+200000
+ 84867 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,15n,49p,482b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Pr
-ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Program Fi
-les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Program Files/MiKT
-eX 2.9/fonts/enc/dvips/libertine/lbtn_omcwp2.enc}<C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/libertine/LinBiolinumT.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/libertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/libertine/LinBiolinumTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/libertine/LinLibertineTB.pfb>
-Output written on Rapport.pdf (11 pages, 893192 bytes).
+ 32i,15n,49p,490b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{C:/Pr
+ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Program Fi
+les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Program Files/MiKT
+eX 2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Program Files/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_omcwp2.enc}<C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/libertine/LinBiolinumT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/libertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/libertine/LinBiolinumTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lib
+ertine/LinLibertineTB.pfb>
+Output written on Rapport.pdf (18 pages, 1907281 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

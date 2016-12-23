@@ -106,13 +106,13 @@ Les identifiant de connexion à la base sont par défaut ``root'' et le mot de p
 \>	define('DBAUTEUR','auteur');\\
 ?>\\
 \end{tabbing} 
-Vous pourrez vous connectez en mode administrateur en vous connectant avec ~:\\
+Vous pourrez vous connectez en mode administrateur en vous connectant avec ~:
 \begin{itemize}
 \item admin@admin.fr
-\item Admin0
+\item Admin0\\
 \end{itemize}
 
-Ou en se connectant avec un rédacteur avec ~:\\
+Ou en se connectant avec un rédacteur avec ~:
 \begin{itemize}
 \item jeremy\_tevenin@hotmail.fr
 \item Jeremy76\\
@@ -138,28 +138,33 @@ Voici un schéma de notre application.\\
 \includegraphics[width=16cm]{images/diag.png}\\
 \end{center}
 
+Nous avons aussi un dossier images contenant les images du site, un dossier articles qui contient les articles du site.\\
 
-Nous avons aussi un dossier images contenant les images du site, un dossier articles qui contient les articles du site.
+\newpage
+\begin{center}
+\textsc{Maquette du site}\\
+\includegraphics[width=16cm]{images/maquette.png}\\
+\end{center}
  
 \newpage
 \section{Les bases de données}
 \subsection{Menu}
 La base de données MENU contient toutes les catégories, sous-catégories et articles.\\
 
-Table categorie : \\
+Table categorie ~:
 \begin{itemize}
 \item id auto-incrémenté
-\item nom
+\item nom\\
 \end{itemize}
 
-Table souscategorie : \\
+Table souscategorie ~:
 \begin{itemize}
 \item id de référence à categorie
 \item id auto-incrémenté
-\item nom
+\item nom\\
 \end{itemize}
 
-Table article : \\
+Table article ~: 
 \begin{itemize}
 \item id de référence à souscategorie
 \item id auteur
@@ -167,19 +172,19 @@ Table article : \\
 \item date
 \item nom
 \item repertoire permet de savoir où est stocké l'article
-\item url permet de savoir le nom de l'article
+\item url permet de savoir le nom de l'article\\
 \end{itemize}
 
 \subsection{Auteur}
 
-Table auteur : \\
+Table auteur ~:
 \begin{itemize}
 \item id auto-incrémenté
 \item nom
 \item ville
 \item mail qui va permettre la connexion au site
 \item un mot de passe
-\item un booléen qui détermine le niveau d'administration
+\item un booléen qui détermine le niveau d'administration\\
 \end{itemize}
 
 \newpage
@@ -187,7 +192,7 @@ Table auteur : \\
 Un utilisateur peut se connecter si il a déjà un compte, s'inscrire pour devenir rédacteur ou simplement visiter le site.
 
 \subsection{Inscription}
-Pour s'inscrire sur le site, il remplir un questionnaire. Tout se passe sur la page d'accueil où l'utilisateur peut remplir ce questionnaire. \\
+Pour s'inscrire sur le site, il remplir un questionnaire. Tout se passe sur la page d'accueil où l'utilisateur peut remplir ce questionnaire ~:\\
 
 \begin{center}
 \includegraphics[scale=0.8]{images/inscriptionvalid.png} 
@@ -201,26 +206,117 @@ Le mot de passe est hashé avec la méthode password\_hash() avant d'être mis d
 \includegraphics[scale=0.8]{images/inscriptionnnvalid.png}\\
 \end{center}
 
-Il ne peut 
+Lors de l'inscription, l'utilisateur est alerté si jamais il utilise une adresse mail déjà existante. Une fois inscrit, il est automatiquement redirigé vers le site.
 
+\newpage
 \subsection{Connexion}
+Un utilisateur peut se connecter en remplissant le formulaire suivant ~:\\
+
+\begin{center}
+\includegraphics[scale=0.8]{images/connexion.png}\\
+\end{center}
+
+Il y a les même sécurité au niveau de la connexion.\\
+Lorsqu'il se connecte, en fonction de ses droits, l'utilisateur peut administrer le site.
 
 \newpage
 \section{Administration du site}
 \subsection{Par l'administrateur}
-\subsubsection{Gérer les catégories}
-\subsubsection{Gérer les sous-catégories}
+L'administrateur peut gérer toutes les catégories, sous-catégories et les rédacteurs. 
+
+\subsubsection{Gérer le menu}
+\begin{center}
+\textsc{Menu de l'administrateur}\\
+\includegraphics[width=8cm]{images/menu2.png}\\
+\end{center}
+
+Dans le premier encadré rouge, on voit l'arborescence généré automatiquement en fonction de la base de données. Dans le deuxième, on voit le menu de gestion pour l'administrateur.\\
+
+Lors de l'administration, l'administrateur peut ajouter un nouveau élément (catégories ou sous-catégorie), modifier le nom de cet élément ou supprimer cet élément si il ne possède aucun fils.\\
+
+A chaque fois qu'on envoie un formulaire, on modifie la base de données MENU grâce à des requêtes.\\
+
+\newpage
+\begin{center}
+\textsc{Ajouter une catégorie}\\
+\includegraphics[width=16cm]{images/ajoutcat.png}\\
+\end{center}
+
+\begin{center}
+\textsc{Modifier une sous-catégorie}\\
+\includegraphics[width=16cm]{images/modifcateg.png}\\
+\end{center}
+
+\newpage
+\begin{center}
+\textsc{Valider la modification}\\
+\includegraphics[width=16cm]{images/modifcateg2.png}\\
+\end{center}
+
+\begin{center}
+\textsc{Supprimer une catégorie}\\
+\includegraphics[width=16cm]{images/suppcat.png}\\
+\end{center}
+
 \subsubsection{Gérer les rédacteurs}
+L'administrateur peut aussi supprimer les rédacteurs.
+
+\begin{center}
+\textsc{Supprimer un auteur}\\
+\includegraphics[width=16cm]{images/suppaut.png}\\
+\end{center}
 
 \newpage
 \subsection{Par les rédacteurs}
 \subsubsection{Créer un article}
+Pour créer un article, le rédacteur doit choisir la sous-catégorie et un nom d'article. On ne peut pas créer un article avec un nom qui est déjà utilisé.
+
+\begin{center}
+\includegraphics[width=16cm]{images/ajoutart.png}\\
+\end{center}
+
+\begin{center}
+\includegraphics[width=16cm]{images/ajoutart2.png}\\
+\end{center}
+
+Pour rédiger un article, nous avons intégrer l'éditeur CKeditor qui permet au rédacteur d'écrire ses articles.
+
+\begin{center}
+\includegraphics[width=16cm]{images/ajoutart3.png}\\
+\end{center}
+
+Lorsque le rédacteur à validé le contenu de son article, un répertoire au nom de l'article est crée dans le dossier articles. Un fichier php est crée et contient une fonction qui sera appelé pour afficher l'article.
+
 \subsubsection{Modifier un article}
+Un rédacteur ne peut modifier le contenu que de ses articles.\\
+
+\begin{center}
+\includegraphics[width=16cm]{images/modifart.png}\\
+\end{center}
+
+\begin{center}
+\includegraphics[width=16cm]{images/modifart2.png}\\
+\end{center}
+
+
 \subsubsection{Supprimer un article}
+Un rédacteur ne peut supprimer le contenu que de ses articles.\\
+\begin{center}
+\includegraphics[width=16cm]{images/suppart.png}\\
+\end{center}
+
+Lorsque le rédacteur supprime un article, le répertoire contenant l'article est supprimé du dossier articles.
+
+\subsubsection{Modifier son mot de passe}
+Un rédacteur ne peut modifier son mot de passe.\\
+\begin{center}
+\includegraphics[width=16cm]{images/modifauteur.png}\\
+\end{center}
 
 
 \newpage
 \section{Le style du site (CSS)}
+\subsection{Le menu}
 
 \newpage
 \section{Conclusion}
