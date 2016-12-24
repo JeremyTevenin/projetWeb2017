@@ -320,7 +320,27 @@ Le CSS a été réalisé grâce au framework Bootstrap 3 qui nous a permis de r�
 \subsection{Le site}
 Nous avons majoritairement utilisé des \% afin que tous les éléments soit bien dimensionnés par rapport à la taille de l'écran.
 \subsection{Le menu}
+Nous avons réalisé ce menu grâce aux balises li et ul d'HTML. Voici un exemple de l’affichage du menu, bien sûr, de nombreuses boucles sont là pour automatiser l'affichage du menu. Cette fonction est entre une balise ouvrante <div> et une balise fermante </div>. 
 Voici l'arborescence du menu déroulant. Une classe CSS lui a été défini afin de le rendre plus agréble et élégant.
+
+<ul id="menu-content" class="menu-content collapse out">\\
+   <li data-toggle="collapse" data-target="\#categ".cpt."" class="collapsed">\\
+      Requête permettant d'obtenir le nom des catégories\\
+     <ul class="sub-menu collapse" id="categ".cpt."">\\
+           <li data-toggle="collapse" data-target="\#souscateg".cpt1."" class="collapsed">\\
+                Requête permettant d'obtenir le nom des sous catégories\\
+                 <ul class="sub-sub-menu collapse" id="souscateg".cpt1."">\\
+                    <li data-toggle="collapse" data-target="\#article".cpt2."" class="collapsed ">\\
+                        Requête récupérant les articles\\
+                    </li>\\
+               </ul>\\
+          </li>\\
+        </ul>\\
+    </li>\\
+</ul>\\
+
+Nous avons utilisé la fonction "hover" de CSS. Cette fonction permet au menu quand il n'est pas activé par le passage de la souris de rester caché. Ce qui permet de faire un menu dynamique au passage de la souris. Nous avons aussi mis une couleur différente lorsque l'utilisateur navigue dans le menu pour qu'il voit dans quelle partie il se trouve.
+Pour pouvoir afficher ce menu des requêtes sont effectuées.
 
 \newpage
 \section{Conclusion}

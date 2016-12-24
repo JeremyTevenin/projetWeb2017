@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  23 DEC 2016 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  24 DEC 2016 16:20
 entering extended mode
 **C:/wamp64/www/projetWeb/projetWeb2017/rapport/Rapport.tex
 (C:/wamp64/www/projetWeb/projetWeb2017/rapport/Rapport.tex
@@ -1073,7 +1073,7 @@ File: images/universite-rouen.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/universite-rouen.jpg used on input line 125.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
@@ -1347,34 +1347,58 @@ Package pdftex.def Info: images/universite-rouen.jpg used on input line 317.
  [15 <C:/wamp64/www/projetWeb/projetWeb2017/rapport/images/modifart2.png> <C:/w
 amp64/www/projetWeb/projetWeb2017/rapport/images/suppart.png> <C:/wamp64/www/pr
 ojetWeb/projetWeb2017/rapport/images/modifauteur.png>]
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.331 \parindent{
+                 4ex}     <ul class="sub-menu collapse" id="categ".cpt."">\\
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.331 \parindent{
+                 4ex}     <ul class="sub-menu collapse" id="categ".cpt."">\\
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--343
+
+ []
+
+File: images/universite-rouen.jpg Graphic file (type jpg)
+<use images/universite-rouen.jpg>
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 347.
+(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
+ [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 321.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 351.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
 
-[16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
-File: images/universite-rouen.jpg Graphic file (type jpg)
- <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 324.
-(pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
- [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  (Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
-Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: C19748A0BF715ECF3EAAF275EF68A636;1355.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
+
+
+Package rerunfilecheck Warning: File `Rapport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Rapport.out':
+(rerunfilecheck)             Before: C19748A0BF715ECF3EAAF275EF68A636;1355
+(rerunfilecheck)             After:  AEEF33C59DBEBBC590722D81CA5C570B;1413.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
  ) 
 Here is how much of TeX's memory you used:
- 9798 strings out of 493333
- 151176 string characters out of 3139193
+ 9800 strings out of 493333
+ 151201 string characters out of 3139193
  236180 words of memory out of 3000000
- 13084 multiletter control sequences out of 15000+200000
+ 13085 multiletter control sequences out of 15000+200000
  84867 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,15n,49p,534b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,15n,49p,538b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Program Fi
 les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Program Files/MiKT
@@ -1385,9 +1409,9 @@ ublic/libertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/libertine/LinBiolinumTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lib
 ertine/LinLibertineTB.pfb>
-Output written on Rapport.pdf (18 pages, 1812556 bytes).
+Output written on Rapport.pdf (18 pages, 1822449 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 
