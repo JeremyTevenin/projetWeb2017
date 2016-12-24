@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  24 DEC 2016 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  24 DEC 2016 16:40
 entering extended mode
 **C:/wamp64/www/projetWeb/projetWeb2017/rapport/Rapport.tex
 (C:/wamp64/www/projetWeb/projetWeb2017/rapport/Rapport.tex
@@ -1349,37 +1349,34 @@ amp64/www/projetWeb/projetWeb2017/rapport/images/suppart.png> <C:/wamp64/www/pr
 ojetWeb/projetWeb2017/rapport/images/modifauteur.png>]
 ! Missing number, treated as zero.
 <to be read again> 
-                   {
-l.331 \parindent{
-                 4ex}     <ul class="sub-menu collapse" id="categ".cpt."">\\
+                   <
+l.333 \parindent<
+                 li data-toggle="collapse" data-target="\#souscateg".cpt1.""...
+
 ? 
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
-                   {
-l.331 \parindent{
-                 4ex}     <ul class="sub-menu collapse" id="categ".cpt."">\\
+                   <
+l.333 \parindent<
+                 li data-toggle="collapse" data-target="\#souscateg".cpt1.""...
+
 ? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--343
-
- []
-
 File: images/universite-rouen.jpg Graphic file (type jpg)
 <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 347.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 349.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
  [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
 File: images/universite-rouen.jpg Graphic file (type jpg)
  <use images/universite-rouen.jpg>
-Package pdftex.def Info: images/universite-rouen.jpg used on input line 351.
+Package pdftex.def Info: images/universite-rouen.jpg used on input line 353.
 (pdftex.def)             Requested size: 71.13188pt x 25.60722pt.
 
 [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
  (Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
 
 
 Package rerunfilecheck Warning: File `Rapport.out' has changed.
@@ -1389,13 +1386,13 @@ Package rerunfilecheck Warning: File `Rapport.out' has changed.
 Package rerunfilecheck Info: Checksums for `Rapport.out':
 (rerunfilecheck)             Before: C19748A0BF715ECF3EAAF275EF68A636;1355
 (rerunfilecheck)             After:  AEEF33C59DBEBBC590722D81CA5C570B;1413.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  ) 
 Here is how much of TeX's memory you used:
- 9800 strings out of 493333
- 151201 string characters out of 3139193
+ 9799 strings out of 493333
+ 151190 string characters out of 3139193
  236180 words of memory out of 3000000
- 13085 multiletter control sequences out of 15000+200000
+ 13084 multiletter control sequences out of 15000+200000
  84867 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,15n,49p,538b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1409,7 +1406,7 @@ ublic/libertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/libertine/LinBiolinumTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 libertine/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lib
 ertine/LinLibertineTB.pfb>
-Output written on Rapport.pdf (18 pages, 1822449 bytes).
+Output written on Rapport.pdf (18 pages, 1816365 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
